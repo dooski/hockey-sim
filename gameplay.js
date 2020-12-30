@@ -3,28 +3,16 @@ const sim = require("./gens/sim.js")
 
 
 function test(){ 
-    let teams = [data.teams.buffalo, data.teams.montreal]
-    let score = [0, 0]
-    for (i = 0; i < 3; i++) {
-        sim.period(teams, score)
-    }
+    let teams = [data.teams.newYork, data.teams.philly]
+        sim.game(teams)
 }
 
-function wait() {
-    console.log("hey")
+function simSeason(){
+    let bingoDiv = [data.teams.buffalo, data.teams.rochester, data.teams.toronto, data.teams.montreal]
+    let bongoDiv = [data.teams.newYork, data.teams.philly, data.teams.burlington, data.teams.hartford]
+    sim.season(bingoDiv, bongoDiv)
 }
-
-let roster = data.teams.rochester.players
-
-let rosterMessage = `
-X
-X
-*** Introducing ${data.teams.rochester.info.full}! ***
-On offense, we have ${roster.LW.full}, ${roster.C.full}, and ${roster.RW.full}.
-On defense, we have ${roster.LD.full}, ${roster.RD.full}, and ${roster.G.full} in net!
-X
-X`
-
 module.exports = {
-    test
+    test,
+    simSeason
 }

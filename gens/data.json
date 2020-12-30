@@ -5,19 +5,20 @@
                 "full": "Buffalo Starlights",
                 "city": "Buffalo",
                 "team": "Starlights",
-                "desc": "America's Canada!"
+                "desc": "America's Canada!",
+                "div": "bingo"
             },
             "players": {
                 "LW": {
-                    "full": "Shannon Molotov",
+                    "full": "Bo Specksgoor",
                     "captain": 0,
                     "stats": {
-                        "shooting": 0.3,
-                        "passing": 0.6,
-                        "handling": 0.5,
+                        "shooting": 0.7,
+                        "passing": 0.7,
+                        "handling": 0.6,
                         "checking": 0.3,
                         "positioning": 0.4,
-                        "blocking": 0.2,
+                        "blocking": 0.4,
                         "speed": 0.8,
                         "goalkeeping": 0.1,
                         "discipline": 0.6
@@ -27,24 +28,24 @@
                     "full": "Sven Hickory",
                     "captain": 1,
                     "stats": {
-                        "shooting": 0.5,
-                        "passing": 0.5,
+                        "shooting": 0.9,
+                        "passing": 0.8,
                         "handling": 0.5,
                         "checking": 0.4,
-                        "positioning": 0.3,
-                        "blocking": 0.2,
+                        "positioning": 0.4,
+                        "blocking": 0.4,
                         "speed": 0.7,
                         "goalkeeping": 0.2,
-                        "discipline": 0.4
+                        "discipline": 0.7
                     }
                 },
                 "RW": {
-                    "full": "Harold Crowley",
+                    "full": "Rachelle Peach",
                     "captain": 0,
                     "stats": {
-                        "shooting": 0.3,
-                        "passing": 0.6,
-                        "handling": 0.5,
+                        "shooting": 0.7,
+                        "passing": 0.7,
+                        "handling": 0.7,
                         "checking": 0.3,
                         "positioning": 0.4,
                         "blocking": 0.2,
@@ -59,28 +60,28 @@
                     "stats": {
                         "shooting": 0.3,
                         "passing": 0.5,
-                        "handling": 0.3,
-                        "checking": 0.6,
-                        "positioning": 0.5,
+                        "handling": 0.2,
+                        "checking": 0.5,
+                        "positioning": 0.4,
                         "blocking": 0.6,
                         "speed": 0.4,
                         "goalkeeping": 0.3,
-                        "discipline": 0.7
+                        "discipline": 0.3
                     }
                 },
                 "RD": {
-                    "full": "Dooski Thunderbug",
+                    "full": "MX Esquire",
                     "captain": 0,
                     "stats": {
                         "shooting": 0.3,
-                        "passing": 0.5,
-                        "handling": 0.3,
-                        "checking": 0.6,
+                        "passing": 0.3,
+                        "handling": 0.2,
+                        "checking": 0.5,
                         "positioning": 0.5,
-                        "blocking": 0.6,
-                        "speed": 0.4,
+                        "blocking": 0.5,
+                        "speed": 0.3,
                         "goalkeeping": 0.3,
-                        "discipline": 0.7
+                        "discipline": 0.6
                     }
                 },
                 "G": {
@@ -88,14 +89,14 @@
                     "captain": 0,
                     "stats": {
                         "shooting": 0.1,
-                        "passing": 0.3,
+                        "passing": 0.1,
                         "handling": 0.2,
-                        "checking": 0.3,
-                        "positioning": 0.3,
-                        "blocking": 0.7,
-                        "speed": 0.3,
-                        "goalkeeping": 0.8,
-                        "discipline": 0.9
+                        "checking": 0.2,
+                        "positioning": 0.2,
+                        "blocking": 0.3,
+                        "speed": 0.2,
+                        "goalkeeping": 0.3,
+                        "discipline": 0.4
                     }
                 }
             }
@@ -105,52 +106,53 @@
                         "full": "Rochester Bones",
                         "city": "Rochester",
                         "team": "Bones",
-                        "desc": "The Future is Bones"
+                        "desc": "The Future is Bones",
+                        "div": "bingo"
             },
             "players": {
                         "LW": {
                             "full": "Bart Guilfoyle",
                             "captain": 0,
                             "stats": {
-                                "shooting": 0.3,
-                                "passing": 0.6,
-                                "handling": 0.5,
-                                "checking": 0.3,
-                                "positioning": 0.4,
-                                "blocking": 0.2,
-                                "speed": 0.8,
-                                "goalkeeping": 0.1,
-                                "discipline": 0.6
+                                "shooting": 0.6,
+                        "passing": 0.8,
+                        "handling": 0.8,
+                        "checking": 0.3,
+                        "positioning": 0.7,
+                        "blocking": 0.2,
+                        "speed": 0.9,
+                        "goalkeeping": 0.1,
+                        "discipline": 0.6
                             }
                         },
                         "C": {
                             "full": "Frankie Dake",
                             "captain": 0,
                             "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.4,
-                                "positioning": 0.3,
-                                "blocking": 0.2,
-                                "speed": 0.7,
-                                "goalkeeping": 0.2,
-                                "discipline": 0.4
+                                "shooting": 0.7,
+                        "passing": 0.5,
+                        "handling": 0.5,
+                        "checking": 0.4,
+                        "positioning": 0.3,
+                        "blocking": 0.2,
+                        "speed": 0.7,
+                        "goalkeeping": 0.2,
+                        "discipline": 0.4
                             }
                         },
                         "RW": {
                             "full": "Tom Hotdog",
                             "captain": 0,
                             "stats": {
-                                "shooting": 0.3,
-                                "passing": 0.6,
-                                "handling": 0.5,
-                                "checking": 0.3,
-                                "positioning": 0.4,
-                                "blocking": 0.2,
-                                "speed": 0.8,
-                                "goalkeeping": 0.1,
-                                "discipline": 0.6
+                                "shooting": 0.4,
+                        "passing": 0.5,
+                        "handling": 0.4,
+                        "checking": 0.2,
+                        "positioning": 0.3,
+                        "blocking": 0.2,
+                        "speed": 0.6,
+                        "goalkeeping": 0.1,
+                        "discipline": 0.4
                             }
                         },
                         "LD": {
@@ -158,14 +160,14 @@
                             "captain": 1,
                             "stats": {
                                 "shooting": 0.3,
-                                "passing": 0.5,
-                                "handling": 0.3,
-                                "checking": 0.6,
-                                "positioning": 0.5,
-                                "blocking": 0.6,
-                                "speed": 0.4,
-                                "goalkeeping": 0.3,
-                                "discipline": 0.7
+                        "passing": 0.5,
+                        "handling": 0.2,
+                        "checking": 0.6,
+                        "positioning": 0.5,
+                        "blocking": 0.6,
+                        "speed": 0.4,
+                        "goalkeeping": 0.3,
+                        "discipline": 0.6
                             }
                         },
                         "RD": {
@@ -173,14 +175,14 @@
                             "captain": 0,
                             "stats": {
                                 "shooting": 0.3,
-                                "passing": 0.5,
-                                "handling": 0.3,
-                                "checking": 0.6,
-                                "positioning": 0.5,
-                                "blocking": 0.6,
-                                "speed": 0.4,
-                                "goalkeeping": 0.3,
-                                "discipline": 0.7
+                        "passing": 0.5,
+                        "handling": 0.2,
+                        "checking": 0.6,
+                        "positioning": 0.5,
+                        "blocking": 0.6,
+                        "speed": 0.4,
+                        "goalkeeping": 0.3,
+                        "discipline": 0.6
                             }
                         },
                         "G": {
@@ -188,14 +190,14 @@
                             "captain": 0,
                             "stats": {
                                 "shooting": 0.1,
-                                "passing": 0.3,
-                                "handling": 0.2,
-                                "checking": 0.3,
-                                "positioning": 0.3,
-                                "blocking": 0.7,
-                                "speed": 0.3,
-                                "goalkeeping": 0.8,
-                                "discipline": 0.9
+                        "passing": 0.3,
+                        "handling": 0.2,
+                        "checking": 0.4,
+                        "positioning": 0.3,
+                        "blocking": 0.7,
+                        "speed": 0.3,
+                        "goalkeeping": 0.8,
+                        "discipline": 0.9
                             }
                         }
             }
@@ -205,7 +207,8 @@
                 "full": "Montreal Panic",
                 "city": "Montreal",
                 "team": "Panic",
-                "desc": "Poutine Pucks in the Net!"
+                "desc": "Poutine Pucks in the Net!",
+                "div": "bingo"
             },
             "players": {
                 "LW": {
@@ -213,7 +216,108 @@
                     "captain": 0,
                     "stats": {
                         "shooting": 0.3,
+                        "passing": 0.4,
+                        "handling": 0.3,
+                        "checking": 0.4,
+                        "positioning": 0.6,
+                        "blocking": 0.2,
+                        "speed": 0.5,
+                        "goalkeeping": 0.1,
+                        "discipline": 0.3
+                    }
+                },
+                "C": {
+                    "full": "Pierre Pizzazz",
+                    "captain": 1,
+                    "stats": {
+                        "shooting": 0.7,
+                        "passing": 0.4,
+                        "handling": 0.3,
+                        "checking": 0.1,
+                        "positioning": 0.3,
+                        "blocking": 0.1,
+                        "speed": 0.5,
+                        "goalkeeping": 0.2,
+                        "discipline": 0.4
+                    }
+                },
+                "RW": {
+                    "full": "Celine Twig",
+                    "captain": 0,
+                    "stats": {
+                        "shooting": 0.3,
+                        "passing": 0.4,
+                        "handling": 0.3,
+                        "checking": 0.3,
+                        "positioning": 0.6,
+                        "blocking": 0.2,
+                        "speed": 0.6,
+                        "goalkeeping": 0.1,
+                        "discipline": 0.6
+                    }
+                },
+                "LD": {
+                    "full": "Barney Lawrence",
+                    "captain": 0,
+                    "stats": {
+                        "shooting": 0.3,
+                        "passing": 0.7,
+                        "handling": 0.2,
+                        "checking": 0.9,
+                        "positioning": 0.8,
+                        "blocking": 0.8,
+                        "speed": 0.4,
+                        "goalkeeping": 0.3,
+                        "discipline": 0.6
+                    }
+                },
+                "RD": {
+                    "full": "Hank Hotdog",
+                    "captain": 0,
+                    "stats": {
+                        "shooting": 0.5,
+                        "passing": 0.5,
+                        "handling": 0.2,
+                        "checking": 0.7,
+                        "positioning": 0.5,
+                        "blocking": 0.8,
+                        "speed": 0.4,
+                        "goalkeeping": 0.3,
+                        "discipline": 0.6
+                    }
+                },
+                "G": {
+                    "full": "JJ Milkman",
+                    "captain": 0,
+                    "stats": {
+                        "shooting": 0.1,
                         "passing": 0.6,
+                        "handling": 0.2,
+                        "checking": 0.4,
+                        "positioning": 0.3,
+                        "blocking": 0.7,
+                        "speed": 0.7,
+                        "goalkeeping": 1.0,
+                        "discipline": 0.9
+                    }
+                }
+            }
+        },
+        "toronto": {
+            "info": {
+                        "full": "Toronto Brewskis",
+                        "city": "Toronto",
+                        "team": "Brewskis",
+                        "desc": "Canada's America!",
+                        "div": "bingo"
+            },
+            "players": {
+                        "LW": {
+                            "full": "Mackenzie Lemon",
+                            "captain": 1,
+                            "stats": {
+                                "shooting": 0.4,
+                        "passing": 0.7,
                         "handling": 0.5,
                         "checking": 0.3,
                         "positioning": 0.4,
@@ -221,13 +325,114 @@
                         "speed": 0.8,
                         "goalkeeping": 0.1,
                         "discipline": 0.6
+                            }
+                        },
+                        "C": {
+                            "full": "Hannah Hammer",
+                            "captain": 0,
+                            "stats": {
+                                "shooting": 0.7,
+                        "passing": 0.5,
+                        "handling": 0.5,
+                        "checking": 0.4,
+                        "positioning": 0.3,
+                        "blocking": 0.2,
+                        "speed": 0.7,
+                        "goalkeeping": 0.2,
+                        "discipline": 0.4
+                            }
+                        },
+                        "RW": {
+                            "full": "Tommy Domino",
+                            "captain": 0,
+                            "stats": {
+                                "shooting": 0.4,
+                        "passing": 0.7,
+                        "handling": 0.5,
+                        "checking": 0.3,
+                        "positioning": 0.4,
+                        "blocking": 0.2,
+                        "speed": 0.8,
+                        "goalkeeping": 0.1,
+                        "discipline": 0.6
+                            }
+                        },
+                        "LD": {
+                            "full": "Bruce Oaks",
+                            "captain": 0,
+                            "stats": {
+                                "shooting": 0.3,
+                        "passing": 0.5,
+                        "handling": 0.2,
+                        "checking": 0.6,
+                        "positioning": 0.5,
+                        "blocking": 0.6,
+                        "speed": 0.4,
+                        "goalkeeping": 0.3,
+                        "discipline": 0.6
+                            }
+                        },
+                        "RD": {
+                            "full": "Allison Grunge",
+                            "captain": 0,
+                            "stats": {
+                                "shooting": 0.3,
+                        "passing": 0.5,
+                        "handling": 0.2,
+                        "checking": 0.6,
+                        "positioning": 0.5,
+                        "blocking": 0.6,
+                        "speed": 0.4,
+                        "goalkeeping": 0.3,
+                        "discipline": 0.6
+                            }
+                        },
+                        "G": {
+                            "full": "Ed Kirby",
+                            "captain": 0,
+                            "stats": {
+                                "shooting": 0.1,
+                        "passing": 0.3,
+                        "handling": 0.2,
+                        "checking": 0.4,
+                        "positioning": 0.3,
+                        "blocking": 0.7,
+                        "speed": 0.3,
+                        "goalkeeping": 0.8,
+                        "discipline": 0.9
+                            }
+                        }
+            }
+        },
+        "newYork": {
+            "info": {
+                "full": "New York Rats",
+                "city": "New York",
+                "team": "Rats",
+                "desc": "No One Loves Us, Everyone Hates Us",
+                "div": "bongo"
+            },
+            "players": {
+                "LW": {
+                    "full": "Izzy Thump",
+                    "captain": 0,
+                    "stats": {
+                        "shooting": 0.8,
+                        "passing": 1.0,
+                        "handling": 0.8,
+                        "checking": 0.3,
+                        "positioning": 0.7,
+                        "blocking": 0.4,
+                        "speed": 0.9,
+                        "goalkeeping": 0.1,
+                        "discipline": 0.7
                     }
                 },
                 "C": {
-                    "full": "Pierre Pizzazz",
-                    "captain": 1,
+                    "full": "Krinyan McCartney",
+                    "captain": 0,
                     "stats": {
-                        "shooting": 0.5,
+                        "shooting": 0.7,
                         "passing": 0.5,
                         "handling": 0.5,
                         "checking": 0.4,
@@ -239,11 +444,183 @@
                     }
                 },
                 "RW": {
-                    "full": "Celine Twig",
+                    "full": "Alannah Win",
+                    "captain": 0,
+                    "stats": {
+                        "shooting": 0.4,
+                        "passing": 0.4,
+                        "handling": 0.4,
+                        "checking": 0.3,
+                        "positioning": 0.4,
+                        "blocking": 0.2,
+                        "speed": 0.7,
+                        "goalkeeping": 0.1,
+                        "discipline": 0.6
+                    }
+                },
+                "LD": {
+                    "full": "Sentient Pizza",
+                    "captain": 1,
+                    "stats": {
+                        "shooting": 0.3,
+                        "passing": 0.5,
+                        "handling": 0.2,
+                        "checking": 0.6,
+                        "positioning": 0.5,
+                        "blocking": 0.6,
+                        "speed": 0.4,
+                        "goalkeeping": 0.3,
+                        "discipline": 0.6
+                    }
+                },
+                "RD": {
+                    "full": "Terry Clines",
                     "captain": 0,
                     "stats": {
                         "shooting": 0.3,
-                        "passing": 0.6,
+                        "passing": 0.5,
+                        "handling": 0.2,
+                        "checking": 0.6,
+                        "positioning": 0.5,
+                        "blocking": 0.6,
+                        "speed": 0.4,
+                        "goalkeeping": 0.3,
+                        "discipline": 0.6
+                    }
+                },
+                "G": {
+                    "full": "Molly Bagels",
+                    "captain": 0,
+                    "stats": {
+                        "shooting": 0.1,
+                        "passing": 0.3,
+                        "handling": 0.2,
+                        "checking": 0.4,
+                        "positioning": 0.3,
+                        "blocking": 0.7,
+                        "speed": 0.3,
+                        "goalkeeping": 0.4,
+                        "discipline": 0.8
+                    }
+                }
+            }
+        },
+        "philly": {
+            "info": {
+                        "full": "Philly Pineapples",
+                        "city": "Philadelphia",
+                        "team": "Pineapples",
+                        "desc": "Fruit Prevents Scurvy!",
+                        "div": "bongo"
+            },
+            "players": {
+                        "LW": {
+                            "full": "Daymor Dangles",
+                            "captain": 0,
+                            "stats": {
+                                "shooting": 0.4,
+                        "passing": 0.7,
+                        "handling": 0.5,
+                        "checking": 0.3,
+                        "positioning": 0.4,
+                        "blocking": 0.2,
+                        "speed": 0.8,
+                        "goalkeeping": 0.1,
+                        "discipline": 0.6
+                            }
+                        },
+                        "C": {
+                            "full": "Big Trash",
+                            "captain": 1,
+                            "stats": {
+                                "shooting": 0.7,
+                        "passing": 0.4,
+                        "handling": 0.5,
+                        "checking": 0.4,
+                        "positioning": 0.3,
+                        "blocking": 0.2,
+                        "speed": 0.5,
+                        "goalkeeping": 0.2,
+                        "discipline": 0.2
+                            }
+                        },
+                        "RW": {
+                            "full": "Avy Blunt",
+                            "captain": 0,
+                            "stats": {
+                                "shooting": 0.4,
+                        "passing": 0.9,
+                        "handling": 0.8,
+                        "checking": 0.3,
+                        "positioning": 0.6,
+                        "blocking": 0.2,
+                        "speed": 0.8,
+                        "goalkeeping": 0.1,
+                        "discipline": 0.6
+                            }
+                        },
+                        "LD": {
+                            "full": "Elmo Battleaxe",
+                            "captain": 1,
+                            "stats": {
+                                "shooting": 0.3,
+                        "passing": 0.5,
+                        "handling": 0.2,
+                        "checking": 0.6,
+                        "positioning": 0.5,
+                        "blocking": 0.6,
+                        "speed": 0.4,
+                        "goalkeeping": 0.3,
+                        "discipline": 0.6
+                            }
+                        },
+                        "RD": {
+                            "full": "Dooski Sherwood",
+                            "captain": 0,
+                            "stats": {
+                                "shooting": 0.3,
+                        "passing": 0.4,
+                        "handling": 0.2,
+                        "checking": 0.5,
+                        "positioning": 0.5,
+                        "blocking": 0.5,
+                        "speed": 0.4,
+                        "goalkeeping": 0.3,
+                        "discipline": 0.4
+                            }
+                        },
+                        "G": {
+                            "full": "Oaksy the Kid",
+                            "captain": 0,
+                            "stats": {
+                                "shooting": 0.1,
+                        "passing": 0.3,
+                        "handling": 0.2,
+                        "checking": 0.4,
+                        "positioning": 0.3,
+                        "blocking": 0.7,
+                        "speed": 0.3,
+                        "goalkeeping": 0.8,
+                        "discipline": 0.9
+                            }
+                        }
+            }
+        },
+        "hartford": {
+            "info": {
+                "full": "Hartford Shrooms",
+                "city": "Hartford",
+                "team": "Shrooms",
+                "desc": "Sporesmanship is the Real Trip",
+                "div": "bongo"
+            },
+            "players": {
+                "LW": {
+                    "full": "Giovanni Schmitz",
+                    "captain": 0,
+                    "stats": {
+                        "shooting": 0.4,
+                        "passing": 0.7,
                         "handling": 0.5,
                         "checking": 0.3,
                         "positioning": 0.4,
@@ -253,149 +630,180 @@
                         "discipline": 0.6
                     }
                 },
+                "C": {
+                    "full": "Penelope Cleaver",
+                    "captain": 1,
+                    "stats": {
+                        "shooting": 0.7,
+                        "passing": 0.7,
+                        "handling": 1.0,
+                        "checking": 0.4,
+                        "positioning": 0.6,
+                        "blocking": 0.2,
+                        "speed": 0.7,
+                        "goalkeeping": 0.2,
+                        "discipline": 0.4
+                    }
+                },
+                "RW": {
+                    "full": "Butterfly Funk",
+                    "captain": 0,
+                    "stats": {
+                        "shooting": 0.4,
+                        "passing": 0.7,
+                        "handling": 0.3,
+                        "checking": 0.1,
+                        "positioning": 0.4,
+                        "blocking": 0.2,
+                        "speed": 0.5,
+                        "goalkeeping": 0.1,
+                        "discipline": 0.4
+                    }
+                },
                 "LD": {
-                    "full": "Barney Lawrence",
+                    "full": "Smooth Ambrose",
                     "captain": 0,
                     "stats": {
                         "shooting": 0.3,
                         "passing": 0.5,
-                        "handling": 0.3,
+                        "handling": 0.2,
                         "checking": 0.6,
                         "positioning": 0.5,
                         "blocking": 0.6,
                         "speed": 0.4,
                         "goalkeeping": 0.3,
-                        "discipline": 0.7
+                        "discipline": 0.6
                     }
                 },
                 "RD": {
-                    "full": "Hank Hotdog",
+                    "full": "Igor Kranck",
                     "captain": 0,
                     "stats": {
                         "shooting": 0.3,
                         "passing": 0.5,
-                        "handling": 0.3,
+                        "handling": 0.2,
                         "checking": 0.6,
                         "positioning": 0.5,
                         "blocking": 0.6,
                         "speed": 0.4,
                         "goalkeeping": 0.3,
-                        "discipline": 0.7
+                        "discipline": 0.6
                     }
                 },
                 "G": {
-                    "full": "JJ Milkman",
+                    "full": "Deeno Watkins",
                     "captain": 0,
                     "stats": {
                         "shooting": 0.1,
-                        "passing": 0.3,
+                        "passing": 0.5,
+                        "handling": 0.2,
+                        "checking": 0.4,
+                        "positioning": 0.3,
+                        "blocking": 0.7,
+                        "speed": 0.3,
+                        "goalkeeping": 1.0,
+                        "discipline": 1.0
+                    }
+                }
+            }
+        },
+        "burlington": {
+            "info": {
+                        "full": "Burlington Lumberjacks",
+                        "city": "Burlington",
+                        "team": "Lumberjacks",
+                        "desc": "Sustainable Forecheckestry",
+                        "div": "bongo"
+            },
+            "players": {
+                        "LW": {
+                            "full": "Lucy Stoddart",
+                            "captain": 0,
+                            "stats": {
+                                "shooting": 0.7,
+                        "passing": 1.0,
+                        "handling": 0.7,
+                        "checking": 0.3,
+                        "positioning": 0.5,
+                        "blocking": 0.2,
+                        "speed": 0.9,
+                        "goalkeeping": 0.1,
+                        "discipline": 0.6
+                            }
+                        },
+                        "C": {
+                            "full": "Argo Voyager",
+                            "captain": 0,
+                            "stats": {
+                                "shooting": 0.7,
+                        "passing": 0.7,
+                        "handling": 1.0,
+                        "checking": 0.4,
+                        "positioning": 0.6,
+                        "blocking": 0.2,
+                        "speed": 0.7,
+                        "goalkeeping": 0.2,
+                        "discipline": 0.4
+                            }
+                        },
+                        "RW": {
+                            "full": "Fishy Lupino",
+                            "captain": 0,
+                            "stats": {
+                                "shooting": 0.4,
+                        "passing": 0.7,
+                        "handling": 0.5,
+                        "checking": 0.3,
+                        "positioning": 0.4,
+                        "blocking": 0.2,
+                        "speed": 0.8,
+                        "goalkeeping": 0.1,
+                        "discipline": 0.6
+                            }
+                        },
+                        "LD": {
+                            "full": "Vladimira Nishikawa",
+                            "captain": 1,
+                            "stats": {
+                                "shooting": 0.3,
+                        "passing": 0.5,
+                        "handling": 0.2,
+                        "checking": 0.6,
+                        "positioning": 0.5,
+                        "blocking": 0.6,
+                        "speed": 0.4,
+                        "goalkeeping": 0.3,
+                        "discipline": 0.6
+                            }
+                        },
+                        "RD": {
+                            "full": "Betsy Grunge",
+                            "captain": 0,
+                            "stats": {
+                                "shooting": 0.1,
+                        "passing": 0.2,
                         "handling": 0.2,
                         "checking": 0.3,
+                        "positioning": 0.2,
+                        "blocking": 0.3,
+                        "speed": 0.2,
+                        "goalkeeping": 0.2,
+                        "discipline": 0.4
+                            }
+                        },
+                        "G": {
+                            "full": "Amir Borowski",
+                            "captain": 0,
+                            "stats": {
+                                "shooting": 0.1,
+                        "passing": 0.3,
+                        "handling": 0.2,
+                        "checking": 0.4,
                         "positioning": 0.3,
                         "blocking": 0.7,
                         "speed": 0.3,
                         "goalkeeping": 0.8,
                         "discipline": 0.9
-                    }
-                }
-            }
-        },
-        "toronto": {
-            "info": {
-                        "full": "Toronto Brewskis",
-                        "city": "Toronto",
-                        "team": "Brewskis",
-                        "desc": "Canada's America!"
-            },
-            "players": {
-                        "LW": {
-                            "full": "Mackenzie Lemon",
-                            "captain": 1,
-                            "stats": {
-                                "shooting": 0.3,
-                                "passing": 0.6,
-                                "handling": 0.5,
-                                "checking": 0.3,
-                                "positioning": 0.4,
-                                "blocking": 0.2,
-                                "speed": 0.8,
-                                "goalkeeping": 0.1,
-                                "discipline": 0.6
-                            }
-                        },
-                        "C": {
-                            "full": "Hannah Hammer",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.4,
-                                "positioning": 0.3,
-                                "blocking": 0.2,
-                                "speed": 0.7,
-                                "goalkeeping": 0.2,
-                                "discipline": 0.4
-                            }
-                        },
-                        "RW": {
-                            "full": "Felix Grasshopper",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.3,
-                                "passing": 0.6,
-                                "handling": 0.5,
-                                "checking": 0.3,
-                                "positioning": 0.4,
-                                "blocking": 0.2,
-                                "speed": 0.8,
-                                "goalkeeping": 0.1,
-                                "discipline": 0.6
-                            }
-                        },
-                        "LD": {
-                            "full": "Bruce Oaks",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.3,
-                                "passing": 0.5,
-                                "handling": 0.3,
-                                "checking": 0.6,
-                                "positioning": 0.5,
-                                "blocking": 0.6,
-                                "speed": 0.4,
-                                "goalkeeping": 0.3,
-                                "discipline": 0.7
-                            }
-                        },
-                        "RD": {
-                            "full": "Allison Bucket",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.3,
-                                "passing": 0.5,
-                                "handling": 0.3,
-                                "checking": 0.6,
-                                "positioning": 0.5,
-                                "blocking": 0.6,
-                                "speed": 0.4,
-                                "goalkeeping": 0.3,
-                                "discipline": 0.7
-                            }
-                        },
-                        "G": {
-                            "full": "Kirby",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.1,
-                                "passing": 0.3,
-                                "handling": 0.2,
-                                "checking": 0.3,
-                                "positioning": 0.3,
-                                "blocking": 0.7,
-                                "speed": 0.3,
-                                "goalkeeping": 0.8,
-                                "discipline": 0.9
                             }
                         }
             }
