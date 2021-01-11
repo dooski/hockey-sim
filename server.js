@@ -14,7 +14,7 @@ if (process.env.NODE_ENV === "production") {
 
 //api routes
 
-setTimeout(gameplay.simSeason, 3000)
+setTimeout(gameplay.test, 3000)
 
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "./client/build/index.html"));

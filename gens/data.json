@@ -101,6 +101,107 @@
                 }
             }
         },
+        "hamilton": {
+            "info": {
+                        "full": "Hamilton Foxtrots",
+                        "city": "Hamilton",
+                        "team": "Foxtrots",
+                        "desc": "Foxy Grandpas!",
+                        "div": "bingo"
+            },
+            "players": {
+                        "LW": {
+                            "full": "Claude Roy",
+                            "captain": 1,
+                            "stats": {
+                                "shooting": 0.4,
+                        "passing": 0.7,
+                        "handling": 0.5,
+                        "checking": 0.3,
+                        "positioning": 0.4,
+                        "blocking": 0.2,
+                        "speed": 0.8,
+                        "goalkeeping": 0.1,
+                        "discipline": 0.6
+                            }
+                        },
+                        "C": {
+                            "full": "Preston Saul",
+                            "captain": 0,
+                            "stats": {
+                                "shooting": 0.7,
+                        "passing": 0.5,
+                        "handling": 0.5,
+                        "checking": 0.4,
+                        "positioning": 0.3,
+                        "blocking": 0.2,
+                        "speed": 0.7,
+                        "goalkeeping": 0.2,
+                        "discipline": 0.4
+                            }
+                        },
+                        "RW": {
+                            "full": "Jessica Highlander",
+                            "captain": 0,
+                            "stats": {
+                                "shooting": 0.4,
+                        "passing": 0.7,
+                        "handling": 0.5,
+                        "checking": 0.3,
+                        "positioning": 0.4,
+                        "blocking": 0.2,
+                        "speed": 0.8,
+                        "goalkeeping": 0.1,
+                        "discipline": 0.6
+                            }
+                        },
+                        "LD": {
+                            "full": "Brandy Maple",
+                            "captain": 0,
+                            "stats": {
+                                "shooting": 0.3,
+                        "passing": 0.5,
+                        "handling": 0.2,
+                        "checking": 0.6,
+                        "positioning": 0.5,
+                        "blocking": 0.6,
+                        "speed": 0.4,
+                        "goalkeeping": 0.3,
+                        "discipline": 0.6
+                            }
+                        },
+                        "RD": {
+                            "full": "Lucky Jupiter",
+                            "captain": 0,
+                            "stats": {
+                                "shooting": 0.3,
+                        "passing": 0.5,
+                        "handling": 0.2,
+                        "checking": 0.6,
+                        "positioning": 0.5,
+                        "blocking": 0.6,
+                        "speed": 0.4,
+                        "goalkeeping": 0.3,
+                        "discipline": 0.6
+                            }
+                        },
+                        "G": {
+                            "full": "Mats Sharqvist",
+                            "captain": 0,
+                            "stats": {
+                                "shooting": 0.1,
+                        "passing": 0.3,
+                        "handling": 0.2,
+                        "checking": 0.4,
+                        "positioning": 0.3,
+                        "blocking": 0.7,
+                        "speed": 0.3,
+                        "goalkeeping": 0.8,
+                        "discipline": 0.9
+                            }
+                        }
+            }
+        },
         "rochester": {
             "info": {
                         "full": "Rochester Bones",

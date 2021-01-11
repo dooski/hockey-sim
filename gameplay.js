@@ -7,6 +7,11 @@ function test(){
         sim.game(teams)
 }
 
+function odds(){
+    let teams = [data.teams.rochester, data.teams.buffalo]
+    let result = sim.odds(teams)
+}
+
 function simSeason(){
     let bingoDiv = [data.teams.buffalo, data.teams.rochester, data.teams.toronto, data.teams.montreal]
     let bongoDiv = [data.teams.newYork, data.teams.philly, data.teams.burlington, data.teams.hartford]
@@ -14,5 +19,6 @@ function simSeason(){
 }
 module.exports = {
     test,
-    simSeason
+    simSeason,
+    odds
 }

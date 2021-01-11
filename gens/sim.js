@@ -1,4 +1,4 @@
-let data = require("./data.json")
+const playmaker = require("./playmaker.js")
 
 function zp(z) {
     return Math.floor(Math.random() * z)
@@ -19,30 +19,44 @@ function game(teams) {
     let t1Score = 0
     let t2 = teams[1]
     let t2Score = 0
+    let lineup = {
+            LW0: t1.players.LW,
+            CE0: t1.players.C,
+            RW0: t1.players.RW,
+            LD0: t1.players.LD,
+            RD0: t1.players.RD,
+            GK0: t1.players.GK,
+            LW1: t2.players.LW,
+            CE1: t2.players.C,
+            RW1: t2.players.RW,
+            LD1: t2.players.LD,
+            RD1: t2.players.RD,
+            GK1: t2.players.GK
+        }
     let stage = 0
-    let possession = 0
-    for (i = 0; i < 90; i++) {
+    let possession = null
+    let carrier = "CE0"
+    let involved = ["LW0", "RW0", "CE1", "LW1", "RW1"]
+        for (i = 0; i < 90; i++) {
         let length = (i*5000)
         if (i == 0) {
             setTimeout(beginning, length)
         }
         else if (i == 29) {
             setTimeout(endOfFirst, length)
-            possession = 0
-            stage = 0
         } else if (i === 59) {
             setTimeout(endOfSecond, length)
-            possession = 0
-            stage = 0
         } else if (i == 89) {
             setTimeout(finalScore, length)
         } else
-        setTimeout(play, length)
+        setTimeout(onePlay, length)
     }
-    function play()         
-{ console.log(`
-${t1.info.full} ${t1Score} - ${t2Score} ${t2.info.full}
-`)
+    function onePlay(){
+    console.log(`${t1.info.full} ${t1Score} - ${t2Score} ${t2.info.full}`)
+    let involvedList = listMaker(involved, carrier)
+    let play = `000${stage}${involvedList}`
+    playmaker.playmaker(play, lineup)
+    console.log(play)
     if (stage == 0) {
         puckdrop()
     } else if
@@ -291,7 +305,6 @@ function fastGame(teams) {
     let possession = 0
     for (i = 0; i < 90; i++) {
         if (i == 89) {
-            console.log(`${t1.info.full} ${t1Score} - ${t2Score} ${t2.info.full}`)
             if (t1Score > t2Score) {return "home"} 
             else if (t2Score > t1Score) {return "away"} 
             else if (t1Score == t2Score ) {
@@ -515,34 +528,64 @@ function season(bingo, bongo){
         "wins": 0,
         "losses": 0}
     let homeWins = 0
-    setTimeout(day1, 1000)
-    setTimeout(day2, 1500)
-    setTimeout(day3, 2500)
-    setTimeout(day4, 3000)
-    setTimeout(day5, 3500)
-    setTimeout(day6, 4000)
-    setTimeout(day7, 4500)
-    setTimeout(day8, 5000)
-    setTimeout(day9, 5500)
-    setTimeout(day10, 6000)
-    setTimeout(day11, 6500)
-    setTimeout(day12, 7000)
-    setTimeout(day13, 7500)
-    setTimeout(day14, 8000)
-    setTimeout(day1, 8500)
-    setTimeout(day2, 9000)
-    setTimeout(day3, 9500)
-    setTimeout(day4, 10000)
-    setTimeout(day5, 10500)
-    setTimeout(day6, 11000)
-    setTimeout(day7, 11500)
-    setTimeout(day8, 12000)
-    setTimeout(day9, 12500)
-    setTimeout(day10, 13000)
-    setTimeout(day11, 13500)
-    setTimeout(day12, 14000)
-    setTimeout(day13, 14500)
-    setTimeout(day14, 15000)
+    setTimeout(day1, 100)
+    setTimeout(day2, 200)
+    setTimeout(day3, 300)
+    setTimeout(day4, 400)
+    setTimeout(day5, 500)
+    setTimeout(day6, 600)
+    setTimeout(day7, 700)
+    setTimeout(day8, 800)
+    setTimeout(day9, 900)
+    setTimeout(day10, 1000)
+    setTimeout(day11, 1100)
+    setTimeout(day12, 1200)
+    setTimeout(day13, 1300)
+    setTimeout(day14, 1400)
+    setTimeout(day1, 1500)
+    setTimeout(day2, 1600)
+    setTimeout(day3, 1700)
+    setTimeout(day4, 1800)
+    setTimeout(day5, 2000)
+    setTimeout(day6, 2100)
+    setTimeout(day7, 2200)
+    setTimeout(day8, 2300)
+    setTimeout(day9, 2400)
+    setTimeout(day10, 2500)
+    setTimeout(day11, 2600)
+    setTimeout(day12, 2700)
+    setTimeout(day13, 2800)
+    setTimeout(day14, 2900)
+    setTimeout(day1, 3000)
+    setTimeout(day2, 3100)
+    setTimeout(day3, 3200)
+    setTimeout(day4, 3300)
+    setTimeout(day5, 3400)
+    setTimeout(day6, 3500)
+    setTimeout(day7, 3600)
+    setTimeout(day8, 3700)
+    setTimeout(day9, 3800)
+    setTimeout(day10, 3900)
+    setTimeout(day11, 4000)
+    setTimeout(day12, 4100)
+    setTimeout(day13, 4200)
+    setTimeout(day14, 4300)
+    setTimeout(day1, 4400)
+    setTimeout(day2, 4500)
+    setTimeout(day3, 4600)
+    setTimeout(day4, 47000)
+    setTimeout(day5, 48500)
+    setTimeout(day6, 49000)
+    setTimeout(day7, 5000)
+    setTimeout(day8, 5100)
+    setTimeout(day9, 5200)
+    setTimeout(day10, 5300)
+    setTimeout(day11, 5400)
+    setTimeout(day12, 5500)
+    setTimeout(day13, 5600)
+    setTimeout(day14, 5700)
+    setTimeout(stats, 5800)
+    
     function stats(){
         console.log(`
 
@@ -716,13 +759,36 @@ function season(bingo, bongo){
         if (winner2 === "away") {t2.wins = t2.wins + 1, t3.losses = t3.losses + 1} else if (winner2 === "home") {t3.wins = t4.wins + 1, t2.losses = t2.losses + 1; homeWins = homeWins + 1}
         if (winner3 === "away") {t5.wins = t5.wins + 1, t8.losses = t8.losses + 1} else if (winner3 === "home") {t8.wins = t8.wins + 1, t5.losses = t5.losses + 1; homeWins = homeWins + 1}
         if (winner4 === "away") {t6.wins = t6.wins + 1, t7.losses = t7.losses + 1} else if (winner4 === "home") {t7.wins = t7.wins + 1, t6.losses = t6.losses + 1; homeWins = homeWins + 1}
-        stats()
         }
     
     
 }
 
+function odds(teams){
+    let t1W = 0
+    let t2W = 0
+    let results = null
+    for (x = 0; x < 101; x++){
+        if (x === 100) {
+            results = `${teams[0].info.full}: ${t1W}%. ${teams[1].info.full}: ${t2W}%.`
+            console.log(results)
+            return
+        } else
+        winner = fastGame(teams)
+    if (winner === "home"){
+        t1W = t1W + 1
+    } else t2W = t2W + 1    }
+}
+
+function listMaker(involved, carrier){
+    let list = `${carrier}`
+    for (let players in involved) {
+        list += involved[players]
+    }
+    return list
+}
 module.exports = {
     game,
-    season
+    season,
+    odds
 }

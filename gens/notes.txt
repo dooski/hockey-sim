@@ -27,3 +27,43 @@ GK average: 4.0
     off: 0.6
     def: 1.4
     phy: 2.0
+
+
+    SITUATION CODE:
+    whereOnIce+playersInvolved
+
+    whereOnIce:
+    00: faceoff
+    01: home end
+    02: home third
+    03: center ice 
+    04: away third
+    05: away end
+
+    playersInvolved:
+        code for players by position:
+            LW: left wing
+            CE: center
+            RW: right wing
+            LD: left defender
+            RD: right defender
+            GK: goalie
+        team  
+            h: home
+            a: away
+        do they have puck?
+            0: no
+            1: yes
+
+    for example, a breakaway for the hometeam down the left side could look like:
+
+    0004LWhCEhLDaGKa
+    ^   ^  ^  ^
+    ^   ^  ^  defender and goalie
+    ^   ^  other attacker
+    ^   player with the puck
+    location is the away teams third as the player approaches the net
+
+
+
+
