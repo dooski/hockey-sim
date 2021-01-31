@@ -240,7 +240,7 @@ function third(side) {
         }
         else {
             let target = targetPicker(defLine2)
-            message = `${target.full} gets the puck back for ${t1.info.city}.`
+            message = `${target.full} gets the puck back for ${t2.info.city}.`
             possession = 2
             carrier = target
         }
