@@ -148,7 +148,7 @@ function center() {
         }
         else {
             let target = targetPicker(offLine2)
-            message = `${target.full} gets it for ${t1.info.city}.`
+            message = `${target.full} gets it for ${t2.info.city}.`
             possession = 2
             carrier = target
         }
