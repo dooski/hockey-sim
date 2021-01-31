@@ -148,7 +148,7 @@ function center() {
         }
         else {
             let target = targetPicker(offLine2)
-            message = `${target.full} gets it for ${t2.info.city}.`
+            message = `${t2.info.city} has the puck.`
             possession = 2
             carrier = target
         }
@@ -165,7 +165,7 @@ function center() {
         }
         else {
             let target = targetPicker(offLine1)
-            message = `${target.full} gets it for ${t1.info.city}.`
+            message = `${t1.info.city} has the puck.`
             possession = 1
             carrier = target
         }
@@ -203,7 +203,7 @@ function third(side) {
         }
         else {
             let target = targetPicker(offLine1)
-            message = `${carrier.full} loses the puck!`
+            message = `${target.full} gets the puck back for ${t1.info.city}.`
             possession = 1
             carrier = target
         }
@@ -240,7 +240,7 @@ function third(side) {
         }
         else {
             let target = targetPicker(defLine2)
-            message = `${carrier.full} loses the puck!`
+            message = `${target.full} gets the puck back for ${t1.info.city}.`
             possession = 2
             carrier = target
         }
@@ -280,6 +280,7 @@ function crash(side) {
             let target = targetPicker(offLine1)
             message = `${target.full} gets the puck back for ${t1.info.city}.`
             possession = 1
+            stage = 4
             carrier = target
         }
     }
@@ -318,6 +319,7 @@ function crash(side) {
                 let target = targetPicker(offLine2)
                 message = `${target.full} gets the puck back for ${t2.info.city}.`
                 possession = 2
+                stage = 2
                 carrier = target
             }
         }

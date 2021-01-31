@@ -560,7 +560,7 @@
                             }
                         },
                         "LD": {
-                            "full": "Bruce Oaks",
+                            "full": "Tom Hirton",
                             "captain": 0,
                             "stats": {
                                 "shooting": 0.3,
@@ -833,7 +833,7 @@
                             }
                         },
                         "C": {
-                            "full": "Simon Crimock",
+                            "full": "Clam Adams",
                             "captain": 0,
                             "stats": {
                                 "shooting": 0.7,
@@ -863,7 +863,7 @@
                             }
                         },
                         "LD": {
-                            "full": "Clam Adams",
+                            "full": "Simon Crimock",
                             "captain": 0,
                             "stats": {
                                 "shooting": 0.3,
@@ -1020,7 +1020,7 @@
             },
             "players": {
                         "LW": {
-                            "full": "Gregory Wawa",
+                            "full": "Snack Falcon",
                             "captain": 1,
                             "stats": {
                                 "shooting": 0.4,
@@ -1095,7 +1095,7 @@
                             }
                         },
                         "G": {
-                            "full": "Carla Sketch",
+                            "full": "Bruce Oaks",
                             "captain": 0,
                             "stats": {
                                 "shooting": 0.1,
