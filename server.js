@@ -1,7 +1,8 @@
 const express = require("express");
-const gameplay = require("./gameplay.js")
+const control = require("./control.js")
+const routes = require("./routes/index")
 const path = require("path");
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 4000;
 const app = express()
 
 //middlewhere? middleware!
@@ -14,11 +15,9 @@ if (process.env.NODE_ENV === "production") {
 
 //api routes
 
-setTimeout(gameplay.test, 3000)
+setTimeout(control.test, 3000)
 
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+app.use(routes)
 
 app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}!`)
