@@ -4,12 +4,12 @@ const fs = require("fs")
 
 
 function test(){ 
-    let teams1 = [data.teams.pittsburgh, data.teams.rochester]
-    let teams2 = [data.teams.toronto, data.teams.montreal]
-    let teams3 = [data.teams.boston, data.teams.philly]
-    let teams4 = [data.teams.buffalo, data.teams.newYork]
-    let teams5 = [data.teams.hamilton, data.teams.hartford]
-    let teams6 = [data.teams.burlington, data.teams.ottawa]
+    let teams1 = [data.teams.boston, data.teams.rochester]
+    let teams2 = [data.teams.hamilton, data.teams.montreal]
+    let teams3 = [data.teams.pittsburgh, data.teams.philly]
+    let teams4 = [data.teams.ottawa, data.teams.newYork]
+    let teams5 = [data.teams.toronto, data.teams.hartford]
+    let teams6 = [data.teams.buffalo, data.teams.ottawa]
     function g1(){sim.game(teams1, 4800)}
     function g2(){sim.game(teams2, 4800)}
     function g3(){sim.game(teams3, 4800)}
@@ -24,7 +24,7 @@ function test(){
     setTimeout(g6, 4500600)
 }
 
-setInterval(test, 5500700)
+setInterval(test, 5501000)
 
 async function packageReturn(req, res) {
     fs.readFile('./gens/currentGame.json', 'utf8', (err, data) => 
