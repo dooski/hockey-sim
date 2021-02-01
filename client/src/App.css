@@ -141,6 +141,10 @@ br.nav-br {
   padding-bottom: 4px;
 }
 
+.division-table-team:hover {
+  transform: scale(1.1)
+}
+
 .bingo {
   background-color: rgb(0, 0, 73)
 }
@@ -207,6 +211,21 @@ span {
   margin: 0px
 }
 
+button {
+  background-color: rgb(34, 34, 34);
+  border: 1px solid black;
+  color: white;
+  border-radius: 25px;
+  font-size: 26px;
+  padding-left: 10px;
+  padding-right: 10px
+}
+
+button:hover {
+  transform: scale(1.1)
+}
+
+
 @media only screen and (max-width: 1030px) {
   .game-box {
     margin-left: 10%;
@@ -262,6 +281,6 @@ span {
     margin-top: 0px;
   }
   .nav-button {
-    font-size: 12px
+    font-size: 16px
   }
 }

@@ -94,7 +94,7 @@ function closeModal(){
             <p class="modal-card-title team-modal team-modal-title">
             <Symbol abrv={currentTeam.info.abrv}/> {currentTeam.info.full}
                 <br/><p class="team-modal-subtitle">{currentTeam.info.desc}</p></p>
-            <button class="delete" aria-label="close" onClick={closeModal}></button>      
+            <button aria-label="close" onClick={closeModal}>X</button>      
             </header>
         <section class="modal-card-body">
         <p className="position-title">Forwards</p>
