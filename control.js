@@ -15,9 +15,10 @@ function test(){
 function pickTeams(league){
     let z1 = rng(league.length)
     let team1 = league[z1]
+    league.splice(z1, 1)
     let z2 = rng(league.length)
     let team2 = league[z2]
-    if (team1 == team2) {pickTeams(league)} else return [team1, team2]
+    return [team1, team2]
 }
 
 setInterval(test, 1085000)

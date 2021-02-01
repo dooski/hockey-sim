@@ -8,15 +8,14 @@ let goal1 = "_"
     return (
         <div className="game-box">
             <div className="columns">
-                <div className="column game-box-card is-7">
+                <div className="column game-box-card center is-7">
                 <p className="game-box-team-name">
-                    <div className="columns is-mobile">
+                    <div className="columns is-mobile game-box-team-name-a">
                     <div className="column is-2">{props.sym1} </div>
                     <div className="column is-8">{props.t1}: </div>
                     <div className="column is-2">{props.t1S} </div>
                     </div>
-                    </p>  
-                    <br/>          
+                    </p>            
                     <p className="game-box-team-name">
                     <div className="columns is-mobile">
                     <div className="column is-2">{props.sym2} </div>
@@ -25,14 +24,13 @@ let goal1 = "_"
                     </div>
                     </p> 
                     </div>
-                <br/>
                     
                 
 
-                <div className="column is-half-tablet is-5" size={5}>
+                <div className="column is-half-tablet is-5 game-box-info" size={5}>
                     <p className="minor-text"><b>PERIOD {props.per}</b></p>
                     <mark className="clock"> {props.time} </mark>
-                    <hr/>
+                    <hr className="game-box-line"/>
                     <p className="minor-text">Possession: {props.pos}</p>
                     <br/>
                 <div className="columns is-mobile">
@@ -49,7 +47,6 @@ let goal1 = "_"
                 
                 </div>
             </div>
-<br/>
             <div className="game-box-message game-box-card"><h3>{props.mes}</h3></div>
             
         </div>

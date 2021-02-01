@@ -114,7 +114,10 @@ function closeModal(){
             <div className="columns league-table-wrapper">
                 <div className="column is-5 division-table bingo left">
                     <p className="division-table-title center">BINGO DIVISON</p>
-                    <p className="division-table-team bingo a" onClick={openBUF}><Symbol abrv={"BUF"}/> {data.teams.buffalo.info.full}</p>
+                    <div className="columns division-table-team bingo a is-mobile">
+                        <div className="column div-table is-9"><p onClick={openBUF}><Symbol abrv={"BUF"}/> {data.teams.buffalo.info.full}</p></div>
+                        <div className="column div-table is-3"><p className="right"></p></div>
+                    </div>
                     <p className="division-table-team bingo b" onClick={openROC}><Symbol abrv={"ROC"}/> {data.teams.rochester.info.full}</p>
                     <p className="division-table-team bingo a" onClick={openBOS}><Symbol abrv={"BOS"}/> {data.teams.boston.info.full}</p>
                     <p className="division-table-team bingo b" onClick={openOTT}><Symbol abrv={"OTT"}/> {data.teams.ottawa.info.full}</p>
