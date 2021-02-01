@@ -15,6 +15,7 @@ function Symbol(props){
     else if (team == "CHI") {return (<Twemoji text=":mushroom:"/>)}
     else if (team == "PIT") {return (<Twemoji text=":dog:"/>)}
     else if (team == "BUR") {return (<Twemoji text=":evergreen_tree:"/>)}
+    else if (team == "MSC") {return (<Twemoji text=":heavy_minus_sign:"/>)}
 }
 
 export default Symbol

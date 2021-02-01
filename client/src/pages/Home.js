@@ -40,11 +40,11 @@ function Home() {
     const [per, setPer] = useState(1)
     const [pos, setPos] = useState("Nobody")
     const [mes, setMes] = useState("Hello!")
-    const [goal1, setGoal1] = useState("_")
-    const [side1, setSide1] = useState("_")
-    const [center, setCenter] = useState("_")
-    const [side2, setSide2] = useState("_")
-    const [goal2, setGoal2] = useState("_")
+    const [goal1, setGoal1] = useState(<Symbol abrv="MSC"/>)
+    const [side1, setSide1] = useState(<Symbol abrv="MSC"/>)
+    const [center, setCenter] = useState(<Symbol abrv="MSC"/>)
+    const [side2, setSide2] = useState(<Symbol abrv="MSC"/>)
+    const [goal2, setGoal2] = useState(<Symbol abrv="MSC"/>)
 
     function UpdateGame() {
          API.checkGame()
@@ -97,11 +97,11 @@ function Home() {
     }
 
     function resetMap(){
-        setGoal1(" _ ")
-        setSide1(" _ ")
-        setCenter(" _ ")
-        setSide2(" _ ")
-        setGoal2(" _ ")
+        setGoal1(<Symbol abrv="MSC"/>)
+        setSide1(<Symbol abrv="MSC"/>)
+        setCenter(<Symbol abrv="MSC"/>)
+        setSide2(<Symbol abrv="MSC"/>)
+        setGoal2(<Symbol abrv="MSC"/>)
     }
 
     function symbolPicker(team){
