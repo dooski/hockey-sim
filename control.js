@@ -7,7 +7,7 @@ function rng(z) {
 }
 
 function test(){ 
-    const league = [data.teams.buffalo, data.teams.boston, data.teams.rochester, data.teams.ottawa, data.teams.toronto, data.teams.montreal, data.teams.newYork, data.teams.philly, data.teams.pittsburgh, data.teams.vancouver, data.teams.chicago, data.teams.burlington]
+    const league = [data.teams.buffalo, data.teams.rochester, data.teams.ottawa, data.teams.newYork, data.teams.philly, data.teams.pittsburgh, data.teams.chicago, data.teams.westVirginia, data.teams.newOrleans, data.teams.santaFe, data.teams.valhalla, data.teams.LA]
     let teams = pickTeams(league)
     sim.game(teams, 6000) 
 }

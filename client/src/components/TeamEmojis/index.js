@@ -12,9 +12,15 @@ function Symbol(props){
     else if (team == "NYR") {return (<Twemoji text=":rat:"/>)}
     else if (team == "PHL") {return (<Twemoji text=":pineapple:"/>)}
     else if (team == "BOS") {return (<Twemoji text=":bowl_with_spoon:"/>)}
-    else if (team == "CHI") {return (<Twemoji text=":mushroom:"/>)}
+    else if (team == "POR") {return (<Twemoji text=":mushroom:"/>)}
     else if (team == "PIT") {return (<Twemoji text=":dog:"/>)}
     else if (team == "BUR") {return (<Twemoji text=":evergreen_tree:"/>)}
+    else if (team == "CHI") {return (<Twemoji text=":party_popper:"/>)}
+    else if (team == "WVM") {return (<Twemoji text=":nazar_amulet:"/>)}
+    else if (team == "NOR") {return (<Twemoji text=":crescent_moon:"/>)}
+    else if (team == "SFB") {return (<Twemoji text=":horse:"/>)}
+    else if (team == "VAL") {return (<Twemoji text=":comet:"/>)}
+    else if (team == "LAK") {return (<Twemoji text=":skateboard:"/>)}
     else if (team == "MSC") {return (<Twemoji text=":heavy_minus_sign:"/>)}
 }
 

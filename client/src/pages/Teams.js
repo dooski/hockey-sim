@@ -70,6 +70,36 @@ function openBUR() {
     openModal()
 }
 
+function openPOR() {
+    setCurrentTeam(data.teams.portland)
+    openModal()
+}
+
+function openWVM() {
+    setCurrentTeam(data.teams.westVirginia)
+    openModal()
+}
+
+function openNOR() {
+    setCurrentTeam(data.teams.newOrleans)
+    openModal()
+}
+
+function openSFB() {
+    setCurrentTeam(data.teams.santaFe)
+    openModal()
+}
+
+function openVAL() {
+    setCurrentTeam(data.teams.valhalla)
+    openModal()
+}
+
+function openLAK() {
+    setCurrentTeam(data.teams.LA)
+    openModal()
+}
+
 
 function openModal() {
   setIsOpen(true);
@@ -114,15 +144,16 @@ function closeModal(){
             <div className="columns league-table-wrapper">
                 <div className="column is-5 division-table bingo left">
                     <p className="division-table-title center">BINGO DIVISON</p>
-                    <div className="columns division-table-team bingo a is-mobile">
-                        <div className="column div-table is-9"><p onClick={openBUF}><Symbol abrv={"BUF"}/> {data.teams.buffalo.info.full}</p></div>
-                        <div className="column div-table is-3"><p className="right"></p></div>
-                    </div>
+                    <p className="division-table-team bingo a" onClick={openBUF}><Symbol abrv={"BUF"}/> {data.teams.buffalo.info.full}</p>
                     <p className="division-table-team bingo b" onClick={openROC}><Symbol abrv={"ROC"}/> {data.teams.rochester.info.full}</p>
                     <p className="division-table-team bingo a" onClick={openBOS}><Symbol abrv={"BOS"}/> {data.teams.boston.info.full}</p>
                     <p className="division-table-team bingo b" onClick={openOTT}><Symbol abrv={"OTT"}/> {data.teams.ottawa.info.full}</p>
                     <p className="division-table-team bingo a" onClick={openMON}><Symbol abrv={"MON"}/> {data.teams.montreal.info.full}</p>
                     <p className="division-table-team bingo b" onClick={openTOR}><Symbol abrv={"TOR"}/> {data.teams.toronto.info.full}</p>
+                    <p className="division-table-team bingo a" onClick={openPOR}><Symbol abrv={"POR"}/> {data.teams.portland.info.full}</p>
+                    <p className="division-table-team bingo b" onClick={openWVM}><Symbol abrv={"WVM"}/> {data.teams.westVirginia.info.full}</p>
+                    <p className="division-table-team bingo a" onClick={openNOR}><Symbol abrv={"NOR"}/> {data.teams.newOrleans.info.full}</p>
+
                 </div>
                 <div className="column is-2 buffer"><p> -</p></div>
                 <div className="column is-5 division-table bongo left">
@@ -133,6 +164,9 @@ function closeModal(){
                     <p className="division-table-team bongo b" onClick={openCHI}><Symbol abrv={"CHI"}/> {data.teams.chicago.info.full}</p>
                     <p className="division-table-team bongo a" onClick={openPIT}><Symbol abrv={"PIT"}/> {data.teams.pittsburgh.info.full}</p>
                     <p className="division-table-team bongo b" onClick={openBUR}><Symbol abrv={"BUR"}/> {data.teams.burlington.info.full}</p>
+                    <p className="division-table-team bongo a" onClick={openSFB}><Symbol abrv={"SFB"}/> {data.teams.santaFe.info.full}</p>
+                    <p className="division-table-team bongo b" onClick={openVAL}><Symbol abrv={"VAL"}/> {data.teams.valhalla.info.full}</p>
+                    <p className="division-table-team bongo a" onClick={openLAK}><Symbol abrv={"LAK"}/> {data.teams.LA.info.full}</p>
                 </div>
             </div>
         </div>
