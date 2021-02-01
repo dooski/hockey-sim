@@ -4,12 +4,12 @@ const fs = require("fs")
 
 
 function test(){ 
-    let teams1 = [data.teams.boston, data.teams.rochester]
-    let teams2 = [data.teams.hamilton, data.teams.montreal]
+    let teams1 = [data.teams.chicago, data.teams.ottawa]
+    let teams2 = [data.teams.vancouver, data.teams.boston]
     let teams3 = [data.teams.pittsburgh, data.teams.philly]
-    let teams4 = [data.teams.ottawa, data.teams.newYork]
-    let teams5 = [data.teams.toronto, data.teams.hartford]
-    let teams6 = [data.teams.buffalo, data.teams.ottawa]
+    let teams4 = [data.teams.montreal, data.teams.newYork]
+    let teams5 = [data.teams.toronto, data.teams.burlington]
+    let teams6 = [data.teams.buffalo, data.teams.rochester]
     function g1(){sim.game(teams1, 4800)}
     function g2(){sim.game(teams2, 4800)}
     function g3(){sim.game(teams3, 4800)}

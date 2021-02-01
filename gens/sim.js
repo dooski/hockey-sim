@@ -53,7 +53,7 @@ function game(teams, timing) {
             finalScore()
         } else {
         onePlay()
-        console.log(message)}
+        }
         packager() 
         await timer(timing)
     }}
@@ -341,6 +341,8 @@ function packager () {
         t2C: teams[1].info.city,
         t1S: t1Score,
         t2S: t2Score,
+        ab1: teams[0].info.abrv,
+        ab2: teams[1].info.abrv,
         per: period,
         st: stage,
         pos: possession,
@@ -350,7 +352,6 @@ function packager () {
     var json = JSON.stringify(package)
     fs.writeFile('./gens/currentGame.json', json, 'utf8', function(err) {
         if (err) throw err;
-        console.log(json)
     });
 }
 }

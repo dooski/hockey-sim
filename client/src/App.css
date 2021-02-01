@@ -2,32 +2,112 @@
   text-align: center;
   background-color:black;
   min-height: 100vh;
-  color: white
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.center {
+  text-align:center;
+}
+
+.right {
+  text-align:right;
+}
+
+.left {
+  text-align:left
+}
+
+.just {
+  text-align: justify
+}
+
+.minor-text {
+  font-size: 20px;
+  font-weight: 100
+}
+
+.game-box-container {
+  min-height: 30vh;
+  max-height: 50vh;
+  padding: 5vh;
+  line-height: 1.2;
 }
 
 .game-box {
-  color: white
+  text-align: center;
+  margin-left: 20%;
+  margin-right: 20%;
 }
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.game-box-card {
+  background-color: rgb(2, 27, 27);
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-content: center;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.game-box-team-name {
+  font-size: 36px;
+  font-weight: 700;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.game-box-rink {
+  font-size: 30px;
+  white-space: nowrap;
+}
+
+.game-box-message {
+  font-size: 25px;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: 10px;
+  height: 150px;
+  background-color:rgb(2, 27, 27);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+p {
+  margin: 0px
+}
+
+span {
+  margin: 0px
+}
+@media only screen and (max-width: 900px) {
+  .App {
+    justify-content:start;
+    padding-top: 5%
   }
-  to {
-    transform: rotate(360deg);
+}
+@media only screen and (max-width: 600px){
+  .game-box-rink{
+    font-size: 20px
+  }
+  .game-box-message{
+    font-size: 18px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .game-box-team-name {
+    font-size: 20px;
+    font-weight: 500
+  }
+  .game-box {
+    margin-left: 5%;
+    margin-right: 5%
+  }
+  .minor-text {
+    font-size: 16px
   }
 }
