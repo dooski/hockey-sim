@@ -29,11 +29,12 @@ let goal1 = "_"
                     
                 
 
-                <div className="column game-box-rink is-half-tablet is-5" size={5}>
+                <div className="column is-half-tablet is-5" size={5}>
                     <p className="minor-text"><b>PERIOD {props.per}</b></p>
+                    <mark className="clock"> {props.time} </mark>
+                    <hr/>
                     <p className="minor-text">Possession: {props.pos}</p>
-                <hr/>
-
+                    <br/>
                 <div className="columns is-mobile">
                     <div className="column" size={2}>
                     <p className="minor-text right"> <b>{props.ab1}</b> </p>

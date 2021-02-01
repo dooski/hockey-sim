@@ -5,7 +5,7 @@
                 "full": "Buffalo Starlights",
                 "city": "Buffalo",
                 "team": "Starlights",
-                "desc": "America's Canada!",
+                "desc": "Shinin' Just For You",
                 "div": "Bingo",
                 "abrv": "BUF"
             },
@@ -27,7 +27,7 @@
                 },
                 "C": {
                     "full": "Sven Hickory",
-                    "captain": 1,
+                    "captain": 0,
                     "stats": {
                         "shooting": 0.9,
                         "passing": 0.8,
@@ -57,7 +57,7 @@
                 },
                 "LD": {
                     "full": "Hutch Chiarella",
-                    "captain": 0,
+                    "captain": 1,
                     "stats": {
                         "shooting": 0.3,
                         "passing": 0.5,
@@ -102,19 +102,19 @@
                 }
             }
         },
-        "vancouver": {
+        "boston": {
             "info": {
-                        "full": "Vancouver Foxtrots",
-                        "city": "Vancouver",
-                        "team": "Foxtrots",
-                        "desc": "Magically Pacific!",
-                        "div": "Bingo",
-                        "abrv": "VAN"
+                        "full": "Boston Chowdahs",
+                        "city": "Boston",
+                        "team": "Chowdahs",
+                        "desc": "Like We Say In Boston, Let's Go Boston",
+                        "div": "Bongo",
+                        "abrv": "BOS"
             },
             "players": {
                         "LW": {
-                            "full": "Claude Roy",
-                            "captain": 1,
+                            "full": "Mimi Chip",
+                            "captain": 0,
                             "stats": {
                                 "shooting": 0.4,
                         "passing": 0.7,
@@ -128,8 +128,8 @@
                             }
                         },
                         "C": {
-                            "full": "Tony Puck",
-                            "captain": 0,
+                            "full": "Clam Adams",
+                            "captain": 1,
                             "stats": {
                                 "shooting": 0.7,
                         "passing": 0.5,
@@ -143,7 +143,7 @@
                             }
                         },
                         "RW": {
-                            "full": "Jessica Highlander",
+                            "full": "Bean Bradley",
                             "captain": 0,
                             "stats": {
                                 "shooting": 0.4,
@@ -158,7 +158,7 @@
                             }
                         },
                         "LD": {
-                            "full": "Brandy Maple",
+                            "full": "Simon Crimock",
                             "captain": 0,
                             "stats": {
                                 "shooting": 0.3,
@@ -173,7 +173,7 @@
                             }
                         },
                         "RD": {
-                            "full": "Lucky Jupiter",
+                            "full": "Olli Zelda",
                             "captain": 0,
                             "stats": {
                                 "shooting": 0.3,
@@ -188,7 +188,7 @@
                             }
                         },
                         "G": {
-                            "full": "Mats Sharqvist",
+                            "full": "RJ Spider",
                             "captain": 0,
                             "stats": {
                                 "shooting": 0.1,
@@ -203,7 +203,7 @@
                             }
                         }
             }
-        },
+        },      
         "rochester": {
             "info": {
                         "full": "Rochester Bones",
@@ -230,7 +230,7 @@
                             }
                         },
                         "C": {
-                            "full": "Frankie Dake",
+                            "full": "Poppy Dake",
                             "captain": 0,
                             "stats": {
                                 "shooting": 0.7,
@@ -245,7 +245,7 @@
                             }
                         },
                         "RW": {
-                            "full": "Tom Hotdog",
+                            "full": "Hella Froio",
                             "captain": 0,
                             "stats": {
                                 "shooting": 0.4,
@@ -275,7 +275,7 @@
                             }
                         },
                         "RD": {
-                            "full": "Flannel Roger",
+                            "full": "Petrov Garbo",
                             "captain": 0,
                             "stats": {
                                 "shooting": 0.3,
@@ -318,7 +318,7 @@
             "players": {
                         "LW": {
                             "full": "Amelia Zamboni",
-                            "captain": 1,
+                            "captain": 0,
                             "stats": {
                                 "shooting": 0.4,
                         "passing": 0.7,
@@ -378,7 +378,7 @@
                         },
                         "RD": {
                             "full": "Sparky Medina",
-                            "captain": 0,
+                            "captain": 1,
                             "stats": {
                                 "shooting": 0.3,
                         "passing": 0.5,
@@ -435,7 +435,7 @@
                 },
                 "C": {
                     "full": "Pierre Pizzazz",
-                    "captain": 1,
+                    "captain": 0,
                     "stats": {
                         "shooting": 0.7,
                         "passing": 0.4,
@@ -450,7 +450,7 @@
                 },
                 "RW": {
                     "full": "Celine Twig",
-                    "captain": 0,
+                    "captain": 1,
                     "stats": {
                         "shooting": 0.3,
                         "passing": 0.4,
@@ -566,7 +566,7 @@
                             }
                         },
                         "LD": {
-                            "full": "Tom Hirton",
+                            "full": "Tom Hirtin",
                             "captain": 0,
                             "stats": {
                                 "shooting": 0.3,
@@ -617,7 +617,7 @@
                 "full": "New York Rats",
                 "city": "New York",
                 "team": "Rats",
-                "desc": "No One Loves Us, Everyone Hates Us",
+                "desc": "From the Bodega to the Blueline",
                 "div": "Bongo",
                 "abrv": "NYR"
             },
@@ -719,7 +719,7 @@
                         "full": "Philly Pineapples",
                         "city": "Philadelphia",
                         "team": "Pineapples",
-                        "desc": "Fruit Prevents Scurvy!",
+                        "desc": "No One Likes Us, We Don't Care",
                         "div": "Bongo",
                         "abrv": "PHL"
             },
@@ -740,8 +740,8 @@
                             }
                         },
                         "C": {
-                            "full": "Julie Blunt",
-                            "captain": 1,
+                            "full": "Gregg Wawa",
+                            "captain": 0,
                             "stats": {
                                 "shooting": 0.7,
                         "passing": 0.4,
@@ -756,7 +756,7 @@
                         },
                         "RW": {
                             "full": "Avy Blunt",
-                            "captain": 0,
+                            "captain": 1,
                             "stats": {
                                 "shooting": 0.4,
                         "passing": 0.9,
@@ -771,7 +771,7 @@
                         },
                         "LD": {
                             "full": "Elmo Battleaxe",
-                            "captain": 1,
+                            "captain": 0,
                             "stats": {
                                 "shooting": 0.3,
                         "passing": 0.5,
@@ -816,19 +816,19 @@
                         }
             }
         },
-        "boston": {
+        "vancouver": {
             "info": {
-                        "full": "Boston Chowdahs",
-                        "city": "Boston",
-                        "team": "Chowdahs",
-                        "desc": "Like We Say In Boston, Let's Go Boston",
-                        "div": "Bongo",
-                        "abrv": "BOS"
+                        "full": "Vancouver Foxtrots",
+                        "city": "Vancouver",
+                        "team": "Foxtrots",
+                        "desc": "Magically Pacific!",
+                        "div": "Bingo",
+                        "abrv": "VAN"
             },
             "players": {
                         "LW": {
-                            "full": "Mimi Chip",
-                            "captain": 1,
+                            "full": "Claude Roy",
+                            "captain": 0,
                             "stats": {
                                 "shooting": 0.4,
                         "passing": 0.7,
@@ -842,8 +842,8 @@
                             }
                         },
                         "C": {
-                            "full": "Clam Adams",
-                            "captain": 0,
+                            "full": "Tony Puck",
+                            "captain": 1,
                             "stats": {
                                 "shooting": 0.7,
                         "passing": 0.5,
@@ -857,7 +857,7 @@
                             }
                         },
                         "RW": {
-                            "full": "Bean Bradley",
+                            "full": "Jessica Highlander",
                             "captain": 0,
                             "stats": {
                                 "shooting": 0.4,
@@ -872,7 +872,7 @@
                             }
                         },
                         "LD": {
-                            "full": "Simon Crimock",
+                            "full": "Brandy Maple",
                             "captain": 0,
                             "stats": {
                                 "shooting": 0.3,
@@ -887,7 +887,7 @@
                             }
                         },
                         "RD": {
-                            "full": "Olli Zelda",
+                            "full": "Lucky Jupiter",
                             "captain": 0,
                             "stats": {
                                 "shooting": 0.3,
@@ -902,7 +902,7 @@
                             }
                         },
                         "G": {
-                            "full": "RJ Spider",
+                            "full": "Mats Sharqvist",
                             "captain": 0,
                             "stats": {
                                 "shooting": 0.1,
@@ -945,7 +945,7 @@
                 },
                 "C": {
                     "full": "Penelope Cleaver",
-                    "captain": 1,
+                    "captain": 0,
                     "stats": {
                         "shooting": 0.7,
                         "passing": 0.7,
@@ -960,7 +960,7 @@
                 },
                 "RW": {
                     "full": "Butterfly Funk",
-                    "captain": 0,
+                    "captain": 1,
                     "stats": {
                         "shooting": 0.4,
                         "passing": 0.7,
@@ -1032,7 +1032,7 @@
             "players": {
                         "LW": {
                             "full": "Snack Falcon",
-                            "captain": 1,
+                            "captain": 0,
                             "stats": {
                                 "shooting": 0.4,
                         "passing": 0.7,
@@ -1091,8 +1091,8 @@
                             }
                         },
                         "RD": {
-                            "full": "Fiona Hogger",
-                            "captain": 0,
+                            "full": "Faith McKeon",
+                            "captain": 1,
                             "stats": {
                                 "shooting": 0.3,
                         "passing": 0.5,
@@ -1149,7 +1149,7 @@
                         },
                         "C": {
                             "full": "Argo Voyager",
-                            "captain": 0,
+                            "captain": 1,
                             "stats": {
                                 "shooting": 0.7,
                         "passing": 0.7,
@@ -1179,7 +1179,7 @@
                         },
                         "LD": {
                             "full": "Vladimira Nishikawa",
-                            "captain": 1,
+                            "captain": 0,
                             "stats": {
                                 "shooting": 0.3,
                         "passing": 0.5,

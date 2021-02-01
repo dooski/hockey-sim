@@ -1,3 +1,4 @@
+const { time } = require("console")
 const fs = require("fs")
 
 function rng(z) {
@@ -332,6 +333,70 @@ function crash(side) {
     return targets[z]
 }
 }
+function timeConvert(x){
+    if (x === 0){return "20:00"}
+    else if (x == 1){return "19:40"}
+    else if (x == 2){return "19:20"}
+    else if (x == 3){return "19:00"}
+    else if (x == 4){return "18:40"}
+    else if (x == 5){return "18:20"}
+    else if (x == 6){return "18:00"}
+    else if (x == 7){return "17:40"}
+    else if (x == 8){return "17:20"}
+    else if (x == 9){return "17:00"}
+    else if (x == 10){return "16:40"}
+    else if (x == 11){return "16:20"}
+    else if (x == 12){return "16:00"}
+    else if (x == 13){return "15:40"}
+    else if (x == 14){return "15:20"}
+    else if (x == 15){return "15:00"}
+    else if (x == 16){return "14:40"}
+    else if (x == 17){return "14:20"}
+    else if (x == 18){return "14:00"}
+    else if (x == 19){return "13:40"}
+    else if (x == 20){return "13:20"}
+    else if (x == 21){return "13:00"}
+    else if (x == 22){return "12:40"}
+    else if (x == 23){return "12:20"}
+    else if (x == 24){return "12:00"}
+    else if (x == 25){return "11:40"}
+    else if (x == 26){return "11:20"}
+    else if (x == 27){return "11:00"}
+    else if (x == 28){return "10:40"}
+    else if (x == 29){return "10:20"}
+    else if (x == 30){return "10:00"}
+    else if (x == 31){return "09:40"}
+    else if (x == 32){return "09:20"}
+    else if (x == 33){return "09:00"}
+    else if (x == 34){return "08:40"}
+    else if (x == 35){return "08:20"}
+    else if (x == 36){return "08:00"}
+    else if (x == 37){return "07:40"}
+    else if (x == 38){return "07:20"}
+    else if (x == 39){return "07:00"}
+    else if (x == 40){return "06:40"}
+    else if (x == 41){return "06:20"}
+    else if (x == 42){return "06:00"}
+    else if (x == 43){return "05:40"}
+    else if (x == 44){return "05:20"}
+    else if (x == 45){return "05:00"}
+    else if (x == 46){return "04:40"}
+    else if (x == 47){return "BLAZE"}
+    else if (x == 48){return "04:00"}
+    else if (x == 49){return "03:40"}
+    else if (x == 50){return "03:20"}
+    else if (x == 51){return "03:00"}
+    else if (x == 52){return "02:40"}
+    else if (x == 53){return "02:20"}
+    else if (x == 54){return "02:00"}
+    else if (x == 55){return "01:40"}
+    else if (x == 56){return "01:20"}
+    else if (x == 57){return "01:00"}
+    else if (x == 58){return "00:40"}
+    else if (x == 59){return "00:20"}
+    else if (x == 60){return "00:00"}
+    else {return "??:??"}
+}
 function packager () {
     if (carrier == null) {carrier = {full: ""}}
     let package = {
@@ -347,7 +412,8 @@ function packager () {
         st: stage,
         pos: possession,
         car: carrier.full,
-        mes: message
+        mes: message,
+        time: timeConvert(i)
     }
     var json = JSON.stringify(package)
     fs.writeFile('./gens/currentGame.json', json, 'utf8', function(err) {

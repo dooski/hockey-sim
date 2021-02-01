@@ -3,10 +3,6 @@
   background-color:black;
   min-height: 100vh;
   color: white;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
 }
 
 .center {
@@ -30,6 +26,34 @@
   font-weight: 100
 }
 
+.nav-spot {
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-top: 20px;
+}
+
+.nav-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: white
+}
+
+.nav-button {
+  background-color: white;
+  color: black;
+  padding: 5px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.nav-button-wrapper {
+  margin-top: 20px;
+}
+
+br.nav-br {
+  height: 2px
+}
 .game-box-container {
   min-height: 30vh;
   max-height: 50vh;
@@ -60,7 +84,7 @@
 }
 
 .game-box-rink {
-  font-size: 22px;
+  font-size: 16px;
   white-space: nowrap;
 }
 
@@ -77,12 +101,117 @@
   flex-direction: column;
 }
 
+.clock {
+  background: white;
+  font-size: 20px;
+  color: black;
+  font-weight: 700;
+  border: 1px solid white;
+  border-radius: 3px;
+  line-height: 1.8
+}
+
+.buffer {
+  color: black
+}
+
+.league-table-wrapper {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 2%
+}
+
+.division-table {
+  background-color: rgb(46, 45, 45);
+  border-radius: 10px;
+  padding: 0
+}
+
+.division-table-title {
+  font-size: 26px;
+  font-style: italic;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.division-table-team {
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.bingo {
+  background-color: rgb(0, 0, 73)
+}
+
+.bingo.division-table-team.a {
+  background-color:rgb(0, 40, 123);
+
+}
+
+.bingo.division-table-team.b {
+  background-color:rgb(0, 0, 73);
+
+}
+
+.bongo {
+  background-color: rgb(73, 0, 0)
+}
+
+.bongo.division-table-team.a {
+  background-color: rgb(123, 0, 0)
+}
+
+.bongo.division-table-team.b {
+  background-color: rgb(73,0,0)
+}
+
+.team-modal {
+  background-color: black;
+  color: white
+}
+
+.team-modal-title {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.team-modal-subtitle {
+  margin-top: 5px;
+  margin-left: 50px;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: italic
+}
+
+.modal-card-body {
+  background-color: black;
+  color:white
+}
+
+.position-title {
+  font-weight: 800;
+}
+
+hr {
+  height: 5px;
+  margin: 1.2rem
+}
+
 p {
   margin: 0px
 }
 
 span {
   margin: 0px
+}
+
+@media only screen and (max-width: 1030px) {
+  .game-box {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
 }
 @media only screen and (max-width: 900px) {
   .App {
@@ -92,7 +221,7 @@ span {
 }
 @media only screen and (max-width: 600px){
   .game-box-rink{
-    font-size: 20px
+    font-size: 12px
   }
   .game-box-message{
     font-size: 18px;
@@ -104,10 +233,35 @@ span {
     font-weight: 500
   }
   .game-box {
-    margin-left: 5%;
-    margin-right: 5%
+    margin-left: 2%;
+    margin-right: 2%
   }
   .minor-text {
     font-size: 16px
+  }
+  .division-table-title {
+    font-size: 20px;
+    font-weight: 500
+  }
+  .division-table-team {
+    font-size: 16px
+  }
+  .league-table-wrapper {
+    margin-top: 10px;
+  }
+  .team-modal-title {
+    font-size: 20px;
+  }
+  .team-modal-subtitle{
+    margin-left: 30px
+  }
+  .nav-title {
+    font-size: 16px
+  }
+  .nav-button-wrapper {
+    margin-top: 0px;
+  }
+  .nav-button {
+    font-size: 12px
   }
 }

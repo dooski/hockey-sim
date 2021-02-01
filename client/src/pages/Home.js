@@ -40,6 +40,7 @@ function Home() {
     const [per, setPer] = useState(1)
     const [pos, setPos] = useState("Nobody")
     const [mes, setMes] = useState("Hello!")
+    const [time, setTime] = useState("00:00")
     const [goal1, setGoal1] = useState(<Symbol abrv="MSC"/>)
     const [side1, setSide1] = useState(<Symbol abrv="MSC"/>)
     const [center, setCenter] = useState(<Symbol abrv="MSC"/>)
@@ -63,6 +64,7 @@ function Home() {
                 setSYM2(symbolPicker(data.ab2))
                 setPer(data.per)
                 setMes(data.mes)
+                setTime(data.time)
                 if (data.pos == 1) {setPos(t1C)} else if (data.pos == 2) {setPos(t2C)} else setPos("Nobody"); setPSYM("_")
                 if (data.st == 0) {resetMap()}
                 else if (data.st == 1) {
@@ -112,13 +114,13 @@ function Home() {
     }
     useInterval(() => {
         UpdateGame();
-      }, 2500);
+      }, 1000);
 
     return (
-        <div className="App">
+        <div>
             {t1 ? (
             <div className="game-box-container">
-            <GameBox t1={t1} t2={t2} t1C={t1C} t2C={t2C} t1S={t1S} t2S={t2S} ab1={ab1} ab2={ab2} sym1={sym1} sym2={sym2} pos={pos} per={per} mes={mes} goal1={goal1} side1={side1} center={center} side2={side2} goal2={goal2}/>
+            <GameBox time={time} t1={t1} t2={t2} t1C={t1C} t2C={t2C} t1S={t1S} t2S={t2S} ab1={ab1} ab2={ab2} sym1={sym1} sym2={sym2} pos={pos} per={per} mes={mes} goal1={goal1} side1={side1} center={center} side2={side2} goal2={goal2}/>
             </div>
             ):(<div><i>loading. . . </i></div>)}</div>
     )
