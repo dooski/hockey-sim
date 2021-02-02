@@ -16,7 +16,7 @@ function test(){
     const league = [data.teams.buffalo, data.teams.boston, data.teams.rochester, data.teams.ottawa, data.teams.montreal, data.teams.toronto, data.teams.portland, data.teams.westVirginia, data.teams.newOrleans,
                     data.teams.newYork, data.teams.philly, data.teams.vancouver, data.teams.chicago, data.teams.pittsburgh, data.teams.burlington, data.teams.santaFe, data.teams.valhalla, data.teams.LA]
     let games = pickTeams(league)
-    records.syncRecord()
+    // records.syncRecord()
     sim.game(games[0], 6000, "game1")
     sim.game(games[1], 6000, "game2")
     sim.game(games[2], 6000, "game3")

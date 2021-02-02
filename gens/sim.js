@@ -103,7 +103,7 @@ function game(teams, timing, whichGame) {
     }
     function finalScore(){
         message = `END OF THIRD PERIOD. GAME OVER. Final Score: ${t1.info.city} ${t1Score} - ${t2Score} ${t2.info.city}`
-        endOfGame(t1, t2, t1Score, t2Score)
+        // endOfGame(t1, t2, t1Score, t2Score)
     }
     function onePlay(){
     if (stage == 0) {
