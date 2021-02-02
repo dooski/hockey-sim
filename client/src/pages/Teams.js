@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from "react";
+import React, {useState} from "react";
 import "../App.css"
 import Modal from "react-modal"
 import data from "../utils/data.json"
@@ -128,16 +128,16 @@ function closeModal(){
             </header>
         <section class="modal-card-body">
         <p className="position-title">Forwards</p>
-        <p>{currentTeam.players.LW.full} {currentTeam.players.LW.captain == 1? (<b>(C)</b>) : (<b></b>)}</p>
-        <p>{currentTeam.players.C.full} {currentTeam.players.C.captain == 1? (<b>(C)</b>) : (<b></b>)}</p>
-        <p>{currentTeam.players.RW.full} {currentTeam.players.RW.captain == 1? (<b>(C)</b>) : (<b></b>)}</p>
+        <p>{currentTeam.players.LW.full} {currentTeam.players.LW.captain === 1? (<b>(C)</b>) : (<b></b>)}</p>
+        <p>{currentTeam.players.C.full} {currentTeam.players.C.captain === 1? (<b>(C)</b>) : (<b></b>)}</p>
+        <p>{currentTeam.players.RW.full} {currentTeam.players.RW.captain === 1? (<b>(C)</b>) : (<b></b>)}</p>
         <br/>
         <p className="position-title">Defenders</p>
-        <p>{currentTeam.players.LD.full} {currentTeam.players.LD.captain == 1? (<b>(C)</b>) : (<b></b>)}</p>
-        <p>{currentTeam.players.RD.full} {currentTeam.players.RD.captain == 1? (<b>(C)</b>) : (<b></b>)}</p>
+        <p>{currentTeam.players.LD.full} {currentTeam.players.LD.captain === 1? (<b>(C)</b>) : (<b></b>)}</p>
+        <p>{currentTeam.players.RD.full} {currentTeam.players.RD.captain === 1? (<b>(C)</b>) : (<b></b>)}</p>
         <br/>
         <p className="position-title">Goalies</p>
-        <p>{currentTeam.players.G.full} {currentTeam.players.G.captain == 1? (<b>(C)</b>) : (<b></b>)}</p>
+        <p>{currentTeam.players.G.full} {currentTeam.players.G.captain === 1? (<b>(C)</b>) : (<b></b>)}</p>
         </section>
   </div>              
             </Modal>

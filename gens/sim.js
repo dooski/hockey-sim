@@ -1,5 +1,7 @@
-const { time } = require("console")
+const records = require("./seasonManagement")
 const fs = require("fs")
+
+let endOfGame = records.endOfGame
 
 function rng(z) {
     return Math.floor(Math.random() * z)
@@ -18,7 +20,7 @@ const timer = ms => new Promise(res => setTimeout(res, ms))
 // 0 = no one
 // 1 = team 1
 // 2 = team 2
-function game(teams, timing) {
+function game(teams, timing, whichGame) {
     let t1 = teams[0]
     let t2 = teams[1]
     let t1Score = 0
@@ -44,6 +46,7 @@ function game(teams, timing) {
     let possession = null
     let carrier = null
     let message = ""
+    var i = 0
     beginning()
     periodPlay()
     async function periodPlay(){
@@ -100,6 +103,7 @@ function game(teams, timing) {
     }
     function finalScore(){
         message = `END OF THIRD PERIOD. GAME OVER. Final Score: ${t1.info.city} ${t1Score} - ${t2Score} ${t2.info.city}`
+        endOfGame(t1, t2, t1Score, t2Score)
     }
     function onePlay(){
     if (stage == 0) {
@@ -399,6 +403,7 @@ function timeConvert(x){
 }
 function packager () {
     if (carrier == null) {carrier = {full: ""}}
+    let fileName = "./gens/games/" + whichGame + ".json"
     let package = {
         t1: teams[0].info.full,
         t2: teams[1].info.full,
@@ -415,8 +420,9 @@ function packager () {
         mes: message,
         time: timeConvert(i)
     }
+    if (package == ""){package = "hello"}
     var json = JSON.stringify(package)
-    fs.writeFile('./gens/currentGame.json', json, 'utf8', function(err) {
+    fs.writeFile(fileName, json, 'utf8', function(err) {
         if (err) throw err;
     });
 }

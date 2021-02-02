@@ -14,8 +14,8 @@ if (process.env.NODE_ENV === "production") {
 }
 
 //api routes
-
-setTimeout(control.test, 3000)
+control.test()
+setInterval(control.test, 1090000)
 
 app.use(routes)
 

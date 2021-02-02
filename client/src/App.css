@@ -51,6 +51,15 @@
   font-weight: 700;
 }
 
+.nav-button:hover {
+  background-color:burlywood;
+}
+
+.nav-button:active {
+  background-color:black;
+  font-size: white
+}
+
 .nav-button-wrapper {
   margin-top: 20px;
 }
@@ -58,12 +67,17 @@
 br.nav-br {
   height: 2px
 }
+
+.footer {
+  height: 25px;
+  background-color: black;
+}
 .game-box-container {
   min-height: 30vh;
   max-height: 50vh;
-  padding: 5vh;
+  padding: 10px;
+  margin-top: 30px;
   line-height: 1.2;
-  
 }
 
 .game-box {
@@ -73,6 +87,7 @@ br.nav-br {
   padding:2%;
   margin-left: 20%;
   margin-right: 20%;
+
 }
 
 .game-box-card {
@@ -89,7 +104,7 @@ br.nav-br {
 .game-box-team-name {
   font-size: 30px;
   font-weight: 700;
-  line-height: 1.2rem;
+  line-height: 1.4rem;
 }
 
 .game-box-team-name-a {
@@ -239,7 +254,8 @@ button {
   border-radius: 25px;
   font-size: 26px;
   padding-left: 10px;
-  padding-right: 10px
+  padding-right: 10px;
+  left: -55px
 }
 
 button:hover {
@@ -251,7 +267,9 @@ button:hover {
   .game-box {
     margin-left: 10%;
     margin-right: 10%;
-    
+  }
+  .game-box-rink {
+    font-size: 12px
   }
 }
 @media only screen and (max-width: 900px) {
@@ -271,6 +289,7 @@ button:hover {
     margin-top: 10px;
     margin-bottom: 10px;
   }
+  
 }
 @media only screen and (max-width: 600px){
   .game-box-rink{
@@ -328,15 +347,15 @@ button:hover {
     font-size: 20px;
   }
   .team-modal-subtitle{
-    margin-left: 30px
+    margin-left: 0px
   }
   .nav-title {
-    font-size: 16px
+    font-size: 24px
   }
   .nav-button-wrapper {
     margin-top: 0px;
   }
   .nav-button {
-    font-size: 16px
+    font-size: 14px
   }
 }
