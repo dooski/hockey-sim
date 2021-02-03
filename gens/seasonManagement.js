@@ -1,24 +1,23 @@
-const control = require("../control.js")
 const fs = require("fs")
 
-let BUF = [0, 0, 0]
-let BOS = [0, 0, 0]
-let ROC = [0, 0, 0]
-let OTT = [0, 0, 0]
-let MON = [0, 0, 0]
-let TOR = [0, 0, 0]
-let POR = [0, 0, 0]
-let WVM = [0, 0, 0]
-let NOR = [0, 0, 0]
-let NYR = [0, 0, 0]
-let PHL = [0, 0, 0]
-let VAN = [0, 0, 0]
-let CHI = [0, 0, 0]
-let PIT = [0, 0, 0]
-let BUR = [0, 0, 0]
-let SFB = [0, 0, 0]
-let VAL = [0, 0, 0]
-let LAK = [0, 0, 0]
+let BUF = ["BUF", "Buffalo Starlights", 0, 0, 0]
+let BOS = ["BOS", "Boston Chowdahs", 0, 0, 0]
+let ROC = ["ROC", "Rochester Bones", 0, 0, 0]
+let OTT = ["OTT", "Ottawa Tulips", 0, 0, 0]
+let MON = ["MON", "Montreal Panic", 0, 0, 0]
+let TOR = ["TOR", "Toronto Brewskis", 0, 0, 0]
+let POR = ["POR", "Portland Shrooms", 0, 0, 0]
+let WVM = ["WVM", "West Virginia Mothmen", 0, 0, 0]
+let NOR = ["NOR", "New Orleans Moonshine", 0, 0, 0]
+let NYR = ["NYR", "New York Rats", 0, 0, 0]
+let PHL = ["PHL", "Philly Pineapples", 0, 0, 0]
+let VAN = ["VAN", "Vancouver Foxtrots", 0, 0, 0]
+let CHI = ["CHI", "Chicago Paloozas", 0, 0, 0]
+let PIT = ["PIT", "Pittsburgh Good Boys", 0, 0, 0]
+let BUR = ["BUR", "Burlington Lumberjacks", 0, 0, 0]
+let SFB = ["SFB", "Santa Fe Buckaroos", 0, 0, 0]
+let VAL = ["VAL", "Valhalla Omens", 0, 0, 0]
+let LAK = ["LAK", "LA Kickflips", 0, 0, 0]
 
 
 const syncRecord = async function() {
@@ -53,10 +52,9 @@ function getRecord(){
 }
 
 function updateRecord(){
-    var package = {BUF, BOS, ROC, OTT, MON, TOR, POR, WVM,
-                NOR, NYR, PHL, VAN, CHI, PIT, BUR, SFB, VAL, LAK}
+    var package = [BUF, BOS, ROC, OTT, MON, TOR, POR, WVM,
+                NOR, NYR, PHL, VAN, CHI, PIT, BUR, SFB, VAL, LAK]
     var json = JSON.stringify(package)
-    console.log(json)
     fs.writeFile('./gens/currentSeason.json', json, 'utf8', function(err){if (err) throw err})
 }
 
@@ -67,15 +65,14 @@ function endOfGame(t1, t2, t1s, t2s) {
     let team2 = t2.info.abrv
     console.log(team1, team2)
     if (t1s > t2s) {
-        eval(team1)[0]++
-        eval(team2)[1]++
+        eval(team1)[2]++
+        eval(team2)[3]++
     } else if (t1s < t2s) {
-        eval(team1)[1]++
-        eval(team2)[0]++
-    } else if (t1s === t2s) {eval(team1)[2]++; eval(team2)[2]++}
+        eval(team1)[2]++
+        eval(team2)[3]++
+    } else if (t1s === t2s) {eval(team1)[4]++; eval(team2)[4]++}
     gamesDone++   
-    if (gamesDone > 7) {
-        console.log(gamesDone)
+    if (gamesDone > 8) {
         updateRecord()
         gamesDone = 0
     }
@@ -83,5 +80,6 @@ function endOfGame(t1, t2, t1s, t2s) {
 
 module.exports = {
     endOfGame,
-    syncRecord
+    syncRecord,
+    updateRecord
 }

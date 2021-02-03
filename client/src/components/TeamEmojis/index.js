@@ -22,6 +22,7 @@ function Symbol(props){
     else if (team === "VAL") {return (<Twemoji text=":comet:"/>)}
     else if (team === "LAK") {return (<Twemoji text=":skateboard:"/>)}
     else if (team === "MSC") {return (<Twemoji text=":heavy_minus_sign:"/>)}
+    else return null
 }
 
 export default Symbol

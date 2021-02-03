@@ -188,7 +188,7 @@
                             }
                         },
                         "G": {
-                            "full": "RJ Spider",
+                            "full": "Bryan Hell",
                             "captain": 0,
                             "stats": {
                                 "shooting": 0.1,
@@ -770,7 +770,7 @@
                             }
                         },
                         "LD": {
-                            "full": "Charlie McElroy",
+                            "full": "Hoops McElroy",
                             "captain": 0,
                             "stats": {
                                 "shooting": 0.3,
@@ -800,7 +800,7 @@
                             }
                         },
                         "G": {
-                            "full": "Mars Cook",
+                            "full": "RJ Spider",
                             "captain": 0,
                             "stats": {
                                 "shooting": 0.1,
@@ -887,7 +887,7 @@
                             }
                         },
                         "RD": {
-                            "full": "Andy Cheddar",
+                            "full": "Sarah Crowley",
                             "captain": 0,
                             "stats": {
                                 "shooting": 0.3,
@@ -1148,7 +1148,7 @@
                             }
                         },
                         "C": {
-                            "full": "Tony Puck",
+                            "full": "Shinji Otto",
                             "captain": 1,
                             "stats": {
                                 "shooting": 0.7,
@@ -1557,7 +1557,7 @@
                         },
                         "C": {
                             "full": "Hillary Applesauce",
-                            "captain": 1,
+                            "captain": 0,
                             "stats": {
                                 "shooting": 0.7,
                         "passing": 0.5,
@@ -1571,8 +1571,8 @@
                             }
                         },
                         "RW": {
-                            "full": "Charlie Morris",
-                            "captain": 0,
+                            "full": "Coyote Morris",
+                            "captain": 1,
                             "stats": {
                                 "shooting": 0.4,
                         "passing": 0.7,
@@ -1746,7 +1746,7 @@
             "players": {
                         "LW": {
                             "full": "Bryce Cream",
-                            "captain": 1,
+                            "captain": 0,
                             "stats": {
                                 "shooting": 0.4,
                         "passing": 0.7,
@@ -1760,8 +1760,8 @@
                             }
                         },
                         "C": {
-                            "full": "Coyote Deke",
-                            "captain": 0,
+                            "full": "Tony Puck",
+                            "captain": 1,
                             "stats": {
                                 "shooting": 0.7,
                         "passing": 0.5,

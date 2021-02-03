@@ -1,5 +1,6 @@
 const express = require("express");
 const control = require("./control.js")
+const records = require("./gens/seasonManagement")
 const routes = require("./routes/index")
 const path = require("path");
 const PORT = process.env.PORT || 4000;
@@ -13,9 +14,18 @@ if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"))
 }
 
+//timing
+setInterval(clock, 60000)
+records.updateRecord()
+function clock() {
+    now = new Date
+    if (now.getMinutes() === 30 || now.getMinutes() === 0){
+        control.test()
+        console.log(`Playing games at ${now.getMinutes()}`)
+    }
+}
+
 //api routes
-control.test()
-setInterval(control.test, 1090000)
 
 app.use(routes)
 

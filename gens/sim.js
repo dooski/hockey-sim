@@ -1,4 +1,6 @@
 const records = require("./seasonManagement")
+const gameHandler = require("./gameHandler")
+const handleGame = gameHandler.handleGame
 const fs = require("fs")
 
 let endOfGame = records.endOfGame
@@ -47,7 +49,6 @@ function game(teams, timing, whichGame) {
     let carrier = null
     let message = ""
     var i = 0
-    beginning()
     periodPlay()
     async function periodPlay(){
         for (i = 0; i < 61; i++) {
@@ -61,35 +62,6 @@ function game(teams, timing, whichGame) {
         packager() 
         await timer(timing)
     }}
-    function beginning(){
-        console.log(`
-
-        AND NOW: The ${t1.info.team} host the ${t2.info.full} here in ${t1.info.city}!
-        ------------
-        ------------
-        ---- ${t1.info.full}: ${t1.info.desc}
-            LINEUP:
-                LW: ${LW1.full}
-                C: ${CE1.full}
-                RW: ${RW1.full}
-                LD: ${LD1.full}
-                RD: ${RD1.full}
-                GK: ${GK1.full}
-        ------------
-        ---- ${t2.info.full}: ${t2.info.desc}
-            LINEUP:
-                LW: ${LW2.full}
-                C: ${CE2.full}
-                RW: ${RW2.full}
-                LD: ${LD2.full}
-                RD: ${RD2.full}
-                GK: ${GK2.full}
-        ------------
-        ------------
-        TIME FOR PUCKDROP!
-        
-        `)
-    }
     async function endOfPeriod(x){
         let periodName = "FIRST"
         if (x === 2) {periodName = "SECOND"}
@@ -103,7 +75,7 @@ function game(teams, timing, whichGame) {
     }
     function finalScore(){
         message = `END OF THIRD PERIOD. GAME OVER. Final Score: ${t1.info.city} ${t1Score} - ${t2Score} ${t2.info.city}`
-        // endOfGame(t1, t2, t1Score, t2Score)
+        endOfGame(t1, t2, t1Score, t2Score)
     }
     function onePlay(){
     if (stage == 0) {
@@ -420,11 +392,11 @@ function packager () {
         mes: message,
         time: timeConvert(i)
     }
-    if (package == ""){package = "hello"}
-    var json = JSON.stringify(package)
-    fs.writeFile(fileName, json, 'utf8', function(err) {
-        if (err) throw err;
-    });
+    // var json = JSON.stringify(package)
+    // fs.writeFile(fileName, json, 'utf8', function(err) {
+    //     if (err) throw err;
+    // });
+    handleGame(package, whichGame)
 }
 }
 

@@ -40,7 +40,7 @@ function GameBox(props) {
 
     useInterval(() => {
         UpdateScores();
-    }, 2000)
+    }, 500)
 
     function UpdateScores(){
     let data = props.props
