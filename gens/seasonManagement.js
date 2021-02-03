@@ -68,8 +68,8 @@ function endOfGame(t1, t2, t1s, t2s) {
         eval(team1)[2]++
         eval(team2)[3]++
     } else if (t1s < t2s) {
-        eval(team1)[2]++
-        eval(team2)[3]++
+        eval(team1)[3]++
+        eval(team2)[2]++
     } else if (t1s === t2s) {eval(team1)[4]++; eval(team2)[4]++}
     gamesDone++   
     if (gamesDone > 8) {
