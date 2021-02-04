@@ -52,7 +52,7 @@ function game(teams, timing, whichGame) {
     var oti = null
     periodPlay()
     async function periodPlay(){
-        for (i = 60; i < 61; i++) {
+        for (i = 0; i < 61; i++) {
         if (i == 60 && period !== 3) {
             endOfPeriod(period)
         } else if (i == 60 && period == 3 && t1Score !== t2Score) {
