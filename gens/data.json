@@ -1050,8 +1050,8 @@
                             "captain": 0,
                             "stats": {
                                 "shooting": 0.7,
-                        "passing": 0.4,
-                        "handling": 0.5,
+                        "passing": 0.6,
+                        "handling": 0.6,
                         "checking": 0.4,
                         "positioning": 0.3,
                         "blocking": 0.2,
@@ -1064,7 +1064,7 @@
                             "full": "Avy Blunt",
                             "captain": 1,
                             "stats": {
-                                "shooting": 0.4,
+                                "shooting": 0.6,
                         "passing": 0.9,
                         "handling": 0.8,
                         "checking": 0.3,
@@ -1080,26 +1080,26 @@
                             "captain": 0,
                             "stats": {
                                 "shooting": 0.3,
-                        "passing": 0.5,
+                        "passing": 0.7,
                         "handling": 0.2,
-                        "checking": 0.6,
-                        "positioning": 0.5,
-                        "blocking": 0.6,
+                        "checking": 0.7,
+                        "positioning": 0.8,
+                        "blocking": 0.8,
                         "speed": 0.4,
                         "goalkeeping": 0.3,
                         "discipline": 0.6
                             }
                         },
                         "RD": {
-                            "full": "Dooski Sherwood",
+                            "full": "Julie Blunt",
                             "captain": 0,
                             "stats": {
                                 "shooting": 0.3,
-                        "passing": 0.4,
+                        "passing": 0.5,
                         "handling": 0.2,
-                        "checking": 0.5,
-                        "positioning": 0.5,
-                        "blocking": 0.5,
+                        "checking": 0.9,
+                        "positioning": 0.8,
+                        "blocking": 0.8,
                         "speed": 0.4,
                         "goalkeeping": 0.3,
                         "discipline": 0.4
