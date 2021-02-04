@@ -14,7 +14,11 @@ function scheduleMaker(){
     sim.game(teams, 6000)
 }
 
-function test(){ 
+function test(){
+    sim.game([data.teams.philly, data.teams.boston], 4000, 0)
+}
+
+function start(){ 
     const league = [data.teams.buffalo, data.teams.boston, data.teams.rochester, data.teams.ottawa, data.teams.montreal, data.teams.toronto, data.teams.portland, data.teams.westVirginia, data.teams.newOrleans,
                     data.teams.newYork, data.teams.philly, data.teams.vancouver, data.teams.chicago, data.teams.pittsburgh, data.teams.burlington, data.teams.santaFe, data.teams.valhalla, data.teams.LA]
     let games = pickTeams(league)
@@ -68,6 +72,7 @@ function varString(a, b){
 
 module.exports = {
     test,
+    start,
     scheduleMaker,
     packageReturn,
     seasonData

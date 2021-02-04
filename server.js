@@ -14,13 +14,15 @@ if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"))
 }
 
+// control.test()
+
 //timing
 setInterval(clock, 60000)
 records.updateRecord()
 function clock() {
     now = new Date
     if (now.getMinutes() === 30 || now.getMinutes() === 0){
-        control.test()
+        control.start()
         console.log(`Playing games at ${now.getMinutes()}`)
     }
 }

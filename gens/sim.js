@@ -49,32 +49,51 @@ function game(teams, timing, whichGame) {
     let carrier = null
     let message = ""
     var i = 0
+    var oti = null
     periodPlay()
     async function periodPlay(){
-        for (i = 0; i < 61; i++) {
+        for (i = 60; i < 61; i++) {
         if (i == 60 && period !== 3) {
             endOfPeriod(period)
-        } else if (i == 60 && period == 3) {
-            finalScore()
+        } else if (i == 60 && period == 3 && t1Score !== t2Score) {
+            finalScore("THIRD PERIOD")
+        } else if (i == 60 && period == 3 && t1Score === t2Score) {
+            endOfPeriod(period)
+            overtime()
         } else {
         onePlay()
         }
         packager() 
         await timer(timing)
     }}
+    async function overtime(){
+        for (oti = 0; oti < 1; oti) {
+            if (t1Score !==  t2Score) {
+                finalScore("OVERTIME")
+                oti = 1
+            } else {
+                onePlay()
+            }
+            packager()
+            await timer(timing*0.8)
+        }
+    }
     async function endOfPeriod(x){
         let periodName = "FIRST"
         if (x === 2) {periodName = "SECOND"}
+        if (x === 3) {periodName = "THIRD"}
         message = `END OF ${periodName} PERIOD.`
         period = period + 1
+        if (period === 4){period = "OVERTIME"}
         possession = 0
         carrier = null
         stage = 0
-        await timer(timing*1.1)
-        periodPlay()
+        await timer(timing*1.4)
+        if (period !== "OVERTIME"){
+        periodPlay()}
     }
-    function finalScore(){
-        message = `END OF THIRD PERIOD. GAME OVER. Final Score: ${t1.info.city} ${t1Score} - ${t2Score} ${t2.info.city}`
+    function finalScore(x){
+        message = `END OF ${x}. GAME OVER. Final Score: ${t1.info.city} ${t1Score} - ${t2Score} ${t2.info.city}`
         endOfGame(t1, t2, t1Score, t2Score)
     }
     function onePlay(){
@@ -309,7 +328,7 @@ function crash(side) {
     return targets[z]
 }
 }
-function timeConvert(x){
+function timeConvert(x, y){
     if (x === 0){return "20:00"}
     else if (x == 1){return "19:40"}
     else if (x == 2){return "19:20"}
@@ -371,6 +390,7 @@ function timeConvert(x){
     else if (x == 58){return "00:40"}
     else if (x == 59){return "00:20"}
     else if (x == 60){return "00:00"}
+    else if (y == 0){return "XX:XX"}
     else {return "??:??"}
 }
 function packager () {
@@ -390,7 +410,7 @@ function packager () {
         pos: possession,
         car: carrier.full,
         mes: message,
-        time: timeConvert(i)
+        time: timeConvert(i, oti)
     }
     // var json = JSON.stringify(package)
     // fs.writeFile(fileName, json, 'utf8', function(err) {

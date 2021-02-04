@@ -31,7 +31,7 @@
                     "stats": {
                         "shooting": 0.9,
                         "passing": 0.8,
-                        "handling": 0.5,
+                        "handling": 0.7,
                         "checking": 0.4,
                         "positioning": 0.4,
                         "blocking": 0.4,
@@ -78,8 +78,8 @@
                         "passing": 0.3,
                         "handling": 0.2,
                         "checking": 0.5,
-                        "positioning": 0.2,
-                        "blocking": 0.2,
+                        "positioning": 0.5,
+                        "blocking": 0.5,
                         "speed": 0.3,
                         "goalkeeping": 0.3,
                         "discipline": 0.6
@@ -96,7 +96,7 @@
                         "positioning": 0.2,
                         "blocking": 0.3,
                         "speed": 0.2,
-                        "goalkeeping": 0.3,
+                        "goalkeeping": 0.5,
                         "discipline": 0.4
                     }
                 }
@@ -729,8 +729,8 @@
                             "captain": 0,
                             "stats": {
                                 "shooting": 0.9,
-                        "passing": 0.9,
-                        "handling": 0.9,
+                        "passing": 0.7,
+                        "handling": 0.7,
                         "checking": 0.3,
                         "positioning": 0.4,
                         "blocking": 0.2,
@@ -743,7 +743,7 @@
                             "full": "Danielle Normalperson",
                             "captain": 0,
                             "stats": {
-                                "shooting": 0.9,
+                                "shooting": 0.8,
                         "passing": 0.9,
                         "handling": 0.9,
                         "checking": 0.4,
@@ -758,9 +758,9 @@
                             "full": "Bluejay Watkins",
                             "captain": 0,
                             "stats": {
-                                "shooting": 0.9,
-                        "passing": 0.9,
-                        "handling": 0.9,
+                                "shooting": 0.7,
+                        "passing": 0.7,
+                        "handling": 0.6,
                         "checking": 0.3,
                         "positioning": 0.4,
                         "blocking": 0.2,
@@ -792,8 +792,8 @@
                         "passing": 0.9,
                         "handling": 0.2,
                         "checking": 0.6,
-                        "positioning": 0.9,
-                        "blocking": 0.9,
+                        "positioning": 0.7,
+                        "blocking": 0.7,
                         "speed": 0.9,
                         "goalkeeping": 0.3,
                         "discipline": 0.6
@@ -810,7 +810,7 @@
                         "positioning": 0.3,
                         "blocking": 0.7,
                         "speed": 0.3,
-                        "goalkeeping": 1.0,
+                        "goalkeeping": 0.9,
                         "discipline": 0.9
                             }
                         }

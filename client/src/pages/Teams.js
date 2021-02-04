@@ -174,7 +174,7 @@ function closeModal(){
                             <p onClick={eval(`open${bingo[0][0]}`)}><Symbol abrv={bingo[0][0]}/> {bingo[0][1]}</p>
                         </div>
                         <div className="column is-3 right table-record">
-                            <p>{bingo[0][2]} - {bingo[0][3]} - {bingo[0][4]}</p>
+                            <p>{bingo[0][2]} - {bingo[0][3]}</p>
                         </div>
                     </div>
                     <div className="columns is-mobile division-table-team bingo b">
@@ -182,7 +182,7 @@ function closeModal(){
                             <p onClick={eval(`open${bingo[1][0]}`)}><Symbol abrv={bingo[1][0]}/> {bingo[1][1]}</p>
                         </div>
                         <div className="column is-3 right table-record">
-                            <p>{bingo[1][2]} - {bingo[1][3]} - {bingo[1][4]}</p>
+                            <p>{bingo[1][2]} - {bingo[1][3]}</p>
                         </div>
                     </div>                    
                     <div className="columns is-mobile division-table-team bingo a">
@@ -190,7 +190,7 @@ function closeModal(){
                             <p onClick={eval(`open${bingo[2][0]}`)}><Symbol abrv={bingo[2][0]}/> {bingo[2][1]}</p>
                         </div>
                         <div className="column is-3 right table-record">
-                            <p>{bingo[2][2]} - {bingo[2][3]} - {bingo[2][4]}</p>
+                            <p>{bingo[2][2]} - {bingo[2][3]}</p>
                         </div>
                     </div>
                     <div className="columns is-mobile division-table-team bingo b">
@@ -198,7 +198,7 @@ function closeModal(){
                             <p onClick={eval(`open${bingo[3][0]}`)}><Symbol abrv={bingo[3][0]}/> {bingo[3][1]}</p>
                         </div>
                         <div className="column is-3 right table-record">
-                            <p>{bingo[3][2]} - {bingo[3][3]} - {bingo[3][4]}</p>
+                            <p>{bingo[3][2]} - {bingo[3][3]}</p>
                         </div>
                     </div> 
                     <div className="columns is-mobile division-table-team bingo a">
@@ -206,7 +206,7 @@ function closeModal(){
                             <p onClick={eval(`open${bingo[4][0]}`)}><Symbol abrv={bingo[4][0]}/> {bingo[4][1]}</p>
                         </div>
                         <div className="column is-3 right table-record">
-                            <p>{bingo[4][2]} - {bingo[4][3]} - {bingo[4][4]}</p>
+                            <p>{bingo[4][2]} - {bingo[4][3]}</p>
                         </div>
                     </div>
                     <div className="columns is-mobile division-table-team bingo b">
@@ -214,7 +214,7 @@ function closeModal(){
                             <p onClick={eval(`open${bingo[5][0]}`)}><Symbol abrv={bingo[5][0]}/> {bingo[5][1]}</p>
                         </div>
                         <div className="column is-3 right table-record">
-                            <p>{bingo[5][2]} - {bingo[5][3]} - {bingo[5][4]}</p>
+                            <p>{bingo[5][2]} - {bingo[5][3]}</p>
                         </div>
                     </div> 
                     <div className="columns is-mobile division-table-team bingo a">
@@ -222,7 +222,7 @@ function closeModal(){
                             <p onClick={eval(`open${bingo[6][0]}`)}><Symbol abrv={bingo[6][0]}/> {bingo[6][1]}</p>
                         </div>
                         <div className="column is-3 right table-record">
-                            <p>{bingo[6][2]} - {bingo[6][3]} - {bingo[6][4]}</p>
+                            <p>{bingo[6][2]} - {bingo[6][3]}</p>
                         </div>
                     </div>
                     <div className="columns is-mobile division-table-team bingo b">
@@ -230,7 +230,7 @@ function closeModal(){
                             <p onClick={eval(`open${bingo[7][0]}`)}><Symbol abrv={bingo[7][0]}/> {bingo[7][1]}</p>
                         </div>
                         <div className="column is-3 right table-record">
-                            <p>{bingo[7][2]} - {bingo[7][3]} - {bingo[7][4]}</p>
+                            <p>{bingo[7][2]} - {bingo[7][3]}</p>
                         </div>
                     </div> 
                     <div className="columns is-mobile division-table-team bingo a">
@@ -238,7 +238,7 @@ function closeModal(){
                             <p onClick={eval(`open${bingo[8][0]}`)}><Symbol abrv={bingo[8][0]}/> {bingo[8][1]}</p>
                         </div>
                         <div className="column is-3 right table-record">
-                            <p>{bingo[8][2]} - {bingo[8][3]} - {bingo[8][4]}</p>
+                            <p>{bingo[8][2]} - {bingo[8][3]}</p>
                         </div>
                     </div>
                 </div>
@@ -250,7 +250,7 @@ function closeModal(){
                             <p onClick={eval(`open${bongo[0][0]}`)}><Symbol abrv={bongo[0][0]}/> {bongo[0][1]}</p>
                         </div>
                         <div className="column is-3 right table-record">
-                            <p>{bongo[0][2]} - {bongo[0][3]} - {bongo[0][4]}</p>
+                            <p>{bongo[0][2]} - {bongo[0][3]}</p>
                         </div>
                     </div>
                     <div className="columns is-mobile division-table-team bongo b">
@@ -258,7 +258,7 @@ function closeModal(){
                             <p onClick={eval(`open${bongo[1][0]}`)}><Symbol abrv={bongo[1][0]}/> {bongo[1][1]}</p>
                         </div>
                         <div className="column is-3 right table-record">
-                            <p>{bongo[1][2]} - {bongo[1][3]} - {bongo[1][4]}</p>
+                            <p>{bongo[1][2]} - {bongo[1][3]}</p>
                         </div>
                     </div>                    
                     <div className="columns is-mobile division-table-team bongo a">
@@ -266,7 +266,7 @@ function closeModal(){
                             <p onClick={eval(`open${bongo[2][0]}`)}><Symbol abrv={bongo[2][0]}/> {bongo[2][1]}</p>
                         </div>
                         <div className="column is-3 right table-record">
-                            <p>{bongo[2][2]} - {bongo[2][3]} - {bongo[2][4]}</p>
+                            <p>{bongo[2][2]} - {bongo[2][3]}</p>
                         </div>
                     </div>
                     <div className="columns is-mobile division-table-team bongo b">
@@ -274,7 +274,7 @@ function closeModal(){
                             <p onClick={eval(`open${bongo[3][0]}`)}><Symbol abrv={bongo[3][0]}/> {bongo[3][1]}</p>
                         </div>
                         <div className="column is-3 right table-record">
-                            <p>{bongo[3][2]} - {bongo[3][3]} - {bongo[3][4]}</p>
+                            <p>{bongo[3][2]} - {bongo[3][3]}</p>
                         </div>
                     </div> 
                     <div className="columns is-mobile division-table-team bongo a">
@@ -282,7 +282,7 @@ function closeModal(){
                             <p onClick={eval(`open${bongo[4][0]}`)}><Symbol abrv={bongo[4][0]}/> {bongo[4][1]}</p>
                         </div>
                         <div className="column is-3 right table-record">
-                            <p>{bongo[4][2]} - {bongo[4][3]} - {bongo[4][4]}</p>
+                            <p>{bongo[4][2]} - {bongo[4][3]}</p>
                         </div>
                     </div>
                     <div className="columns is-mobile division-table-team bongo b">
@@ -290,7 +290,7 @@ function closeModal(){
                             <p onClick={eval(`open${bongo[5][0]}`)}><Symbol abrv={bongo[5][0]}/> {bongo[5][1]}</p>
                         </div>
                         <div className="column is-3 right table-record">
-                            <p>{bongo[5][2]} - {bongo[5][3]} - {bongo[5][4]}</p>
+                            <p>{bongo[5][2]} - {bongo[5][3]}</p>
                         </div>
                     </div> 
                     <div className="columns is-mobile division-table-team bongo a">
@@ -298,7 +298,7 @@ function closeModal(){
                             <p onClick={eval(`open${bongo[6][0]}`)}><Symbol abrv={bongo[6][0]}/> {bongo[6][1]}</p>
                         </div>
                         <div className="column is-3 right table-record">
-                            <p>{bongo[6][2]} - {bongo[6][3]} - {bongo[6][4]}</p>
+                            <p>{bongo[6][2]} - {bongo[6][3]}</p>
                         </div>
                     </div>
                     <div className="columns is-mobile division-table-team bongo b">
@@ -306,7 +306,7 @@ function closeModal(){
                             <p onClick={eval(`open${bongo[7][0]}`)}><Symbol abrv={bongo[7][0]}/> {bongo[7][1]}</p>
                         </div>
                         <div className="column is-3 right table-record">
-                            <p>{bongo[7][2]} - {bongo[7][3]} - {bongo[7][4]}</p>
+                            <p>{bongo[7][2]} - {bongo[7][3]}</p>
                         </div>
                     </div> 
                     <div className="columns is-mobile division-table-team bongo a">
@@ -314,7 +314,7 @@ function closeModal(){
                             <p onClick={eval(`open${bongo[8][0]}`)}><Symbol abrv={bongo[8][0]}/> {bongo[8][1]}</p>
                         </div>
                         <div className="column is-3 right table-record">
-                            <p>{bongo[8][2]} - {bongo[8][3]} - {bongo[8][4]}</p>
+                            <p>{bongo[8][2]} - {bongo[8][3]}</p>
                         </div>
                     </div>
                 </div>
