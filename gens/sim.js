@@ -389,13 +389,12 @@ function timeConvert(x, y){
     else if (x == 57){return "01:00"}
     else if (x == 58){return "00:40"}
     else if (x == 59){return "00:20"}
-    else if (x == 60){return "00:00"}
+    else if (x == 60 || y == 1){return "00:00"}
     else if (y == 0){return "XX:XX"}
     else {return "??:??"}
 }
 function packager () {
     if (carrier == null) {carrier = {full: ""}}
-    let fileName = "./gens/games/" + whichGame + ".json"
     let package = {
         t1: teams[0].info.full,
         t2: teams[1].info.full,
@@ -412,10 +411,6 @@ function packager () {
         mes: message,
         time: timeConvert(i, oti)
     }
-    // var json = JSON.stringify(package)
-    // fs.writeFile(fileName, json, 'utf8', function(err) {
-    //     if (err) throw err;
-    // });
     handleGame(package, whichGame)
 }
 }

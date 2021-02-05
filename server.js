@@ -1,3 +1,4 @@
+//server dependencies
 const express = require("express");
 const control = require("./control.js")
 const records = require("./gens/seasonManagement")
