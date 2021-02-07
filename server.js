@@ -1,25 +1,43 @@
 //server dependencies
+require("dotenv").config()
 const express = require("express");
-const control = require("./control.js")
-const records = require("./gens/seasonManagement")
+const session = require("express-session")
+const mongoose = require("mongoose")
 const routes = require("./routes/index")
-const path = require("path");
 const PORT = process.env.PORT || 4000;
 const app = express()
+
+//server stuff
+const control = require("./control.js")
+const records = require("./gens/seasonManagement")
 
 //middlewhere? middleware!
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+
 //static assets
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"))
 }
 
-// control.test()
+//mongo connect
+const uri = `mongodb+srv://${process.env.MDBADMIN}:${process.env.MDBPW}@plondhockey.3acpb.mongodb.net/PlondHockey?retryWrites=true&w=majority`;
+console.log(uri)
+mongoose.connect(uri, {
+    useNewUrlParser: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true,
+    useCreateIndex: true
+})
+    .then(console.log(`MongoDB connected ${uri}`))
+    .catch(err => console.log(err));
+
+
+control.start()
 
 //timing
-setInterval(clock, 60000)
-records.updateRecord()
+// setInterval(clock, 60000)
 function clock() {
     now = new Date
     if (now.getMinutes() === 30 || now.getMinutes() === 0){

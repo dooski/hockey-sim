@@ -82,11 +82,11 @@ function GameBox(props) {
         setGoal2(sym)
     }
     if (data.mes.includes("GOAL") === true){
-      setGoal1("!!")
-      setSide1("!!")
-      setCenter("!!")
-      setSide2("!!")
-      setGoal2("!!")}
+      setGoal1(<Symbol abrv="GOL"/>)
+      setSide1(<Symbol abrv="GOL"/>)
+      setCenter(<Symbol abrv="GOL"/>)
+      setSide2(<Symbol abrv="GOL"/>)
+      setGoal2(<Symbol abrv="GOL"/>)}
 }
 
 function resetMap(){
@@ -136,15 +136,9 @@ if (p === 1) {return sym1} else if (p === 2) {return sym2} else {return "_"}
                     <p className="minor-text">Possession: {pos}</p>
                     <br/>
                 <div className="columns is-mobile">
-                    <div className="column" size={2}>
-                    <p className="minor-text right"> <b>{ab1}</b> </p>
+                    <div className="column" size={12}>
+                    <b className="game-box-rink">{ab1}  [ {goal1}{side1} | {center} | {side2}{goal2} ] {ab2}</b>
                     </div>
-                    <div className="column" size={8}>
-                    <b className="game-box-rink">  [ {goal1} {side1} | {center} | {side2} {goal2} ]  </b>
-                    </div>
-                    <div className="column" size={2}>
-                    <p className="minor-text left"> <b>{ab2}</b> </p>
-                </div> 
                 </div>
                 
                 </div>

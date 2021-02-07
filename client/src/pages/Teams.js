@@ -13,16 +13,16 @@ const [currentTeam,setCurrentTeam] = useState(data.teams.rochester)
 const [bingo, setBingo] = useState([["BUF","Buffalo Starlights",0,0,0],["BOS","Boston Chowdahs",0,0,0],["ROC","Rochester Bones",0,0,0],["OTT","Ottawa Tulips",0,0,0],["MON","Montreal Panic",0,0,0],["TOR","Toronto Brewskis",0,0,0],["POR","Portland Shrooms",0,0,0],["WVM","West Virginia Mothmen",0,0,0],["NOR","New Orleans Moonshine",0,0,0]])
 const [bongo, setBongo] = useState([["NYR","New York Rats",0,0,0],["PHL","Philly Pineapples",0,0,0],["VAN","Vancouver Foxtrots",0,0,0],["CHI","Chicago Paloozas",0,0,0],["PIT","Pittsburgh Good Boys",0,0,0],["BUR","Burlington Lumberjacks",0,0,0],["SFB","Santa Fe Buckaroos",0,0,0],["VAL","Valhalla Omens",0,0,0],["LAK","LA Kickflips",0,0,0]])
 
-useEffect(()=>{
-    UpdateTable()
-}, [])
+// useEffect(()=>{
+//     UpdateTable()
+// }, [])
 
 function UpdateTable() {
-     API.checkSeason()
+     API.getTeams()
         .then((res) => {
             let data = res.data
-            let bingoRaw = [data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8]]
-            let bongoRaw = [data[9], data[10], data[11], data[12], data[13], data[14], data[15], data[16], data[17]]
+            let bingoRaw = [data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8], data[9]]
+            let bongoRaw = [data[10], data[11], data[12], data[13], data[14], data[15], data[16], data[17], data[18]]
             bingoRaw.sort(Sorter)
             bongoRaw.sort(Sorter)
           setBingo(bingoRaw)
