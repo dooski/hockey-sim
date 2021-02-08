@@ -16,7 +16,7 @@ const [bongo, setBongo] = useState(null)
 
 useEffect(() => {
     UpdateTable();
-  });
+  }, []);
 
 
 function UpdateTable() {
