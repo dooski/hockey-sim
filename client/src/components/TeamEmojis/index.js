@@ -8,7 +8,7 @@ function Symbol(props){
     else if (team === "VAN") {return (<Emoji className="symbol van" text=":fox:"/>)}
     else if (team === "ROC") {return (<Emoji className="symbol roc" text=":skull:"/>)}
     else if (team === "OTT") {return (<Emoji className="symbol ott" text=":tulip:"/>)}
-    else if (team === "MON") {return (<Emoji className="symbol mon" text=":warning:"/>)}
+    else if (team === "MON") {return (<Emoji className="symbol mon" text=":bomb:"/>)}
     else if (team === "TOR") {return (<Emoji className="symbol tor" text=":clinking_beer_mugs:"/>)}
     else if (team === "NYR") {return (<Emoji className="symbol nyr" text=":rat:"/>)}
     else if (team === "PHL") {return (<Emoji className="symbol phl" text=":pineapple:"/>)}
