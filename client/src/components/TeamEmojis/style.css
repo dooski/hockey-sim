@@ -1,0 +1,88 @@
+.symbol {
+    border-bottom: 4px solid transparent;
+    border-radius: 50%;
+}
+.buf {
+background-color:darkblue;
+border-color: darkblue
+}
+.van {
+    background-color: lightgreen;
+    background-color: lightgreen
+}
+.roc {
+    background-color: black;
+    border-color:black
+}
+.ott {
+    background-color: darkorchid;
+    border-color:darkorchid;
+}
+.mon {
+    background-color: red;
+    border-color: red;}
+.tor {
+    background-color: salmon;
+    border-color: salmon
+}
+.nyr {
+    background-color: dodgerblue;
+    border-color: dodgerblue
+}
+.phl {
+    background-color: orange;
+    border-color: orange
+}
+.bos {
+    background-color: crimson;
+    border-color: crimson
+}
+.por {
+    background-color: springgreen;
+    border-color: springgreen
+}
+.pit {
+    background-color: burlywood;
+    border-color:burlywood;
+}
+.bur {
+    background-color:forestgreen;
+    border-left: 2px solid;
+    border-right: 2px solid;
+    border-color: forestgreen;
+}
+.chi {
+    background-color: deepskyblue;
+    border-color: deepskyblue
+}
+.wvm {
+    background-color: purple;
+    border-color:purple;
+}
+.nor {
+    background-color: mediumpurple;
+    border-color: mediumpurple;
+}
+.sfb {
+    background-color: sienna;
+    border-color: sienna
+}
+.val {
+    background-color: midnightblue;
+    border-color: midnightblue
+}
+.lak {
+    border-left: 2px solid;
+    border-right: 2px solid;
+    background-color: firebrick;
+    border-color: firebrick;
+}
+.lib {
+    background-color: greenyellow;
+    border-color: greenyellow
+}
+.nsh {
+    background-color: gold;
+    border-color: gold
+}
+

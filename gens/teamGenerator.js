@@ -11,39 +11,39 @@ function makePlayer(name, team){
             alive: true,
             stats: {
                 offense: {
-                    highShot: rng.uniform(),
-                    lowShot: rng.uniform(),
-                    longShot: rng.uniform(),
-                    passing: rng.uniform(),
-                    handling: rng.uniform(),
+                    highShot: rng.random(1, 5),
+                    lowShot: rng.random(1, 5),
+                    longShot: rng.random(1, 5),
+                    passing: rng.random(1, 5),
+                    handling: rng.random(1, 5),
                 },
                 defense: {
-                    forecheck: rng.uniform(),
-                    stick: rng.uniform(),
-                    checking: rng.uniform(),
-                    positioning: rng.uniform(),
-                    blocking: rng.uniform()
+                    forecheck: rng.random(1, 5),
+                    stick: rng.random(1, 5),
+                    checking: rng.random(1, 5),
+                    positioning: rng.random(1, 5),
+                    blocking: rng.random(1, 5)
                 },
                 goalkeeping: {
-                    highBlock: rng.uniform(),
-                    lowBlock: rng.uniform(),
-                    longBlock: rng.uniform(),
-                    catching: rng.uniform(),
-                    aura: rng.uniform()
+                    highBlock: rng.random(1, 5),
+                    lowBlock: rng.random(1, 5),
+                    longBlock: rng.random(1, 5),
+                    catching: rng.random(1, 5),
+                    aura: rng.random(1, 5)
                 },
                 physical: {
-                    speed: rng.uniform(),
-                    strength: rng.uniform(),
-                    faceoff: rng.uniform(),
-                    fighting: rng.uniform(),
-                    blubber: rng.uniform()
+                    speed: rng.random(1, 5),
+                    strength: rng.random(1, 5),
+                    faceoff: rng.random(1, 5),
+                    fighting: rng.random(1, 5),
+                    blubber: rng.random(1, 5)
                 },
                 mental: {
-                    discipline: rng.uniform(),
-                    respect: rng.uniform(),
-                    fear: rng.uniform(),
-                    vision: rng.uniform(),
-                    memory: rng.uniform()
+                    discipline: rng.random(1, 5),
+                    respect: rng.random(1, 5),
+                    fear: rng.random(1, 5),
+                    vision: rng.random(1, 5),
+                    memory: rng.random(1, 5)
                 },
             items: {
                 stick: null,

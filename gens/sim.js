@@ -5,8 +5,14 @@ const fs = require("fs")
 
 let endOfGame = records.endOfGame
 
+function rngWhole(z) {
+    let x = Math.floor(Math.random() * z)
+    return x
+}
+
 function rng(z) {
-    return Math.floor(Math.random() * z)
+    let x = (Math.random() * z)
+    return x
 }
 
 const timer = ms => new Promise(res => setTimeout(res, ms))
@@ -46,6 +52,7 @@ function game(teams, timing, whichGame) {
     let period = 1
     let stage = 0
     let takingShot = false
+    let havingFight = false
     let possession = null
     let carrier = null
     let message = ""
@@ -54,14 +61,19 @@ function game(teams, timing, whichGame) {
     console.log(offLine1)
     periodPlay()
     async function periodPlay() {
-        for (i = 0; i < 61; i++) {
-            if (i == 60 && period !== 3) {
+        for (i = 0; i < 61; i++) { 
+            let fightChance = rngWhole(120)
+            if (havingFight === true) {
+                i--
+            } else if (i == 60 && period !== 3) {
                 endOfPeriod(period)
             } else if (i == 60 && period == 3 && t1Score !== t2Score) {
                 finalScore("THIRD PERIOD")
             } else if (i == 60 && period == 3 && t1Score === t2Score) {
                 endOfPeriod(period)
                 overtime()
+            } else if (fightChance === 69 && havingFight === false) {
+                fight()
             } else {
                 onePlay()
             }
@@ -100,6 +112,52 @@ function game(teams, timing, whichGame) {
         message = `END OF ${x}. GAME OVER. Final Score: ${t1.info.city} ${t1Score} - ${t2Score} ${t2.info.city}`
         endOfGame(t1, t2, t1Score, t2Score)
     }
+    async function fight(){
+        havingFight = true
+        carrier = null
+        possession = 0
+        stage = 0
+        let fighter1 = targetPicker(defLine1)
+        let fighter2 = targetPicker(defLine2)
+        let punch1 = rng((fighter1.stats.physical.fighting * 4) + (fighter2.stats.mental.respect))
+        let punch2 = rng((fighter2.stats.physical.fighting * 4) + (fighter2.stats.mental.discipline))
+        let winner = null
+        let loser = null
+        message = `Here we go, folks! ${fighter1.name} and ${fighter2.name} have thrown down the gloves for a fight!`
+        if (punch1 <= punch2){
+            console.log(RW1.stats.physical.speed)
+            winner = fighter1
+            loser = fighter2
+            await timer(timing*1.1)
+            message = `${t1.info.city}'s ${winner.name} beats ${loser.name}! The ${t1.info.team} are fired up!`
+            RW1.stats.physical.speed++
+            CE1.stats.physical.speed++
+            LW1.stats.physical.speed++
+            LD1.stats.offense.passing++
+            RD1.stats.offense.passing++
+            GK1.stats.goalkeeping.aura++
+            console.log(RW1.stats.physical.speed)
+
+        } else {
+            console.log(RW2.stats.defense.forecheck)
+            winner = fighter2
+            loser = fighter1
+            await timer(timing*1)
+            message = `${t2.info.city}'s ${winner.name} beats ${loser.name}! The ${t2.info.team} are fired up!`
+            RW2.stats.defense.forecheck++
+            CE2.stats.defense.forecheck++
+            LW2.stats.defense.forecheck++
+            LD2.stats.offense.longShot++
+            RD2.stats.offense.longShot++
+            GK2.stats.goalkeeping.aura++
+            console.log(RW2.stats.defense.forecheck)
+        } await timer(timing*1)        
+        message = `Back to the hockey.`
+        await timer(timing*1)
+        havingFight = false
+
+
+    }
     function onePlay() {
         if (stage == 0) {
             puckdrop()
@@ -137,7 +195,7 @@ function game(teams, timing, whichGame) {
         function center() {
             if (possession == 1) {
                 let off = rng((carrier.stats.offense.passing * 20) + (LW1.stats.offense.handling * 8) + (CE1.stats.offense.handling * 8) + (RW1.stats.offense.handling * 8))
-                let def = rng((LW2.stats.defense.forecheck * 10) + (CE2.stats.defense.forecheck * 10) + (RW2.stats.defense.forecheck * 10))
+                let def = rng((LD2.stats.defense.forecheck * 10) + (CE2.stats.defense.forecheck * 10) + (RD2.stats.defense.forecheck * 10))
                 if (def <= off) {
                     let target = targetPicker(offLine1)
                     message = `${carrier.name} passes it up to ${target.name} in ${t2.info.city}'s third.`
@@ -153,7 +211,7 @@ function game(teams, timing, whichGame) {
             }
             else if (possession == 2) {
                 let off = rng((carrier.stats.offense.passing * 20) + (LW2.stats.offense.handling * 8) + (CE2.stats.offense.handling * 8) + (RW2.stats.offense.handling * 8))
-                let def = rng((LW1.stats.defense.forecheck * 10) + (CE1.stats.defense.forecheck * 10) + (RW1.stats.defense.forecheck * 10))
+                let def = rng((LD1.stats.defense.forecheck * 10) + (CE1.stats.defense.forecheck * 10) + (RD1.stats.defense.forecheck * 10))
                 if (def <= off) {
                     let target = targetPicker(offLine2)
                     message = `${carrier.name} passes it up to ${target.name} in ${t1.info.city}'s third.`
@@ -173,16 +231,16 @@ function game(teams, timing, whichGame) {
                 if (possession == 1) {
                     if (takingShot === true) {
                         let shot = rng(carrier.stats.offense.longShot * 30)
-                        let def = rng((GK2.stats.goalkeeping.longBlock * 25) + (LD2.stats.defense.blocking * 5) + (RD2.stats.defense.blocking * 5))
+                        let def = rng((GK2.stats.goalkeeping.longBlock * 30) + (GK2.stats.mental.vision *5) + (LD2.stats.defense.blocking * 10) + (RD2.stats.defense.blocking * 10) + (t1Score * 3))
                         if (def <= shot) {
-                            message = `GOAL: ${t1.info.city}'s ${carrier.name} rockets it past ${GK2.name}!`
+                            message = `GOAL: ${t1.info.city}'s ${carrier.name} takes the shot and rockets it past ${GK2.name}!`
                             t1Score = t1Score + 1
                             possession = 0
                             stage = 0
                             carrier = null
                             takingShot = false
                         } else {
-                            message = `${GK2.name} saves ${carrier.name}'s shot!`
+                            message = `${GK2.name} saves ${carrier.name}'s slapshot!`
                             possession = 2
                             stage = 5
                             carrier = GK2
@@ -190,9 +248,9 @@ function game(teams, timing, whichGame) {
                             return
                         }
                     } else {
-                        let z = rng(10)
-                        if (z > 2) {
-                            let off = rng((carrier.stats.mental.vision * 8) + (carrier.stats.offense.passing * 10) + (CE1.stats.offense.handling * 5) + (RW1.stats.offense.handling * 5) + (LW1.stats.offense.handling * 5))
+                        let z = rngWhole(10)
+                        if (z > 1) {
+                            let off = rng((carrier.stats.mental.vision * 8) + (carrier.stats.offense.passing * 10) + (CE1.stats.physical.speed * 5) + (RW1.stats.physical.speed * 5) + (LW1.stats.physical.speed * 5))
                             let def = rng((LD2.stats.defense.positioning * 10) + (LD2.stats.defense.stick * 5) + (RD2.stats.defense.positioning * 10) + (RD2.stats.defense.stick * 5) + (GK2.stats.goalkeeping.aura * 5))
                             if (def <= off) {
                                 let target = targetPicker(offLine1)
@@ -209,14 +267,14 @@ function game(teams, timing, whichGame) {
                             }
                         } else {
                             let target = targetPicker(defLine1)
-                            message = `${carrier.name} dishes it to ${target.name} at the point who goes for the slapshot!`
+                            message = `${carrier.name} passes it to ${target.name} at the point!`
                             carrier = target
                             takingShot = true
                         }
                     }
                 }
                 else if (possession == 2) {
-                    let off = rng((carrier.stats.offense.passing * 10) + (LD2.stats.offense.handling * 5) + (LD2.stats.physical.speed * 5) + (RD2.stats.offense.handling * 5) + (RD2.stats.physical.speed * 5) + (CE2.stats.offense.handling * 5))
+                    let off = rng((carrier.stats.offense.passing * 12) + (LD2.stats.offense.handling * 5) + (LD2.stats.physical.speed * 5) + (RD2.stats.offense.handling * 5) + (RD2.stats.physical.speed * 5) + (CE2.stats.offense.handling * 5))
                     let def = rng((LW1.stats.defense.forecheck * 8) + (CE1.stats.defense.forecheck * 8) + (RW1.stats.defense.forecheck * 8))
                     if (def <= off) {
                         let target = targetPicker(offLine2)
@@ -235,16 +293,16 @@ function game(teams, timing, whichGame) {
                     if (possession == 2) {
                         if (takingShot === true) {
                             let shot = rng(carrier.stats.offense.longShot * 30)
-                            let def = rng((GK1.stats.goalkeeping.longBlock * 25) + (LD1.stats.defense.blocking * 5) + (RD1.stats.defense.blocking * 5))
+                            let def = rng((GK1.stats.goalkeeping.longBlock * 30) + (GK1.stats.mental.vision * 10) + (LD1.stats.defense.blocking * 10) + (RD1.stats.defense.blocking * 10) + (t2Score * 3))
                             if (def <= shot) {
-                                message = `GOAL: ${t2.info.city}'s ${carrier.name} rockets it past ${GK1.name}!`
+                                message = `GOAL: ${t2.info.city}'s ${carrier.name} takes the shot and rockets it past ${GK1.name}!`
                                 t2Score = t2Score + 1
                                 possession = 0
                                 stage = 0
                                 carrier = null
                                 takingShot = false
                             } else {
-                                message = `${GK1.name} saves ${carrier.name}'s shot!`
+                                message = `${GK1.name} saves ${carrier.name}'s slapshot!`
                                 possession = 1
                                 stage = 1
                                 carrier = GK2
@@ -252,10 +310,10 @@ function game(teams, timing, whichGame) {
                                 return
                             }
                         } else {
-                            let z = rng(10)
+                            let z = rngWhole(10)
                             if (z > 2) {
-                                let off = rng((carrier.stats.mental.vision * 8) + (carrier.stats.offense.passing * 10) + (CE2.stats.offense.handling * 5) + (RW2.stats.offense.handling * 5) + (LW2.stats.offense.handling * 5))
-                                let def = rng((LD1.stats.defense.positioning * 10) + (LD1.stats.defense.stick * 5) + (RD1.stats.defense.positioning * 10) + (RD1.stats.defense.stick * 5) + (GK1.stats.goalkeeping.aura * 5))
+                                let off = rng((carrier.stats.mental.vision * 12) + (carrier.stats.offense.passing * 10) + (CE2.stats.physical.strength * 3) + (RW2.stats.physical.strength * 3) + (LW2.stats.physical.strength * 3))
+                                let def = rng((LD1.stats.defense.positioning * 10) + (LD1.stats.physical.strength * 5) + (RD1.stats.defense.positioning * 10) + (RD1.stats.physical.strength * 5) + (GK1.stats.goalkeeping.aura * 5))
                                 if (def <= off) {
                                     let target = targetPicker(offLine2)
                                     message = `${carrier.name} throws it to ${target.name} near the net!`
@@ -266,19 +324,19 @@ function game(teams, timing, whichGame) {
                                 else {
                                     let target = targetPicker(defLine1)
                                     message = `The defense recovers the puck.`
-                                    possession = 2
+                                    possession = 1
                                     carrier = target
                                 }
                             } else {
                                 let target = targetPicker(defLine2)
-                                message = `${carrier.name} dishes it to ${target.name} at the point who goes for the slapshot!`
+                                message = `${carrier.name} passes it back to ${target.name} at the point!`
                                 carrier = target
                                 takingShot = true
                             }
                         }
                     }
                     else if (possession == 1) {
-                        let off = rng((carrier.stats.offense.passing * 10) + (LD1.stats.offense.handling * 5) + (LD1.stats.physical.speed * 5) + (RD1.stats.offense.handling * 5) + (RD1.stats.physical.speed * 5) + (CE1.stats.offense.handling * 5))
+                        let off = rng((carrier.stats.offense.passing * 12) + (LD1.stats.offense.handling * 5) + (LD1.stats.physical.speed * 5) + (RD1.stats.offense.handling * 5) + (RD1.stats.physical.speed * 5) + (CE1.stats.offense.handling * 5))
                         let def = rng((LW2.stats.defense.forecheck * 8) + (CE2.stats.defense.forecheck * 8) + (RW2.stats.defense.forecheck * 8))
                         if (def <= off) {
                             let target = targetPicker(offLine1)
@@ -298,16 +356,17 @@ function game(teams, timing, whichGame) {
             function crash(side) {
                 if (side == 2) {
                     if (possession == 1) {
-                        let shotType = rng(2)
+                        let shotType = rngWhole(2)
                         let shot = 0
                         let def = 0
                         if (shotType === 0) {
-                            shot = rng(carrier.stats.offense.highShot * 25 + carrier.stats.offense.handling * 10 - carrier.stats.mental.fear * 5)
-                            def = rng(GK2.stats.goalkeeping.highBlock * 25 + GK2.stats.physical.strength * 10)
+                            shot = rng((carrier.stats.offense.highShot * 25) + (carrier.stats.mental.memory * 10) - (carrier.stats.mental.fear * 5))
+                            def = rng((GK2.stats.goalkeeping.highBlock * 35) + (GK2.stats.physical.strength * 10) + (t1Score * 10))
                         }
                         else {
-                            shot = rng(carrier.stats.offense.lowShot * 25 + carrier.stats.physical.speed * 10 - carrier.stats.mental.fear * 5)
-                            def = rng(GK2.stats.goalkeeping.lowBlock * 25 + GK2.stats.physical.speed * 5)
+                            shot = rng((carrier.stats.offense.lowShot * 25) + (carrier.stats.mental.discipline * 10) - (carrier.stats.mental.fear * 5))
+                            def = rng((GK2.stats.goalkeeping.lowBlock * 35) + (GK2.stats.physical.speed * 10) + (t1Score * 10))
+
                         }
                         if (def <= shot) {
                             if (shotType === 0) { message = `GOAL: ${t1.info.city}'s ${carrier.name} scores top corner on ${GK2.name}!` }
@@ -325,7 +384,7 @@ function game(teams, timing, whichGame) {
                         }
                     }
                     else if (possession == 2) {
-                        let off = rng((carrier.stats.goalkeeping.catching * 20) + (carrier.stats.offense.passing * 5) + (LD2.stats.offense.handling * 5) + (RD2.stats.offense.handling * 5) + (CE2.stats.offense.handling * 5))
+                        let off = rng((carrier.stats.goalkeeping.catching * 20) + (carrier.stats.offense.passing * 5) + (LD2.stats.physical.strength * 7) + (RD2.stats.physical.strength * 7) + (CE2.stats.offense.handling * 8))
                         let def = rng((LW1.stats.physical.speed * 10) + (CE1.stats.physical.speed * 10) + (RW1.stats.physical.speed * 10))
                         if (def <= off) {
                             let target = targetPicker(defLine2)
@@ -344,16 +403,16 @@ function game(teams, timing, whichGame) {
                 }
                 else if (side == 1) {
                     if (possession == 2) {
-                        let shotType = rng(2)
+                        let shotType = rngWhole(2)
                         let shot = 0
                         let def = 0
                         if (shotType === 0) {
-                            shot = rng(carrier.stats.offense.highShot * 25 + carrier.stats.offense.handling * 10 - carrier.stats.mental.fear * 5)
-                            def = rng(GK1.stats.goalkeeping.highBlock * 25 + GK1.stats.physical.strength * 10)
+                            shot = rng((carrier.stats.offense.highShot * 25) + (carrier.stats.offense.handling * 10) - (carrier.stats.mental.fear * 5))
+                            def = rng((GK1.stats.goalkeeping.highBlock * 35) + (GK1.stats.mental.discipline * 10) + (t2Score * 10))
                         }
                         else {
-                            shot = rng(carrier.stats.offense.lowShot * 25 + carrier.stats.physical.speed * 10 - carrier.stats.mental.fear * 5)
-                            def = rng(GK1.stats.goalkeeping.lowBlock * 25 + GK1.stats.physical.speed * 5)
+                            shot = rng((carrier.stats.offense.lowShot * 25) + (carrier.stats.physical.speed * 10) - (carrier.stats.mental.fear * 5))
+                            def = rng((GK1.stats.goalkeeping.lowBlock * 35) + (GK1.stats.mental.memory * 10) + (t2Score * 10))
                         }
                         if (def <= shot) {
                             if (shotType === 0) { message = `GOAL: ${t2.info.city}'s ${carrier.name} scores top corner on ${GK1.name}!` }
@@ -371,7 +430,7 @@ function game(teams, timing, whichGame) {
                         }
                     }
                     else if (possession == 1) {
-                        let off = rng((carrier.stats.goalkeeping.catching * 20) + (carrier.stats.offense.passing * 5) + (LD1.stats.offense.handling * 5) + (RD1.stats.offense.handling * 5) + (CE1.stats.offense.handling * 5))
+                        let off = rng((carrier.stats.goalkeeping.catching * 20) + (carrier.stats.offense.passing * 5) + (LD1.stats.physical.strength * 7) + (RD1.stats.physical.strength * 7) + (CE1.stats.offense.handling * 8))
                         let def = rng((LW2.stats.physical.speed * 10) + (CE2.stats.physical.speed * 10) + (RW2.stats.physical.speed * 10))
                         if (def <= off) {
                             let target = targetPicker(defLine1)
@@ -389,13 +448,13 @@ function game(teams, timing, whichGame) {
                     }
                 }
             }
-
-            function targetPicker(line) {
+        }            
+        
+        function targetPicker(line) {
                 let targets = line.filter(player => player !== carrier)
-                let z = rng(targets.length)
+                let z = rngWhole(targets.length)
                 return targets[z]
             }
-        }
         function timeConvert(x, y) {
             if (x === 0) { return "20:00" }
             else if (x == 1) { return "19:40" }

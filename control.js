@@ -21,20 +21,28 @@ function test(){
     sim.game([data.teams.philly, data.teams.boston], 4000, 0)
 }
 
+function wipeRecords(){
+    let teams = ["BUF", "BOS", "ROC", "WVM", "MON", "OTT", "NOR", "POR", "TOR", "NSH", "PHL", "BUR", "LAK", "CHI", "SFB", "PIT", "NYR", "VAL", "VAN", "LIB"]
+    for (i = 0; i < teams.length; i++){
+        teamController.resetRecord(teams[i])
+    }
+}
+
 async function start(){ 
     let bingo = ["BUF", "BOS", "ROC", "WVM", "MON", "OTT", "NOR", "POR", "TOR", "NSH"]
     let bongo = ["PHL", "BUR", "LAK", "CHI", "SFB", "PIT", "NYR", "VAL", "VAN", "LIB"]
     let games = await pickTeams(bingo, bongo)
-    sim.game(games[0], 80, 0)
-    sim.game(games[1], 80, 1)
-    sim.game(games[2], 80, 2)
-    sim.game(games[3], 80, 3)
-    sim.game(games[4], 80, 4)
-    sim.game(games[5], 80, 5)
-    sim.game(games[6], 80, 6)
-    sim.game(games[7], 80, 7)
-    sim.game(games[8], 80, 8)
-    sim.game(games[9], 80, 9)
+    //second argument is length of action in each game (60 actions per period x 3 periods and possible overtime)
+    sim.game(games[0], 6000, 0)
+    sim.game(games[1], 6000, 1)
+    sim.game(games[2], 6000, 2)
+    sim.game(games[3], 6000, 3)
+    sim.game(games[4], 6000, 4)
+    sim.game(games[5], 6000, 5)
+    sim.game(games[6], 6000, 6)
+    sim.game(games[7], 6000, 7)
+    sim.game(games[8], 6000, 8)
+    sim.game(games[9], 6000, 9)
 }
 
 async function pickTeams(x, y){
@@ -237,5 +245,6 @@ module.exports = {
     scheduleMaker,
     packageReturn,
     seasonData,
-    makeTeams
+    makeTeams,
+    wipeRecords
 }

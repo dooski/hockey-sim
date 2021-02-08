@@ -14,6 +14,7 @@ function Home() {
   const [game7, setGame7] = useState(null)
   const [game8, setGame8] = useState(null)
   const [game9, setGame9] = useState(null)
+  const [game10, setGame10] = useState(null)
 
     function useInterval(callback, delay) {
         const savedCallback = useRef();
@@ -34,6 +35,9 @@ function Home() {
           }
         }, [delay]);
       }
+    useInterval(() => {
+        UpdateGame();
+      }, 2000);
 
     function UpdateGame() {
          API.checkGame()
@@ -47,12 +51,10 @@ function Home() {
               setGame6(data[5])
               setGame7(data[6])
               setGame8(data[7])
-              setGame9(data[8])})}
+              setGame9(data[8])
+              setGame10(data[9])})}
 
 
-    useInterval(() => {
-        UpdateGame();
-      }, 2000);
 
     return (
         <div>
@@ -101,7 +103,11 @@ function Home() {
             <GameBox props={game9}/>
             </div>
             ):(<div></div>)}
-
+            {game10 !== null ? (
+            <div className="game-box-container">
+            <GameBox props={game10}/>
+            </div>
+            ):(<div></div>)}
         </div>
     )
 }
