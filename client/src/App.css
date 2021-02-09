@@ -231,13 +231,24 @@ br.nav-br {
   font-style: italic
 }
 
+.modal-card{
+  max-width: 500px;
+}
+
 .modal-card-body {
   background-color: black;
-  color:white
+  color:white;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.roster-list{
+  padding-top: 10px;
+  padding-left: 15px
 }
 
 .position-title {
-  font-weight: 800;
+  font-weight: 700;
 }
 
 hr {
@@ -366,5 +377,10 @@ button:hover {
   }
   .nav-button {
     font-size: 14px
+  }
+  .roster-list{
+    padding-top: 0px;
+    padding-left: 0px;
+    font-size: 14px;
   }
 }
