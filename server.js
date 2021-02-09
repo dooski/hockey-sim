@@ -33,7 +33,6 @@ mongoose.connect(uri, {
     .then(console.log(`MongoDB connected ${uri}`))
     .catch(err => console.log(err));
 
-control.start()
 //timing
 setInterval(clock, 60000)
 function clock() {
