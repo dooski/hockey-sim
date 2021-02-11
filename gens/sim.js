@@ -35,18 +35,18 @@ function game(teams, timing, whichGame) {
     let t2Score = 0
     let currentLine1 = "line1"
     let currentLine2 = "line1"
-    let LW1 = eval("t1.players." + currentLine1 + ".LW")
-    let CE1 = eval("t1.players." + currentLine1 + ".CE")
-    let RW1 = eval("t1.players." + currentLine1 + ".RW")
-    let LD1 = eval("t1.players." + currentLine1 + ".LD")
-    let RD1 = eval("t1.players." + currentLine1 + ".RD")
-    let GK1 = eval("t1.players." + currentLine1 + ".GK")
-    let LW2 = eval("t2.players." + currentLine2 + ".LW")
-    let CE2 = eval("t2.players." + currentLine2 + ".CE")
-    let RW2 = eval("t2.players." + currentLine2 + ".RW")
-    let LD2 = eval("t2.players." + currentLine2 + ".LD")
-    let RD2 = eval("t2.players." + currentLine2 + ".RD")
-    let GK2 = eval("t2.players." + currentLine2 + ".GK")
+    let LW1 = t1.players.line1.LW
+    let CE1 = t1.players.line1.CE
+    let RW1 = t1.players.line1.RW
+    let LD1 = t1.players.line1.LD
+    let RD1 = t1.players.line1.RD
+    let GK1 = t1.players.line1.GK
+    let LW2 = t2.players.line1.LW
+    let CE2 = t2.players.line1.CE
+    let RW2 = t2.players.line1.RW
+    let LD2 = t2.players.line1.LD
+    let RD2 = t2.players.line1.RD
+    let GK2 = t2.players.line1.GK
     let offLine1 = [LW1, CE1, RW1]
     let defLine1 = [LD1, RD1]
     let offLine2 = [LW2, CE2, RW2]
@@ -179,6 +179,7 @@ function game(teams, timing, whichGame) {
             } else if (change1 === 0) {
                 changeLinesHome()
                 message = `The ${t1.info.full} switch lines.`
+                console.log(LW1.name)
             } else if(change2 === 0) {
                 changeLinesAway()
                 message = `The ${t2.info.full} switch lines.`
@@ -196,10 +197,46 @@ function game(teams, timing, whichGame) {
             changeLinesAway()
         }
         function changeLinesHome(){
-            if (currentLine1 = "line1") {currentLine1 = "line2"} else (currentLine1 = "line1")
+            if (currentLine1 = "line1") {
+                currentLine1 = "line2"
+                LW1 = t1.players.line2.LW
+                CE1 = t1.players.line2.CE
+                RW1 = t1.players.line2.RW
+                LD1 = t1.players.line2.LD
+                RD1 = t1.players.line2.RD
+                offLine1 = [LW1, CE1, RW1]
+                defLine1 = [LD1, RD1]
+            } else {
+                currentLine1 = "line1"
+                LW1 = t1.players.line1.LW
+                CE1 = t1.players.line1.CE
+                RW1 = t1.players.line1.RW
+                LD1 = t1.players.line1.LD
+                RD1 = t1.players.line1.RD
+                offLine1 = [LW1, CE1, RW1]
+                defLine1 = [LD1, RD1]
+            }
         }
         function changeLinesAway(){
-            if (currentLine2 = "line1") {currentLine2 = "line2"} else (currentLine2 = "line1")
+            if (currentLine2 = "line1") {
+                currentLine2 = "line2"
+                LW2 = t2.players.line2.LW
+                CE2 = t2.players.line2.CE
+                RW2 = t2.players.line2.RW
+                LD2 = t2.players.line2.LD
+                RD2 = t2.players.line2.RD
+                offLine2 = [LW2, CE2, RW2]
+                defLine2 = [LD2, RD2]
+            } else {
+                currentLine2 = "line1"
+                LW2 = t2.players.line1.LW
+                CE2 = t2.players.line1.CE
+                RW2 = t2.players.line1.RW
+                LD2 = t2.players.line1.LD
+                RD2 = t2.players.line1.RD
+                offLine2 = [LW2, CE2, RW2]
+                defLine2 = [LD2, RD2]
+            }
         }
         function puckdrop() {
             let p1 = rng(CE1.stats.physical.faceoff + 8)
