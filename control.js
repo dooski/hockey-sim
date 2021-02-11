@@ -8,6 +8,8 @@ const playerController = require("./controllers/playerController")
 const returnGames = gameHandler.returnGames
 const fs = require("fs")
 
+const timer = ms => new Promise(res => setTimeout(res, ms))
+
 function rng(z) {
     return Math.floor(Math.random() * z)
 }
@@ -33,16 +35,17 @@ async function start(){
     let bongo = ["PHL", "BUR", "LAK", "CHI", "SFB", "PIT", "NYR", "VAL", "VAN", "LIB"]
     let games = await pickTeams(bingo, bongo)
     //second argument is length of action in each game (60 actions per period x 3 periods and possible overtime)
-    sim.game(games[0], 6000, 0)
-    sim.game(games[1], 6000, 1)
-    sim.game(games[2], 6000, 2)
-    sim.game(games[3], 6000, 3)
-    sim.game(games[4], 6000, 4)
-    sim.game(games[5], 6000, 5)
-    sim.game(games[6], 6000, 6)
-    sim.game(games[7], 6000, 7)
-    sim.game(games[8], 6000, 8)
-    sim.game(games[9], 6000, 9)
+    sim.game(games[0], 6, 0)
+    sim.game(games[1], 6, 1)
+    sim.game(games[2], 6, 2)
+    sim.game(games[3], 6, 3)
+    sim.game(games[4], 6, 4)
+    sim.game(games[5], 6, 5)
+    sim.game(games[6], 6, 6)
+    sim.game(games[7], 6, 7)
+    sim.game(games[8], 6, 8)
+    sim.game(games[9], 6, 9)
+    setTimeout(start, 7000)
 }
 
 async function pickTeams(x, y){
@@ -86,7 +89,7 @@ function varString(a, b){
     return [teamAobj, teamBobj]
 }
 
-function makeTeams(){
+async function makeTeams(){
     var players = [
         ["Bo Specksgoor", "BUF"],
         ["Sven Hickory", "BUF"],
@@ -234,10 +237,55 @@ function makeTeams(){
     for (i = 0; i < players.length; i++){
         teamGenerator.makePlayer(players[i][0], players[i][1])
     }
-    for (i = 0; i < teams.length; i++){
-        teamGenerator.makeTeam(teams[i][0], teams[i][1], teams[i][2], teams[i][3], teams[i][4], teams[i][5])
-    }
 }
+
+async function makeTeam(){
+        var teams = [
+        ["Buffalo Starlights", "Buffalo", "Starlights", "Shinin' Just For You", "Bingo", "BUF"],
+        ["Boston Chowdahs", "Boston", "Chowdahs", "Like We Say in Boston, Let's Go Boston", "Bingo", "BOS"],
+        ["Rochester Bones", "Rochester", "Bones", "The Future is Bones", "Bingo", "ROC"],
+        ["Ottawa Tulips", "Ottawa", "Tulips", "Flower Power", "Bingo", "OTT"],
+        ["Montreal Panic", "Montreal", "Panic", "Poutine Pucks in the Net!", "Bingo", "MON"],
+        ["Toronto Brewskis", "Toronto", "Brewskis", "Grip It and Rip It, Baby", "Bingo", "TOR"],
+        ["Portland Shrooms", "Portland", "Shrooms", "Good Sporesmanship", "Bingo", "POR"],
+        ["West Virginia Mothmen", "West Virginia", "Mothmen", "Scoring Makes the Light Go On", "Bingo", "WVM"],
+        ["New Orleans Moonshine", "New Orleans", "Moonshine", "Is 'Mardi Goals' Anything?", "Bingo", "NOR"],
+        ["Nashville Dollys", "Nashville", "Dollys", "Scoring Nine to Five", "Bingo", "NSH"],
+        ["New York Rats", "New York", "Rats", "From the Bodega to the Blueline", "Bongo", "NYR"],
+        ["Philly Pineapples", "Philadelphia", "Pineapples", "We'll Punt You Off the Ben Franklin Bridge", "Bongo", "PHL"],
+        ["Vancouver Foxtrots", "Vancouver", "Foxtrots", "Magically Pacific!", "Bongo", "VAN"],
+        ["Chicago Squalls", "Chicago", "Squalls", "Guilt-Free Windy City Hockey", "Bongo", "CHI"],
+        ["Pittsburgh Good Boys", "Pittsburgh", "Good Boys", "Yes We Are, Yes We Are", "Bongo", "PIT"],
+        ["Burlington Lumberjacks", "Burlington", "Lumberjacks", "Sustainable Forcheckestry", "Bongo", "BUR"],
+        ["Santa Fe Buckaroos", "Santa Fe", "Buckaroos", "Buck Up, Knucklepuck", "Bongo", "SFB"],
+        ["Valhalla Omens", "Valhalla", "Omens", "Comets, Ravens, Plond Hockey.", "Bongo", "VAL"],
+        ["LA Kickflips", "Los Angeles", "Kickflips", "Skate or Die", "Bongo", "LAK"],
+        ["Long Island Beach Bums", "Long Island", "Beach Bums", "Strong Island Time, Baby!", "Bongo", "LIB"]
+    ] 
+    for (i = 0; i < 20; i++){
+    teamGenerator.makeTeam(teams[i][0], teams[i][1], teams[i][2], teams[i][3], teams[i][4], teams[i][5])
+}
+}
+
+async function makeSecondLine(){
+    var first = data.first
+    var last = data.last
+    var team = data.team
+
+    for (i = 0; i < 120; i++){
+        let z1 = rng(first.length) 
+        let firstName = first[z1]
+        first.splice(z1, 1)
+        let z2 = rng(last.length)
+        let lastName = last[z2]
+        last.splice(z2, 1)
+        let z3 = rng(team.length)
+        let chosenTeam = team[z3]
+        team.splice(z3, 1)
+        let fullName = `${firstName} ${lastName}`
+        teamGenerator.makePlayer(fullName, chosenTeam)
+    } await timer(10000)
+    }
 
 module.exports = {
     test,
@@ -246,5 +294,7 @@ module.exports = {
     packageReturn,
     seasonData,
     makeTeams,
-    wipeRecords
+    makeTeam,
+    wipeRecords,
+    makeSecondLine
 }

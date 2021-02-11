@@ -1,1840 +1,371 @@
 {
-    "teams": {
-        "buffalo": {
-            "info": {
-                "full": "Buffalo Starlights",
-                "city": "Buffalo",
-                "team": "Starlights",
-                "desc": "Shinin' Just For You",
-                "div": "Bingo",
-                "abrv": "BUF"
-            },
-            "players": {
-                "LW": {
-                    "full": "Bo Specksgoor",
-                    "captain": 0,
-                    "stats": {
-                        "shooting": 0.5,
-                        "passing": 0.5,
-                        "handling": 0.5,
-                        "checking": 0.5,
-                        "positioning": 0.5,
-                        "blocking": 0.5,
-                        "speed": 0.5,
-                        "goalkeeping": 0.5,
-                        "discipline": 0.5
-                    }
-                },
-                "C": {
-                    "full": "Sven Hickory",
-                    "captain": 0,
-                    "stats": {
-                        "shooting": 0.5,
-                        "passing": 0.5,
-                        "handling": 0.5,
-                        "checking": 0.5,
-                        "positioning": 0.5,
-                        "blocking": 0.5,
-                        "speed": 0.5,
-                        "goalkeeping": 0.5,
-                        "discipline": 0.5
-                    }
-                },
-                "RW": {
-                    "full": "Rachelle Peach",
-                    "captain": 0,
-                    "stats": {
-                        "shooting": 0.5,
-                        "passing": 0.5,
-                        "handling": 0.5,
-                        "checking": 0.5,
-                        "positioning": 0.5,
-                        "blocking": 0.5,
-                        "speed": 0.5,
-                        "goalkeeping": 0.5,
-                        "discipline": 0.5
-                    }
-                },
-                "LD": {
-                    "full": "Hutch Chiarella",
-                    "captain": 1,
-                    "stats": {
-                        "shooting": 0.9,
-                        "passing": 0.9,
-                        "handling": 0.9,
-                        "checking": 0.9,
-                        "positioning": 0.9,
-                        "blocking": 0.9,
-                        "speed": 0.9,
-                        "goalkeeping": 0.9,
-                        "discipline": 0.9
-                    }
-                },
-                "RD": {
-                    "full": "MX Esquire",
-                    "captain": 0,
-                    "stats": {
-                        "shooting": 0.5,
-                        "passing": 0.5,
-                        "handling": 0.5,
-                        "checking": 0.5,
-                        "positioning": 0.5,
-                        "blocking": 0.5,
-                        "speed": 0.5,
-                        "goalkeeping": 0.5,
-                        "discipline": 0.5
-                    }
-                },
-                "G": {
-                    "full": "Hella Bosque",
-                    "captain": 0,
-                    "stats": {
-                        "shooting": 0.5,
-                        "passing": 0.5,
-                        "handling": 0.5,
-                        "checking": 0.5,
-                        "positioning": 0.5,
-                        "blocking": 0.5,
-                        "speed": 0.5,
-                        "goalkeeping": 0.5,
-                        "discipline": 0.5
-                    }
-                }
-            }
-        },
-        "boston": {
-            "info": {
-                        "full": "Boston Chowdahs",
-                        "city": "Boston",
-                        "team": "Chowdahs",
-                        "desc": "Like We Say In Boston, Let's Go Boston",
-                        "div": "Bongo",
-                        "abrv": "BOS"
-            },
-            "players": {
-                        "LW": {
-                            "full": "Mimi Chip",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "C": {
-                            "full": "Clam Adams",
-                            "captain": 1,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "RW": {
-                            "full": "Bean Bradley",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "LD": {
-                            "full": "Simon Crimock",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "RD": {
-                            "full": "Olli Zelda",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "G": {
-                            "full": "Bryan Hell",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.9,
-                                "passing": 0.9,
-                                "handling": 0.9,
-                                "checking": 0.9,
-                                "positioning": 0.9,
-                                "blocking": 0.9,
-                                "speed": 0.9,
-                                "goalkeeping": 0.9,
-                                "discipline": 0.9
-                            }
-                        }
-            }
-        },      
-        "rochester": {
-            "info": {
-                        "full": "Rochester Bones",
-                        "city": "Rochester",
-                        "team": "Bones",
-                        "desc": "The Future is Bones",
-                        "div": "Bingo",
-                        "abrv": "ROC"
-            },
-            "players": {
-                        "LW": {
-                            "full": "Bart Guilfoyle",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.9,
-                                "passing": 0.9,
-                                "handling": 0.9,
-                                "checking": 0.9,
-                                "positioning": 0.9,
-                                "blocking": 0.9,
-                                "speed": 0.9,
-                                "goalkeeping": 0.9,
-                                "discipline": 0.9
-                            }
-                        },
-                        "C": {
-                            "full": "Poppy Dake",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "RW": {
-                            "full": "Hella Froio",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "LD": {
-                            "full": "Crazy Bones",
-                            "captain": 1,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "RD": {
-                            "full": "Petrov Garbo",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "G": {
-                            "full": "Santiago Pistachio",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        }
-            }
-        },
-        "ottawa": {
-            "info": {
-                        "full": "Ottawa Tulips",
-                        "city": "Ottawa",
-                        "team": "Tulips",
-                        "desc": "Flower Power",
-                        "div": "Bingo",
-                        "abrv": "OTT"
-            },
-            "players": {
-                        "LW": {
-                            "full": "Amelia Zamboni",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "C": {
-                            "full": "Rachel Berg",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "RW": {
-                            "full": "Boomtown Wagner",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.9,
-                                "passing": 0.9,
-                                "handling": 0.9,
-                                "checking": 0.9,
-                                "positioning": 0.9,
-                                "blocking": 0.9,
-                                "speed": 0.9,
-                                "goalkeeping": 0.9,
-                                "discipline": 0.9
-                            }
-                        },
-                        "LD": {
-                            "full": "Dooskbot",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "RD": {
-                            "full": "Sparky Medina",
-                            "captain": 1,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "G": {
-                            "full": "Justo Airplane",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        }
-            }
-        },
-        "montreal": {
-            "info": {
-                "full": "Montreal Panic",
-                "city": "Montreal",
-                "team": "Panic",
-                "desc": "Poutine Pucks in the Net!",
-                "div": "Bingo",
-                "abrv": "MON"
-            },
-            "players": {
-                "LW": {
-                    "full": "Holy Walaprat",
-                    "captain": 0,
-                    "stats": {
-                        "shooting": 0.5,
-                        "passing": 0.5,
-                        "handling": 0.5,
-                        "checking": 0.5,
-                        "positioning": 0.5,
-                        "blocking": 0.5,
-                        "speed": 0.5,
-                        "goalkeeping": 0.5,
-                        "discipline": 0.5
-                    }
-                },
-                "C": {
-                    "full": "Pierre Pizzazz",
-                    "captain": 0,
-                    "stats": {
-                        "shooting": 0.9,
-                        "passing": 0.9,
-                        "handling": 0.9,
-                        "checking": 0.9,
-                        "positioning": 0.9,
-                        "blocking": 0.9,
-                        "speed": 0.9,
-                        "goalkeeping": 0.9,
-                        "discipline": 0.9
-                    }
-                },
-                "RW": {
-                    "full": "Celine Twig",
-                    "captain": 1,
-                    "stats": {
-                        "shooting": 0.5,
-                        "passing": 0.5,
-                        "handling": 0.5,
-                        "checking": 0.5,
-                        "positioning": 0.5,
-                        "blocking": 0.5,
-                        "speed": 0.5,
-                        "goalkeeping": 0.5,
-                        "discipline": 0.5
-                    }
-                },
-                "LD": {
-                    "full": "Barney Lawrence",
-                    "captain": 0,
-                    "stats": {
-                        "shooting": 0.5,
-                        "passing": 0.5,
-                        "handling": 0.5,
-                        "checking": 0.5,
-                        "positioning": 0.5,
-                        "blocking": 0.5,
-                        "speed": 0.5,
-                        "goalkeeping": 0.5,
-                        "discipline": 0.5
-                    }
-                },
-                "RD": {
-                    "full": "Hank Hotdog",
-                    "captain": 0,
-                    "stats": {
-                        "shooting": 0.5,
-                        "passing": 0.5,
-                        "handling": 0.5,
-                        "checking": 0.5,
-                        "positioning": 0.5,
-                        "blocking": 0.5,
-                        "speed": 0.5,
-                        "goalkeeping": 0.5,
-                        "discipline": 0.5
-                    }
-                },
-                "G": {
-                    "full": "JJ Milkman",
-                    "captain": 0,
-                    "stats": {
-                        "shooting": 0.5,
-                        "passing": 0.5,
-                        "handling": 0.5,
-                        "checking": 0.5,
-                        "positioning": 0.5,
-                        "blocking": 0.5,
-                        "speed": 0.5,
-                        "goalkeeping": 0.5,
-                        "discipline": 0.5
-                    }
-                }
-            }
-        },
-        "toronto": {
-            "info": {
-                        "full": "Toronto Brewskis",
-                        "city": "Toronto",
-                        "team": "Brewskis",
-                        "desc": "Canada's America!",
-                        "div": "Bingo",
-                        "abrv": "TOR"
-            },
-            "players": {
-                        "LW": {
-                            "full": "Mackenzie Lemon",
-                            "captain": 1,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "C": {
-                            "full": "Hannah Hammer",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "RW": {
-                            "full": "Tommy Domino",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "LD": {
-                            "full": "Tom Hirtin",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "RD": {
-                            "full": "Allison Grunge",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.9,
-                                "passing": 0.9,
-                                "handling": 0.9,
-                                "checking": 0.9,
-                                "positioning": 0.9,
-                                "blocking": 0.9,
-                                "speed": 0.9,
-                                "goalkeeping": 0.9,
-                                "discipline": 0.9
-                            }
-                        },
-                        "G": {
-                            "full": "Ed Kirby",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        }
-            }
-        },
-        "portland": {
-            "info": {
-                        "full": "Portland Shrooms",
-                        "city": "Portland",
-                        "team": "Shrooms",
-                        "desc": "Good Sporesmanship",
-                        "div": "Bingo",
-                        "abrv": "POR"
-            },
-            "players": {
-                        "LW": {
-                            "full": "Carrie Sleater",
-                            "captain": 1,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "C": {
-                            "full": "Hank Hudson",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "RW": {
-                            "full": "Herbie Sprite",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.9,
-                                "passing": 0.9,
-                                "handling": 0.9,
-                                "checking": 0.9,
-                                "positioning": 0.9,
-                                "blocking": 0.9,
-                                "speed": 0.9,
-                                "goalkeeping": 0.9,
-                                "discipline": 0.9
-                            }
-                        },
-                        "LD": {
-                            "full": "Normie Walsh",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "RD": {
-                            "full": "Martina Hondo",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "G": {
-                            "full": "Stonk Kelly",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        }
-            }
-        },
-        "westVirginia": {
-            "info": {
-                        "full": "West Virginia Mothmen",
-                        "city": "West Virginia",
-                        "team": "Mothmen",
-                        "desc": "Scoring Makes The Light Go On",
-                        "div": "Bingo",
-                        "abrv": "WVM"
-            },
-            "players": {
-                        "LW": {
-                            "full": "Big Bobby",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "C": {
-                            "full": "Danielle Normalperson",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.9,
-                                "passing": 0.9,
-                                "handling": 0.9,
-                                "checking": 0.9,
-                                "positioning": 0.9,
-                                "blocking": 0.9,
-                                "speed": 0.9,
-                                "goalkeeping": 0.9,
-                                "discipline": 0.9
-                            }
-                        },
-                        "RW": {
-                            "full": "Bluejay Watkins",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "LD": {
-                            "full": "Hoops McElroy",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "RD": {
-                            "full": "Brendan O'Sure",
-                            "captain": 1,
-                            "stats": {
-                                "shooting": 0.9,
-                                "passing": 0.9,
-                                "handling": 0.9,
-                                "checking": 0.9,
-                                "positioning": 0.9,
-                                "blocking": 0.9,
-                                "speed": 0.9,
-                                "goalkeeping": 0.9,
-                                "discipline": 0.9
-                            }
-                        },
-                        "G": {
-                            "full": "RJ Spider",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        }
-            }
-        },
-        "newOrleans": {
-            "info": {
-                        "full": "New Orleans Moonshine",
-                        "city": "New Orleans",
-                        "team": "Moonshine",
-                        "desc": "Is 'Mardi Goals' Anything?",
-                        "div": "Bingo",
-                        "abrv": "NOR"
-            },
-            "players": {
-                        "LW": {
-                            "full": "Robbin Lupino",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "C": {
-                            "full": "Luigi Gibbons",
-                            "captain": 1,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "RW": {
-                            "full": "Patrice Huxley",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "LD": {
-                            "full": "Corey Flinch",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "RD": {
-                            "full": "Sarah Crowley",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.9,
-                                "passing": 0.9,
-                                "handling": 0.9,
-                                "checking": 0.9,
-                                "positioning": 0.9,
-                                "blocking": 0.9,
-                                "speed": 0.9,
-                                "goalkeeping": 0.9,
-                                "discipline": 0.9
-                            }
-                        },
-                        "G": {
-                            "full": "Byron Gumbo",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        }
-            }
-        },
-        "newYork": {
-            "info": {
-                "full": "New York Rats",
-                "city": "New York",
-                "team": "Rats",
-                "desc": "From the Bodega to the Blueline",
-                "div": "Bongo",
-                "abrv": "NYR"
-            },
-            "players": {
-                "LW": {
-                    "full": "Izzy Thump",
-                    "captain": 0,
-                    "stats": {
-                        "shooting": 0.9,
-                        "passing": 0.9,
-                        "handling": 0.9,
-                        "checking": 0.9,
-                        "positioning": 0.9,
-                        "blocking": 0.9,
-                        "speed": 0.9,
-                        "goalkeeping": 0.9,
-                        "discipline": 0.9
-                    }
-                },
-                "C": {
-                    "full": "Krinyan McCartney",
-                    "captain": 0,
-                    "stats": {
-                        "shooting": 0.5,
-                        "passing": 0.5,
-                        "handling": 0.5,
-                        "checking": 0.5,
-                        "positioning": 0.5,
-                        "blocking": 0.5,
-                        "speed": 0.5,
-                        "goalkeeping": 0.5,
-                        "discipline": 0.5
-                    }
-                },
-                "RW": {
-                    "full": "Alannah Win",
-                    "captain": 0,
-                    "stats": {
-                        "shooting": 0.5,
-                        "passing": 0.5,
-                        "handling": 0.5,
-                        "checking": 0.5,
-                        "positioning": 0.5,
-                        "blocking": 0.5,
-                        "speed": 0.5,
-                        "goalkeeping": 0.5,
-                        "discipline": 0.5
-                    }
-                },
-                "LD": {
-                    "full": "Sentient Pizza",
-                    "captain": 1,
-                    "stats": {
-                        "shooting": 0.5,
-                        "passing": 0.5,
-                        "handling": 0.5,
-                        "checking": 0.5,
-                        "positioning": 0.5,
-                        "blocking": 0.5,
-                        "speed": 0.5,
-                        "goalkeeping": 0.5,
-                        "discipline": 0.5
-                    }
-                },
-                "RD": {
-                    "full": "Terry Clines",
-                    "captain": 0,
-                    "stats": {
-                        "shooting": 0.5,
-                        "passing": 0.5,
-                        "handling": 0.5,
-                        "checking": 0.5,
-                        "positioning": 0.5,
-                        "blocking": 0.5,
-                        "speed": 0.5,
-                        "goalkeeping": 0.5,
-                        "discipline": 0.5
-                    }
-                },
-                "G": {
-                    "full": "Molly Bagels",
-                    "captain": 0,
-                    "stats": {
-                        "shooting": 0.5,
-                        "passing": 0.5,
-                        "handling": 0.5,
-                        "checking": 0.5,
-                        "positioning": 0.5,
-                        "blocking": 0.5,
-                        "speed": 0.5,
-                        "goalkeeping": 0.5,
-                        "discipline": 0.5
-                    }
-                }
-            }
-        },
-        "philly": {
-            "info": {
-                        "full": "Philly Pineapples",
-                        "city": "Philadelphia",
-                        "team": "Pineapples",
-                        "desc": "We'll Punt You Off The Ben Franklin Bridge",
-                        "div": "Bongo",
-                        "abrv": "PHL"
-            },
-            "players": {
-                        "LW": {
-                            "full": "Daymor Dangles",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "C": {
-                            "full": "Gregg Wawa",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.9,
-                                "passing": 0.9,
-                                "handling": 0.9,
-                                "checking": 0.9,
-                                "positioning": 0.9,
-                                "blocking": 0.9,
-                                "speed": 0.9,
-                                "goalkeeping": 0.9,
-                                "discipline": 0.9
-                            }
-                        },
-                        "RW": {
-                            "full": "Avy Blunt",
-                            "captain": 1,
-                            "stats": {
-                                "shooting": 0.9,
-                                "passing": 0.9,
-                                "handling": 0.9,
-                                "checking": 0.9,
-                                "positioning": 0.9,
-                                "blocking": 0.9,
-                                "speed": 0.9,
-                                "goalkeeping": 0.9,
-                                "discipline": 0.9
-                            }
-                        },
-                        "LD": {
-                            "full": "Elmo Battleaxe",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "RD": {
-                            "full": "Julie Blunt",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "G": {
-                            "full": "Oaksy the Kid",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        }
-            }
-        },
-        "vancouver": {
-            "info": {
-                        "full": "Vancouver Foxtrots",
-                        "city": "Vancouver",
-                        "team": "Foxtrots",
-                        "desc": "Magically Pacific!",
-                        "div": "Bingo",
-                        "abrv": "VAN"
-            },
-            "players": {
-                        "LW": {
-                            "full": "Claude Roy",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "C": {
-                            "full": "Shinji Otto",
-                            "captain": 1,
-                            "stats": {
-                                "shooting": 0.9,
-                                "passing": 0.9,
-                                "handling": 0.9,
-                                "checking": 0.9,
-                                "positioning": 0.9,
-                                "blocking": 0.9,
-                                "speed": 0.9,
-                                "goalkeeping": 0.9,
-                                "discipline": 0.9
-                            }
-                        },
-                        "RW": {
-                            "full": "Jessica Highlander",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "LD": {
-                            "full": "Brandy Maple",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "RD": {
-                            "full": "Lucky Jupiter",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "G": {
-                            "full": "Mats Sharqvist",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        }
-            }
-        },
-        "chicago": {
-            "info": {
-                "full": "Chicago Paloozas",
-                "city": "Chicago",
-                "team": "Paloozas",
-                "desc": "Guilt-Free Windy City Hockey",
-                "div": "Bongo",
-                "abrv": "CHI"
-            },
-            "players": {
-                "LW": {
-                    "full": "Giovanni Schmitz",
-                    "captain": 0,
-                    "stats": {
-                        "shooting": 0.5,
-                        "passing": 0.5,
-                        "handling": 0.5,
-                        "checking": 0.5,
-                        "positioning": 0.5,
-                        "blocking": 0.5,
-                        "speed": 0.5,
-                        "goalkeeping": 0.5,
-                        "discipline": 0.5
-                    }
-                },
-                "C": {
-                    "full": "Penelope Cleaver",
-                    "captain": 0,
-                    "stats": {
-                        "shooting": 0.9,
-                        "passing": 0.9,
-                        "handling": 0.9,
-                        "checking": 0.9,
-                        "positioning": 0.9,
-                        "blocking": 0.9,
-                        "speed": 0.9,
-                        "goalkeeping": 0.9,
-                        "discipline": 0.9
-                    }
-                },
-                "RW": {
-                    "full": "Butterfly Funk",
-                    "captain": 1,
-                    "stats": {
-                        "shooting": 0.5,
-                        "passing": 0.5,
-                        "handling": 0.5,
-                        "checking": 0.5,
-                        "positioning": 0.5,
-                        "blocking": 0.5,
-                        "speed": 0.5,
-                        "goalkeeping": 0.5,
-                        "discipline": 0.5
-                    }
-                },
-                "LD": {
-                    "full": "Smooth Wojtas",
-                    "captain": 0,
-                    "stats": {
-                        "shooting": 0.5,
-                        "passing": 0.5,
-                        "handling": 0.5,
-                        "checking": 0.5,
-                        "positioning": 0.5,
-                        "blocking": 0.5,
-                        "speed": 0.5,
-                        "goalkeeping": 0.5,
-                        "discipline": 0.5
-                    }
-                },
-                "RD": {
-                    "full": "Igor Kranck",
-                    "captain": 0,
-                    "stats": {
-                        "shooting": 0.5,
-                        "passing": 0.5,
-                        "handling": 0.5,
-                        "checking": 0.5,
-                        "positioning": 0.5,
-                        "blocking": 0.5,
-                        "speed": 0.5,
-                        "goalkeeping": 0.5,
-                        "discipline": 0.5
-                    }
-                },
-                "G": {
-                    "full": "Deeno Watkins",
-                    "captain": 0,
-                    "stats": {
-                        "shooting": 0.5,
-                        "passing": 0.5,
-                        "handling": 0.5,
-                        "checking": 0.5,
-                        "positioning": 0.5,
-                        "blocking": 0.5,
-                        "speed": 0.5,
-                        "goalkeeping": 0.5,
-                        "discipline": 0.5
-                    }
-                }
-            }
-        },
-        "pittsburgh": {
-            "info": {
-                        "full": "Pittsburgh Good Boys",
-                        "city": "Pittsburgh",
-                        "team": "Good Boys",
-                        "desc": "Yes We Are, Yes We Are",
-                        "div": "Bongo",
-                        "abrv": "PIT"
-            },
-            "players": {
-                        "LW": {
-                            "full": "Snack Falcon",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "C": {
-                            "full": "Zoey Oaks",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "RW": {
-                            "full": "Sid Benson",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "LD": {
-                            "full": "Ruth Baby",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.9,
-                                "passing": 0.9,
-                                "handling": 0.9,
-                                "checking": 0.9,
-                                "positioning": 0.9,
-                                "blocking": 0.9,
-                                "speed": 0.9,
-                                "goalkeeping": 0.9,
-                                "discipline": 0.9
-                            }
-                        },
-                        "RD": {
-                            "full": "Faith McKeon",
-                            "captain": 1,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "G": {
-                            "full": "Bruce Oaks",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        }
-            }
-        },
-        "burlington": {
-            "info": {
-                        "full": "Burlington Lumberjacks",
-                        "city": "Burlington",
-                        "team": "Lumberjacks",
-                        "desc": "Sustainable Forecheckestry",
-                        "div": "Bongo",
-                        "abrv": "BUR"
-            },
-            "players": {
-                        "LW": {
-                            "full": "Lucy Stoddart",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "C": {
-                            "full": "Argo Voyager",
-                            "captain": 1,
-                            "stats": {
-                                "shooting": 0.9,
-                                "passing": 0.9,
-                                "handling": 0.9,
-                                "checking": 0.9,
-                                "positioning": 0.9,
-                                "blocking": 0.9,
-                                "speed": 0.9,
-                                "goalkeeping": 0.9,
-                                "discipline": 0.9
-                            }
-                        },
-                        "RW": {
-                            "full": "Fishy Lupino",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "LD": {
-                            "full": "Vladimira Nishikawa",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "RD": {
-                            "full": "Betsy Grunge",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "G": {
-                            "full": "Flannel Borowski",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        }
-            }
-        },
-        "santaFe": {
-            "info": {
-                        "full": "Santa Fe Buckaroos",
-                        "city": "Santa Fe",
-                        "team": "Buckaroos",
-                        "desc": "Buck Up or Shut Up",
-                        "div": "Bongo",
-                        "abrv": "SFB"
-            },
-            "players": {
-                        "LW": {
-                            "full": "Olimar Champion",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.9,
-                                "passing": 0.9,
-                                "handling": 0.9,
-                                "checking": 0.9,
-                                "positioning": 0.9,
-                                "blocking": 0.9,
-                                "speed": 0.9,
-                                "goalkeeping": 0.9,
-                                "discipline": 0.9
-                            }
-                        },
-                        "C": {
-                            "full": "Hillary Applesauce",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "RW": {
-                            "full": "Coyote Morris",
-                            "captain": 1,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "LD": {
-                            "full": "Jimmy Kennicott",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "RD": {
-                            "full": "Gaspar Sanz",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "G": {
-                            "full": "Derek Van de Berg",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        }
-            }
-        },
-        "valhalla": {
-            "info": {
-                        "full": "Valhalla Omens",
-                        "city": "Valhalla",
-                        "team": "Omens",
-                        "desc": "Comets, Ravens, Plond Hockey.",
-                        "div": "Bongo",
-                        "abrv": "VAL"
-            },
-            "players": {
-                        "LW": {
-                            "full": "Svend Guðmundur",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "C": {
-                            "full": "Rune Blekksprut",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "RW": {
-                            "full": "Gorm Knudsun",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.9,
-                                "passing": 0.9,
-                                "handling": 0.9,
-                                "checking": 0.9,
-                                "positioning": 0.9,
-                                "blocking": 0.9,
-                                "speed": 0.9,
-                                "goalkeeping": 0.9,
-                                "discipline": 0.9
-                            }
-                        },
-                        "LD": {
-                            "full": "Hilda Ulfsdottir",
-                            "captain": 1,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "RD": {
-                            "full": "Gunhild Gromsdottir",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "G": {
-                            "full": "Spanky McCool",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        }
-            }
-        },
-        "LA": {
-            "info": {
-                        "full": "LA Kickflips",
-                        "city": "Los Angeles",
-                        "team": "Kickflips",
-                        "desc": "Skate or Die",
-                        "div": "Bongo",
-                        "abrv": "LAK"
-            },
-            "players": {
-                        "LW": {
-                            "full": "Bryce Cream",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.9,
-                                "passing": 0.9,
-                                "handling": 0.9,
-                                "checking": 0.9,
-                                "positioning": 0.9,
-                                "blocking": 0.9,
-                                "speed": 0.9,
-                                "goalkeeping": 0.9,
-                                "discipline": 0.9
-                            }
-                        },
-                        "C": {
-                            "full": "Tony Puck",
-                            "captain": 1,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "RW": {
-                            "full": "Christina Slush",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "LD": {
-                            "full": "Sebbie Oof",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "RD": {
-                            "full": "Jordan Oof",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        },
-                        "G": {
-                            "full": "Helen Thrasher",
-                            "captain": 0,
-                            "stats": {
-                                "shooting": 0.5,
-                                "passing": 0.5,
-                                "handling": 0.5,
-                                "checking": 0.5,
-                                "positioning": 0.5,
-                                "blocking": 0.5,
-                                "speed": 0.5,
-                                "goalkeeping": 0.5,
-                                "discipline": 0.5
-                            }
-                        }
-            }
-        }
-    }
+    "first": [
+        "Pierre",
+        "JC",
+        "Ralph",
+        "Yvan",
+        "Lucien",
+        "Serge",
+        "Gump",
+        "Ab",
+        "Gorb",
+        "Edwin",
+        "Walt",
+        "Jean",
+        "Jim",
+        "Andre",
+        "Rosa",
+        "Darryl",
+        "Wayne",
+        "JP",
+        "Stan",
+        "Chico",
+        "Howie",
+        "Mika",
+        "Michu",
+        "Dani",
+        "Skip",
+        "Taras",
+        "Kamehameha",
+        "Sheridan",
+        "Anders",
+        "Ale",
+        "Hong",
+        "Josefina",
+        "Antoinette",
+        "Ira",
+        "Grover",
+        "Fiddle",
+        "Antin",
+        "Grace",
+        "Ares",
+        "Artemis",
+        "Mars",
+        "Morozko",
+        "Skadi",
+        "Pleter",
+        "Plaul",
+        "Platty",
+        "Hammer",
+        "Sput",
+        "Putt",
+        "Francois",
+        "Key",
+        "Mike",
+        "Thomas",
+        "Kelly",
+        "Jack",
+        "Dan",
+        "Kevin",
+        "Billy",
+        "Emma",
+        "Rose",
+        "Andrea",
+        "Gopher",
+        "Guillermo",
+        "HK",
+        "Mae",
+        "Angus",
+        "Fern",
+        "Banshee",
+        "Screams",
+        "Pam",
+        "Doll",
+        "Pine",
+        "Falcon",
+        "Cerebus",
+        "Wolf",
+        "Dimitar",
+        "Miguel",
+        "Charbel",
+        "Roberto",
+        "Gilberto",
+        "Girija",
+        "Miyoshi",
+        "Kazuo",
+        "Emilio",
+        "Norman",
+        "Robbie",
+        "PT",
+        "AJ",
+        "Ricky",
+        "Steph",
+        "Skyler",
+        "Mladen",
+        "Chuck",
+        "Naomi",
+        "Father",
+        "Panagiotis",
+        "Sokratis",
+        "Lars",
+        "Alvin",
+        "Nacho",
+        "Pietro",
+        "Oz",
+        "Beatrice",
+        "Dolph",
+        "Dangus",
+        "Kelly",
+        "Mark",
+        "Marc",
+        "Alan",
+        "Evan",
+        "Dawn",
+        "Sad",
+        "Angry",
+        "Baseball",
+        "What",
+        "Sam",
+        "Wallace",
+        "Teresa",
+        "Joyce",
+        "Johnnie",
+        "Gary"
+    ],
+    "last":[
+        "Sweet",
+        "Marx",
+        "Baker",
+        "Rust",
+        "Kellogg",
+        "Peppers",
+        "Flaubert",
+        "Scopoli",
+        "Lightbulb",
+        "Hobknob",
+        "Goblins",
+        "Badbadnotgood",
+        "Parker",
+        "Jimenez",
+        "Yamamoto",
+        "Alasya",
+        "Blavatsky",
+        "Pistachio",
+        "Egg",
+        "Ponyo",
+        "Lakes",
+        "Townsend",
+        "Oso",
+        "Turbo",
+        "Glove",
+        "Plondson",
+        "Referee",
+        "Love",
+        "Short",
+        "Tall",
+        "Average",
+        "Larper",
+        "Trident",
+        "Milkshake",
+        "Milkshake",
+        "Barkov",
+        "Grogslog",
+        "Garmash",
+        "Blazits",
+        "Yolo",
+        "Bepis",
+        "Crisp",
+        "Zong",
+        "Moutinho",
+        "Aguilera",
+        "Fox",
+        "Bowser",
+        "Croissant",
+        "Velvet",
+        "Spaghetti",
+        "Kovalenko",
+        "Crab",
+        "Lapointe",
+        "Dead",
+        "Gusarov",
+        "Norris",
+        "Ireland",
+        "Sloop",
+        "Bighat",
+        "Young",
+        "Eagles",
+        "Noob",
+        "Sneaky",
+        "Lele",
+        "Price",
+        "Nordie",
+        "Dicey",
+        "Pashmina",
+        "Gorlami",
+        "Lacroix",
+        "Milkyway",
+        "Genders",
+        "Bird",
+        "Moose",
+        "Salmon",
+        "Trenchcoat",
+        "Smirk",
+        "Knope",
+        "Cope",
+        "Friendship",
+        "Friendship",
+        "Daruk",
+        "deMarco",
+        "Gallagher",
+        "Collins",
+        "Colby",
+        "Abernathy",
+        "Octopuskin",
+        "Hogosta",
+        "Klink",
+        "Sleigh",
+        "Jingle",
+        "Horticulture",
+        "Topsy",
+        "Lariviere",
+        "Hart",
+        "Clout",
+        "Legge",
+        "Hislop",
+        "Goodenough",
+        "Apollo",
+        "Tiger",
+        "Olov",
+        "Quicksilver",
+        "Breakfast",
+        "Snip",
+        "Slapdragon",
+        "Weed",
+        "Boldirev",
+        "Hazlenut",
+        "Plumbob",
+        "Tailwind",
+        "Blood",
+        "Blood",
+        "Casablancas",
+        "Pique",
+        "Toure",
+        "Banana",
+        "Checkers",
+        "Chocolate",
+        "Oatmeal"
+    ],
+    "team": [
+        "BUF",
+        "BUF",
+        "BUF",
+        "BUF",
+        "BUF",
+        "BUF",
+        "BOS",
+        "BOS",
+        "BOS",
+        "BOS",
+        "BOS",
+        "BOS",
+        "ROC",
+        "ROC",
+        "ROC",
+        "ROC",
+        "ROC",
+        "ROC",
+        "OTT",
+        "OTT",
+        "OTT",
+        "OTT",
+        "OTT",
+        "OTT",
+        "MON",
+        "MON",
+        "MON",
+        "MON",
+        "MON",
+        "MON",
+        "TOR",
+        "TOR",
+        "TOR",
+        "TOR",
+        "TOR",
+        "TOR",
+        "POR",
+        "POR",
+        "POR",
+        "POR",
+        "POR",
+        "POR",
+        "WVM",
+        "WVM",
+        "WVM",
+        "WVM",
+        "WVM",
+        "WVM",
+        "NOR",
+        "NOR",
+        "NOR",
+        "NOR",
+        "NOR",
+        "NOR",
+        "NSH",
+        "NSH",
+        "NSH",
+        "NSH",
+        "NSH",
+        "NSH",
+        "NYR",
+        "NYR",
+        "NYR",
+        "NYR",
+        "NYR",
+        "NYR",
+        "NYR",
+        "PHL",
+        "PHL",
+        "PHL",
+        "PHL",
+        "PHL",
+        "PHL",
+        "VAN",
+        "VAN",
+        "VAN",
+        "VAN",
+        "VAN",
+        "VAN",
+        "CHI",
+        "CHI",
+        "CHI",
+        "CHI",
+        "CHI",
+        "CHI",
+        "PIT",
+        "PIT",
+        "PIT",
+        "PIT",
+        "PIT",
+        "PIT",
+        "BUR",
+        "BUR",
+        "BUR",
+        "BUR",
+        "BUR",
+        "BUR",
+        "SFB",
+        "SFB",
+        "SFB",
+        "SFB",
+        "SFB",
+        "SFB",
+        "VAL",
+        "VAL",
+        "VAL",
+        "VAL",
+        "VAL",
+        "VAL",
+        "LAK",
+        "LAK",
+        "LAK",
+        "LAK",
+        "LAK",
+        "LAK",
+        "LIB",
+        "LIB",
+        "LIB",
+        "LIB",
+        "LIB",
+        "LIB"
+    ]
 }

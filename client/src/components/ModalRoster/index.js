@@ -3,7 +3,7 @@ import Emoji from "react-emoji-render"
 
 function ModalRoster(props) {
     let players = props.props
-    let symbol = ["🟢⚪⚪⚪⚪", "🟢🟢⚪⚪⚪", "🟢🟢🟢⚪⚪", "🟢🟢🟢🟢⚪", "🟢🟢🟢🟢🟢"]
+    let symbol = ["⚪⚫⚫⚫⚫", "⚪⚪⚫⚫⚫", "⚪⚪⚪⚫⚫", "⚪⚪⚪⚪⚫", "⚪⚪⚪⚪⚪"]
     function calculateStat(stats, position) {
         let y = 0
         if (position === "winger") {
@@ -27,29 +27,41 @@ function ModalRoster(props) {
             <div className="columns roster-list is-mobile">
                 <div className="column is-6 is-mobile">
                     <p className="position-title">Forwards</p>
-                    <p>{players.LW.name}</p>
-                    <p>{players.CE.name}</p>
-                    <p>{players.RW.name}</p>
+                    <p>{players.line1.LW.name}</p>
+                    <p>{players.line1.CE.name}</p>
+                    <p>{players.line1.RW.name}</p>
+                    <p>{players.line2.LW.name}</p>
+                    <p>{players.line2.CE.name}</p>
+                    <p>{players.line2.RW.name}</p>
                     <br/>
                     <p className="position-title">Defenders</p>
-                    <p>{players.LD.name}</p>
-                    <p>{players.RD.name}</p>
+                    <p>{players.line1.LD.name}</p>
+                    <p>{players.line1.RD.name}</p>
+                    <p>{players.line2.LD.name}</p>
+                    <p>{players.line2.RD.name}</p>
                     <br/>
                     <p className="position-title">Goalies</p>
-                    <p>{players.GK.name}</p>
+                    <p>{players.line1.GK.name}</p>
+                    <p>{players.line2.GK.name}</p>
                 </div>
                 <div className="column is-6 is-mobile">
                     <br />
-                    <p>{calculateStat(players.LW.stats, "winger")}</p>
-                    <p>{calculateStat(players.CE.stats, "center")}</p>
-                    <p> {calculateStat(players.RW.stats, "winger")}</p>
+                    <p>{calculateStat(players.line1.LW.stats, "winger")}</p>
+                    <p>{calculateStat(players.line1.CE.stats, "center")}</p>
+                    <p> {calculateStat(players.line1.RW.stats, "winger")}</p>
+                    <p>{calculateStat(players.line2.LW.stats, "winger")}</p>
+                    <p>{calculateStat(players.line2.CE.stats, "center")}</p>
+                    <p> {calculateStat(players.line2.RW.stats, "winger")}</p>
                     <br />
                     <br/>
-                    <p> {calculateStat(players.LD.stats, "defender")}</p>
-                    <p> {calculateStat(players.RD.stats, "defender")}</p>
+                    <p> {calculateStat(players.line1.LD.stats, "defender")}</p>
+                    <p> {calculateStat(players.line1.RD.stats, "defender")}</p>
+                    <p> {calculateStat(players.line2.LD.stats, "defender")}</p>
+                    <p> {calculateStat(players.line2.RD.stats, "defender")}</p>
                     <br />
                     <br/>
-                    <p> {calculateStat(players.GK.stats, "goalie")}</p>
+                    <p> {calculateStat(players.line1.GK.stats, "goalie")}</p>
+                    <p> {calculateStat(players.line2.GK.stats, "goalie")}</p>
                 </div>
             </div>
             <br />

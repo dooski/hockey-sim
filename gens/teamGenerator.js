@@ -11,39 +11,39 @@ function makePlayer(name, team){
             alive: true,
             stats: {
                 offense: {
-                    highShot: rng.random(1, 5),
-                    lowShot: rng.random(1, 5),
-                    longShot: rng.random(1, 5),
-                    passing: rng.random(1, 5),
-                    handling: rng.random(1, 5),
+                    highShot: rng.random(1, 6),
+                    lowShot: rng.random(1, 6),
+                    longShot: rng.random(1, 6),
+                    passing: rng.random(1, 6),
+                    handling: rng.random(1, 6),
                 },
                 defense: {
-                    forecheck: rng.random(1, 5),
-                    stick: rng.random(1, 5),
-                    checking: rng.random(1, 5),
-                    positioning: rng.random(1, 5),
-                    blocking: rng.random(1, 5)
+                    forecheck: rng.random(1, 6),
+                    stick: rng.random(1, 6),
+                    checking: rng.random(1, 6),
+                    positioning: rng.random(1, 6),
+                    blocking: rng.random(1, 6)
                 },
                 goalkeeping: {
-                    highBlock: rng.random(1, 5),
-                    lowBlock: rng.random(1, 5),
-                    longBlock: rng.random(1, 5),
-                    catching: rng.random(1, 5),
-                    aura: rng.random(1, 5)
+                    highBlock: rng.random(1, 6),
+                    lowBlock: rng.random(1, 6),
+                    longBlock: rng.random(1, 6),
+                    catching: rng.random(1, 6),
+                    aura: rng.random(1, 6)
                 },
                 physical: {
-                    speed: rng.random(1, 5),
-                    strength: rng.random(1, 5),
-                    faceoff: rng.random(1, 5),
-                    fighting: rng.random(1, 5),
-                    blubber: rng.random(1, 5)
+                    speed: rng.random(1, 6),
+                    strength: rng.random(1, 6),
+                    faceoff: rng.random(1, 6),
+                    fighting: rng.random(1, 6),
+                    blubber: rng.random(1, 6)
                 },
                 mental: {
-                    discipline: rng.random(1, 5),
-                    respect: rng.random(1, 5),
-                    fear: rng.random(1, 5),
-                    vision: rng.random(1, 5),
-                    memory: rng.random(1, 5)
+                    discipline: rng.random(1, 6),
+                    respect: rng.random(1, 6),
+                    fear: rng.random(1, 6),
+                    vision: rng.random(1, 6),
+                    memory: rng.random(1, 6)
                 },
             items: {
                 stick: null,
@@ -86,12 +86,12 @@ async function makeTeam(fullName, cityName, teamName, teamDesc, teamDiv, teamAbr
                 GK: roster[5]._id
             },
             line2: {
-                LW: null,
-                CE: null,
-                RW: null,
-                LD: null,
-                RD: null,
-                GK: null
+                LW: roster[6]._id,
+                CE: roster[7]._id,
+                RW: roster[8]._id,
+                LD: roster[9]._id,
+                RD: roster[10]._id,
+                GK: roster[11]._id
                 }
             },
             history: {

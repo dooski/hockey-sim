@@ -58,7 +58,7 @@ function Teams() {
                                 <br /><p class="team-modal-subtitle">{currentTeam.info.desc}</p></p>
                             <button aria-label="close" onClick={closeModal}>X</button>
                         </header>
-                        <ModalRoster props={currentTeam.players.line1}/>
+                        <ModalRoster props={currentTeam.players}/>
                     </div>) : (<div></div>)}
             </Modal>
             {bingo !== null && bongo !== null ? (
