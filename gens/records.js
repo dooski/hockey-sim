@@ -19,6 +19,10 @@ function endOfGame(t1, t2, t1s, t2s) {
     }
 }
 
+function recordGoal(scorer){
+    
+}
+
 module.exports = {
     endOfGame
 }

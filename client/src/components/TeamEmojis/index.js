@@ -26,6 +26,8 @@ function Symbol(props){
     else if (team === "LIB") {return (<Emoji className="symbol lib" text=":beach_with_umbrella:"/>)}
     else if (team === "NSH") {return (<Emoji className="symbol nsh" text=":microphone:"/>)}
     else if (team === "GOL") {return (<Emoji text=":police_car_light:"/>)}
+    else if (team === "ATH") {return (<Emoji text=":owl:"/>)}
+    else if (team === "OLY") {return (<Emoji text=":lightning:"/>)}
     else return null
 }
 
