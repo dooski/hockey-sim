@@ -1,8 +1,13 @@
+html {
+  background-color: black;
+}
+
 .App {
   text-align: center;
   background-color:black;
   min-height: 100vh;
   color: whitesmoke;
+  margin-top: 30px;
 }
 
 .column {
@@ -31,16 +36,16 @@
 }
 
 .nav-spot {
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 0%;
+  margin-right: 0%;
+  padding-right: 5%;
+  padding-left: 5%;
   padding-top: 20px;
   background-color:black;
-}
-
-.nav-break {
-  margin: 0px;
+  padding-bottom: 25px;
   border-bottom: 5px double silver
 }
+
 
 .nav-title {
   font-size: 36px;
@@ -83,7 +88,7 @@ br.nav-br {
   min-height: 30vh;
   max-height: 50vh;
   padding: 10px;
-  margin-top: 30px;
+  padding-top: 40px;
   line-height: 1.2;
 }
 
@@ -157,7 +162,7 @@ br.nav-br {
 .league-table-wrapper {
   margin-left: 15%;
   margin-right: 15%;
-  margin-top: 2%
+  margin-top: 5%
 }
 
 .division-table {
@@ -291,6 +296,11 @@ button:hover {
     margin-left: 10%;
     margin-right: 10%;
   }
+  .league-table-wrapper {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 8%
+  }
 }
 @media only screen and (max-width: 900px) {
   .App {
@@ -308,13 +318,14 @@ button:hover {
   .game-box-card {
     margin-top: 10px;
     margin-bottom: 10px;
+    
   }
   
 }
 @media only screen and (max-width: 600px){
   .game-box-container{
     min-height: 0;
-    padding-top: 5px
+    padding-top: 10px
   }
   .game-box-rink{
     font-size: 14px
@@ -352,7 +363,7 @@ button:hover {
   }
   .game-box {
     margin-left: 1%;
-    margin-right: 1%
+    margin-right: 1%;
   }
   .minor-text {
     font-size: 12px

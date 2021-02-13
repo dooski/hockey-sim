@@ -8,15 +8,14 @@ function App() {
   return (
 
     <Router>
-      <div className="nav-spot">
+      <nav className="nav-spot navbar is-fixed-top">
         <div className="columns is-mobile">
           <div className="column">
             <p className="nav-title">Plond Hockey <i className="minor-text">Games on the :00s and :30s</i></p>
             <div className="nav-button-bar"><Link to="/" className="nav-button">The Plond</Link> <Link to="/teams" className="nav-button">The League</Link></div>
-            <br />
           </div>          
         </div>
-      </div>
+      </nav>
       <div className="nav-break"> </div>
       <div className="App">
         <Switch>
