@@ -34,9 +34,9 @@ mongoose.connect(uri, {
     .catch(err => console.log(err));
 
 
-control.start()
+// control.start()
 //timing
-// setInterval(clock, 60000)
+setInterval(clock, 60000)
 function clock() {
     now = new Date
     if (now.getMinutes() === 30 || now.getMinutes() === 0){
