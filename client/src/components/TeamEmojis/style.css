@@ -7,78 +7,79 @@ background-color:darkblue;
 border-color: darkblue
 }
 .van {
-    background-color: lightgreen;
-    background-color: lightgreen
+    background-color: #8AEA92;
+    border-color: #8AEA92;
 }
 .roc {
     background-color: black;
     border-color:black
 }
 .ott {
-    background-color: darkorchid;
-    border-color:darkorchid;
+    background-color: #DB5ABA;
+    border-color: #DB5ABA;
 }
 .mon {
-    background-color: red;
-    border-color: red;}
+    background-color: #C41E3D;
+    border-color: #C41E3D;
+}
 .tor {
-    background-color: salmon;
-    border-color: salmon
+    background-color: #0932EC;
+    border-color: #0932EC
 }
 .nyr {
-    background-color: dodgerblue;
-    border-color: dodgerblue
+    background-color: #3C91E6;
+    border-color: #3C91E6
 }
 .phl {
-    background-color: orange;
-    border-color: orange
+    background-color: #FFA400;
+    border-color: #FFA400
 }
 .bos {
-    background-color: tomato;
-    border-color: tomato
+    background-color: #C97064;
+    border-color: #C97064
 }
 .por {
-    background-color: springgreen;
-    border-color: springgreen
+    background-color: #7FB069;
+    border-color: #7FB069
 }
 .pit {
-    background-color: burlywood;
-    border-color:burlywood;
+    background-color: #F8FCDA;
+    border-color:#F8FCDA
 }
 .bur {
-    background-color:forestgreen;
-    border-color: forestgreen;
+    background-color:#324932;
+    border-color: #324932;
 }
 .chi {
-    background-color: crimson;
-    border-color: crimson
+    background-color: #D62828;
+    border-color: #D62828
 }
 .wvm {
-    background-color: purple;
-    border-color:purple;
+    background-color: #37123C;
+    border-color:#37123C;
 }
 .nor {
-    background-color: mediumpurple;
-    border-color: mediumpurple;
+    background-color: #574D68;
+    border-color: #574D68;
 }
 .sfb {
-    background-color: sienna;
-    border-color: sienna
+    background-color: #2E1F27;
+    border-color: #2E1F27
 }
 .val {
-    background-color: midnightblue;
-    border-color: midnightblue
+    background-color: #1B2021;
+    border-color: #1B2021
 }
 .lak {
-    background-color: firebrick;
-    border-color: firebrick;
+    background-color: #931621;
+    border-color: #931621;
 }
 .lib {
-    background-color: greenyellow;
-    border-color: greenyellow
+    background-color: #F75C03;
+    border-color: #F75C03
 }
 .nsh {
-    background-color: gold;
-    border-color: gold
+    background-color: #FFCB77;
+    border-color: #FFCB77
 }
 

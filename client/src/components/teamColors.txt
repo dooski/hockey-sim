@@ -1,0 +1,79 @@
+Montreal Panic: red & black
+    primary: #C41E3D
+    secondary: #3A2E39
+
+Rochester Bones: black & white
+    primary: #000000
+    secondary: #C4BBB8
+
+Ottawa Tulips: pink & greenish?
+    primary: #DB5ABA
+    secondary: #EAF4D3
+
+Portland Shrooms: faded green & blue
+    primary: #7FB069
+    secondary: #46B1C9
+
+West Virginia Mothmen: dark purple & violet blue
+    primary: #37123C
+    secondary: #6369D1
+
+Buffalo Starlights: blue and white
+    primary: #1D2F6F
+    secondary: #FDFDFF
+
+Boston Chowdahs: cream & red
+    primary: #C97064
+    secondary: #DA2C38
+
+Toronto Brewskis: blue & light blue
+    primary: #0932EC
+    secondary: #87C6FD
+
+New Orleans Moonshine: faded purple & light yellow
+    primary: #574D68
+    secondary: #F4E04D
+
+Nashville Dollys: carolina blue and yellowish
+    primary: #FFCB77
+    secondary: #4D9DE0
+
+Philly Pineapples: orange & black
+    primary: #FFA400
+    secondary: #0A0908
+
+Burlington Lumberjacks: dark green & cyan
+    primary: #324932
+    secondary: #34A5D5
+
+Vancouver Foxtrots: light green & orange
+    primary: #8AEA92
+    secondary: #DE9151
+
+Chicago Squalls: red & blue
+    primary: #D62828
+    secondary: #3454D1
+
+Santa Fe Buckaroos: dark brownish and steel blue
+    primary: #2E1F27
+    secondary: #427AA1
+
+Valhalla Omens: faded black & turqouise
+    primary: #1B2021
+    secondary: #63CCCA
+
+LA Kickflips: darker red & blueish dark grey
+    primary: #931621
+    secondary: #28464B
+
+Pittsburgh Good Boys: light yellow & dark maroon
+    primary: #F8FCDA
+    secondary: #550C18
+
+New York Rats: light blue and dark blue
+    primary: #3C91E6
+    secondary: #011936
+
+Long Island Beach Bums: orange & blue
+    primary: #F75C03
+    secondary: #2274A5
