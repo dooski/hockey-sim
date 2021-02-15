@@ -33,13 +33,13 @@ function ModalRoster(props) {
                     <p>{players.line2.LW.name}</p>
                     <p>{players.line2.CE.name}</p>
                     <p>{players.line2.RW.name}</p>
-                    <br/>
+                    <br />
                     <p className="position-title">Defenders</p>
                     <p>{players.line1.LD.name}</p>
                     <p>{players.line1.RD.name}</p>
                     <p>{players.line2.LD.name}</p>
                     <p>{players.line2.RD.name}</p>
-                    <br/>
+                    <br />
                     <p className="position-title">Goalies</p>
                     <p>{players.line1.GK.name}</p>
                     <p>{players.line2.GK.name}</p>
@@ -53,13 +53,13 @@ function ModalRoster(props) {
                     <p>{calculateStat(players.line2.CE.stats, "center")}</p>
                     <p> {calculateStat(players.line2.RW.stats, "winger")}</p>
                     <br />
-                    <br/>
+                    <br />
                     <p> {calculateStat(players.line1.LD.stats, "defender")}</p>
                     <p> {calculateStat(players.line1.RD.stats, "defender")}</p>
                     <p> {calculateStat(players.line2.LD.stats, "defender")}</p>
                     <p> {calculateStat(players.line2.RD.stats, "defender")}</p>
                     <br />
-                    <br/>
+                    <br />
                     <p> {calculateStat(players.line1.GK.stats, "goalie")}</p>
                     <p> {calculateStat(players.line2.GK.stats, "goalie")}</p>
                 </div>

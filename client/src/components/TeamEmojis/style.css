@@ -47,8 +47,6 @@ border-color: darkblue
 }
 .bur {
     background-color:forestgreen;
-    border-left: 2px solid;
-    border-right: 2px solid;
     border-color: forestgreen;
 }
 .chi {
@@ -72,8 +70,6 @@ border-color: darkblue
     border-color: midnightblue
 }
 .lak {
-    border-left: 2px solid;
-    border-right: 2px solid;
     background-color: firebrick;
     border-color: firebrick;
 }

@@ -14,63 +14,65 @@ function rng(z) {
     return Math.floor(Math.random() * z)
 }
 
-function scheduleMaker(){
-    let teams = varString(teamA, teamB) 
+function scheduleMaker() {
+    let teams = varString(teamA, teamB)
     sim.game(teams, 6000)
 }
 
-async function test(){
+async function test() {
     let team1 = await fetchTeam("ATH")
     let team2 = await fetchTeam("OLY")
-    sim.game([team1, team2], 4000, 0)
+    sim.game([team1, team2], 5000, 0)
 }
 
-function wipeRecords(){
-    let teams = ["BUF", "BOS", "ROC", "WVM", "MON", "OTT", "NOR", "POR", "TOR", "NSH", "PHL", "BUR", "LAK", "CHI", "SFB", "PIT", "NYR", "VAL", "VAN", "LIB"]
-    for (i = 0; i < teams.length; i++){
+function wipeRecords() {
+    let teams = ["BUF", "BOS", "ROC", "WVM", "MON", "OTT", "NOR", "POR", "TOR", "NSH", "PHL", "BUR", "LAK", "CHI", "SFB", "PIT", "NYR", "VAL", "VAN", "LIB", "ATH", "OLY"]
+    for (i = 0; i < teams.length; i++) {
         teamController.resetRecord(teams[i])
     }
 }
 
-async function start(){ 
+async function start() {
     let bingo = ["BUF", "BOS", "ROC", "WVM", "MON", "OTT", "NOR", "POR", "TOR", "NSH"]
     let bongo = ["PHL", "BUR", "LAK", "CHI", "SFB", "PIT", "NYR", "VAL", "VAN", "LIB"]
     let games = await pickTeams(bingo, bongo)
     //second argument is length of action in each game (60 actions per period x 3 periods and possible overtime)
-    sim.game(games[0], 6000, 0)
-    sim.game(games[1], 6000, 1)
-    sim.game(games[2], 6000, 2)
-    sim.game(games[3], 6000, 3)
-    sim.game(games[4], 6000, 4)
-    sim.game(games[5], 6000, 5)
-    sim.game(games[6], 6000, 6)
-    sim.game(games[7], 6000, 7)
-    sim.game(games[8], 6000, 8)
-    sim.game(games[9], 6000, 9)
+    sim.game(games[0], 5000, 0)
+    sim.game(games[1], 5000, 1)
+    sim.game(games[2], 5000, 2)
+    sim.game(games[3], 5000, 3)
+    sim.game(games[4], 5000, 4)
+    sim.game(games[5], 5000, 5)
+    sim.game(games[6], 5000, 6)
+    sim.game(games[7], 5000, 7)
+    sim.game(games[8], 5000, 8)
+    sim.game(games[9], 5000, 9)
 }
 
-async function pickTeams(x, y){
+async function pickTeams(x, y) {
     return new Promise(async resolve => {
-    let gamesList = []
-    let league = x.concat(y)
-    for (i = 0; i < 10; i++ ){
-        let z1 = rng(league.length)
-        let team1 = await fetchTeam(league[z1])
-        league.splice(z1, 1)
-        let z2 = rng(league.length)
-        let team2 = await fetchTeam(league[z2])
-        league.splice(z2, 1)
-        let oneGame = [team1, team2]
-        gamesList.push(oneGame)
-    }
-    resolve(gamesList)})
+        let gamesList = []
+        let league = x.concat(y)
+        for (i = 0; i < 10; i++) {
+            let z1 = rng(league.length)
+            let team1 = await fetchTeam(league[z1])
+            league.splice(z1, 1)
+            let z2 = rng(league.length)
+            let team2 = await fetchTeam(league[z2])
+            league.splice(z2, 1)
+            let oneGame = [team1, team2]
+            gamesList.push(oneGame)
+        }
+        resolve(gamesList)
+    })
 }
 
 function fetchTeam(x) {
-    return new Promise(async resolve => { 
+    return new Promise(async resolve => {
         let team = await teamController.getTeam(x)
         resolve(team)
-})}
+    })
+}
 
 async function packageReturn(req, res) {
     var pack = returnGames()
@@ -78,19 +80,20 @@ async function packageReturn(req, res) {
 }
 
 async function seasonData(req, res) {
-    fs.readFile('./gens/currentSeason.json', 'utf8', (err, data) =>
-    {if (err) {console.log(err)}
-    var json = JSON.parse(data)
-    res.json(json)})
+    fs.readFile('./gens/currentSeason.json', 'utf8', (err, data) => {
+        if (err) { console.log(err) }
+        var json = JSON.parse(data)
+        res.json(json)
+    })
 }
 
-function varString(a, b){
+function varString(a, b) {
     let teamAobj = eval("data.teams." + a)
     let teamBobj = eval("data.teams." + b)
     return [teamAobj, teamBobj]
 }
 
-async function makeTeams(){
+async function makeTeams() {
     var players = [
         ["Delia", "ATH"],
         ["Plato", "ATH"],
@@ -121,16 +124,16 @@ async function makeTeams(){
         ["Athenian Lads", "Athens", "Lads", "Greece Lightning!", "Ancient", "ATH"],
         ["Olympian Gods", "Olympus", "Gods", "*inaudible screaming*", "Ancient", "OLY"],
     ]
-    for (i = 0; i < players.length; i++){
+    for (i = 0; i < players.length; i++) {
         teamGenerator.makePlayer(players[i][0], players[i][1])
     } await timer(10000)
-   for (i = 0; i < teams.length; i++){
-    teamGenerator.makeTeam(teams[i][0], teams[i][1], teams[i][2], teams[i][3], teams[i][4], teams[i][5])
-}
+    for (i = 0; i < teams.length; i++) {
+        teamGenerator.makeTeam(teams[i][0], teams[i][1], teams[i][2], teams[i][3], teams[i][4], teams[i][5])
+    }
 }
 
-async function makeTeam(){
-        var teams = [
+async function makeTeam() {
+    var teams = [
         ["Buffalo Starlights", "Buffalo", "Starlights", "Shinin' Just For You", "Bingo", "BUF"],
         ["Boston Chowdahs", "Boston", "Chowdahs", "Like We Say in Boston, Let's Go Boston", "Bingo", "BOS"],
         ["Rochester Bones", "Rochester", "Bones", "The Future is Bones", "Bingo", "ROC"],
@@ -151,17 +154,17 @@ async function makeTeam(){
         ["Valhalla Omens", "Valhalla", "Omens", "Comets, Ravens, Plond Hockey.", "Bongo", "VAL"],
         ["LA Kickflips", "Los Angeles", "Kickflips", "Skate or Die", "Bongo", "LAK"],
         ["Long Island Beach Bums", "Long Island", "Beach Bums", "Strong Island Time, Baby!", "Bongo", "LIB"]
-    ] 
-    
+    ]
+
 }
 
-async function makeSecondLine(){
+async function makeSecondLine() {
     var first = data.first
     var last = data.last
     var team = data.team
 
-    for (i = 0; i < 120; i++){
-        let z1 = rng(first.length) 
+    for (i = 0; i < 120; i++) {
+        let z1 = rng(first.length)
         let firstName = first[z1]
         first.splice(z1, 1)
         let z2 = rng(last.length)
@@ -173,7 +176,7 @@ async function makeSecondLine(){
         let fullName = `${firstName} ${lastName}`
         teamGenerator.makePlayer(fullName, chosenTeam)
     } await timer(10000)
-    }
+}
 
 module.exports = {
     test,

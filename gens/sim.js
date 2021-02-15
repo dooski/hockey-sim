@@ -71,7 +71,7 @@ function game(teams, timing, whichGame) {
     periodPlay()
     async function periodPlay() {
         for (i = 0; i < 61; i++) {
-            let fightChance = rngWhole(120)
+            let fightChance = rngWhole(80)
             if (havingFight === true) {
                 i--
             } else if (i == 60 && period !== 3) {
@@ -81,7 +81,7 @@ function game(teams, timing, whichGame) {
             } else if (i == 60 && period == 3 && t1.score === t2.score) {
                 endOfPeriod(period)
                 overtime()
-            } else if (fightChance === 69 && havingFight === false) {
+            } else if (fightChance === 69 && havingFight === false && stage !== 1 && stage !== 5 && stage !== 0 && takingShot === false) {
                 fight()
             } else {
                 console.log(posT)
@@ -127,40 +127,25 @@ function game(teams, timing, whichGame) {
         carrier = null
         possession = 0
         stage = 0
-        let fighter1 = targetPicker(defLine1)
-        let fighter2 = targetPicker(defLine2)
+        let fighter1 = targetPicker("defPos")
+        let fighter2 = targetPicker("defNos")
         let punch1 = rng((fighter1.stats.physical.fighting * 4) + (fighter2.stats.mental.respect))
         let punch2 = rng((fighter2.stats.physical.fighting * 4) + (fighter2.stats.mental.discipline))
         let winner = null
         let loser = null
         message = `Here we go, folks! ${fighter1.name} and ${fighter2.name} have thrown down the gloves for a fight!`
         if (punch1 <= punch2) {
-            console.log(RW1.stats.physical.speed)
             winner = fighter1
             loser = fighter2
+            posT.mod = nosT.mod + 10
             await timer(timing * 1.1)
-            message = `${t1.info.city}'s ${winner.name} beats ${loser.name}! The ${t1.info.team} are fired up!`
-            RW1.stats.physical.speed++
-            CE1.stats.physical.speed++
-            LW1.stats.physical.speed++
-            LD1.stats.offense.passing++
-            RD1.stats.offense.passing++
-            GK1.stats.goalkeeping.aura++
-            console.log(RW1.stats.physical.speed)
-
+            message = `${posT.info.city}'s ${winner.name} drops ${loser.name}! The ${posT.info.team} are fired up!`
         } else {
-            console.log(RW2.stats.defense.forecheck)
             winner = fighter2
             loser = fighter1
+            nosT.mod = posT.mod + 10
             await timer(timing * 1)
-            message = `${t2.info.city}'s ${winner.name} beats ${loser.name}! The ${t2.info.team} are fired up!`
-            RW2.stats.defense.forecheck++
-            CE2.stats.defense.forecheck++
-            LW2.stats.defense.forecheck++
-            LD2.stats.offense.longShot++
-            RD2.stats.offense.longShot++
-            GK2.stats.goalkeeping.aura++
-            console.log(RW2.stats.defense.forecheck)
+            message = `${nosT.info.city}'s ${winner.name} drops ${loser.name}! The ${posT.info.team} are fired up!`
         } await timer(timing * 1)
         message = `Back to the hockey.`
         await timer(timing * 1)

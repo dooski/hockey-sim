@@ -13,7 +13,7 @@ function App() {
           <div className="column">
             <p className="nav-title">Plond Hockey <i className="minor-text">Games on the :00s and :30s</i></p>
             <div className="nav-button-bar"><Link to="/" className="nav-button">The Plond</Link> <Link to="/teams" className="nav-button">The League</Link></div>
-          </div>          
+          </div>
         </div>
       </nav>
       <div className="nav-break"> </div>

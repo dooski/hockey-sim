@@ -50,29 +50,29 @@ async function getTeams(req, res) {
     res.json(data)
 }
 function addWin(abrv) {
-        db.Team.findOneAndUpdate({ 'info.abrv': abrv }, {$inc : {'history.wins': 1}},
+    db.Team.findOneAndUpdate({ 'info.abrv': abrv }, { $inc: { 'history.wins': 1 } },
         (err, data) => {
-        if (err) {console.log(err)}
+            if (err) { console.log(err) }
         })
 }
 
 function addLoss(abrv) {
-    db.Team.findOneAndUpdate({ 'info.abrv': abrv }, {$inc : {'history.losses': 1}},
-    (err, data) => {
-        if (err) {console.log(err)}
+    db.Team.findOneAndUpdate({ 'info.abrv': abrv }, { $inc: { 'history.losses': 1 } },
+        (err, data) => {
+            if (err) { console.log(err) }
         })
 }
- function resetRecord(abrv) {
-    db.Team.findOneAndUpdate({ 'info.abrv': abrv}, {'history.wins': 0, 'history.losses':0},
-    (err, data) => {
-        if (err) {console.log(err)}
+function resetRecord(abrv) {
+    db.Team.findOneAndUpdate({ 'info.abrv': abrv }, { 'history.wins': 0, 'history.losses': 0 },
+        (err, data) => {
+            if (err) { console.log(err) }
         })
 }
 
 module.exports = {
-   getTeam,
-   getTeams,
-   addWin,
-   addLoss,
-   resetRecord
+    getTeam,
+    getTeams,
+    addWin,
+    addLoss,
+    resetRecord
 }
