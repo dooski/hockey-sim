@@ -34,7 +34,7 @@ function game(teams, timing, whichGame) {
             full: teams[0].info.full,
             city: teams[0].info.city,
             team: teams[0].info.team,
-            abrv: teams[0].info.abrv,
+            abrv: teams[0].info.abrv
         },
         lines: {
             0: teams[0].players.line1,
@@ -49,7 +49,7 @@ function game(teams, timing, whichGame) {
             full: teams[1].info.full,
             city: teams[1].info.city,
             team: teams[1].info.team,
-            abrv: teams[1].info.abrv,
+            abrv: teams[1].info.abrv
         },
         lines: {
             0: teams[1].players.line1,

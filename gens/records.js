@@ -3,8 +3,8 @@ const teamController = require("../controllers/teamController")
 let gamesDone = 0
 
 function endOfGame(t1, t2, t1s, t2s) {
-    let team1 = t1.abrv
-    let team2 = t2.abrv
+    let team1 = t1.info.abrv
+    let team2 = t2.info.abrv
     console.log(team1, team2)
     if (t1s > t2s) {
         teamController.addWin(team1)
