@@ -33,7 +33,7 @@ mongoose.connect(uri, {
     .then(console.log(`MongoDB connected ${uri}`))
     .catch(err => console.log(err));
 
-
+control.wipeRecords()
 //timing
 setInterval(clock, 60000)
 function clock() {
