@@ -1,13 +1,9 @@
-html {
-  background-color: #350e05;
-}
-
 .App {
   text-align: center;
-  background-color: #350e05;
+  background-color: black;
   min-height: 100vh;
   color: whitesmoke;
-  margin-top: 110px;
+  padding-top: 35px;
 }
 
 .columns:last-child{
@@ -44,7 +40,7 @@ html {
   background-color:black;
   padding-bottom: 25px;
   border-bottom: 5px double silver;
-  height: 110px
+  min-height: 110px
 }
 
 .nav-title {
@@ -81,19 +77,80 @@ br.nav-br {
 
 .footer {
 height: 10px;
-  background-color: #350e05;
+  background-color: black;
 }
 
 .no-margin {
   margin: 0
 }
 
+.home-wrapper {
+  margin-left: 15%;
+  margin-right: 15%
+}
+
+.home-header {
+  font-size: 72px;
+  font-weight: 700;
+  border-bottom: 3px solid silver;
+  line-height: 5.0rem
+}
+
+.home-sub {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 0.75rem
+}
+
+.home-content {
+  text-align: justify;
+  padding: 5px;
+  padding-top: 10px;
+}
+
+.quotes {
+  padding-top: 20px;
+}
+.quote {
+  font-size: 36px;
+  font-weight: 700;
+  color: gold;
+  font-style: italic;
+}
+.source {
+  font-size: 20px;
+  color: goldenrod;
+  font-style:normal
+}
+
+.favor-box {
+  background-color: rgb(22, 22, 22);
+  margin: 5px;
+  margin-top: 0px;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  border: 1px solid silver;
+  border-radius: 10px;
+}
+
+.account-box {
+  background-color:rgb(23, 31, 49);
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
 /* game-box-container */
 
 .game-box-container {
   line-height: 1.2;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 22%;
+  margin-right: 22%;
   padding-bottom: 5vh
 }
 
@@ -150,7 +207,7 @@ height: 10px;
   padding-right: 5px;
   height: 100px;
   font-weight: 700;
-  line-height: 80px;
+  line-height: 90px;
 }
 
 .rink-home-net {
@@ -235,13 +292,12 @@ height: 10px;
 
 
 .buffer {
-  color: black
+  color: transparent
 }
 
 .league-table-wrapper {
   margin-left: 15%;
   margin-right: 15%;
-  margin-top: 5%
 }
 
 .division-table {
@@ -374,10 +430,6 @@ button:hover {
   .league-table-wrapper {
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 8%
-  }
-  .App {
-    margin-top: 90px;
   }
   .nav-spot {
     height: 90px;
@@ -390,6 +442,47 @@ button:hover {
 }
 
 @media only screen and (max-width: 750px){
+  .nav-spot {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    border-bottom: 5px double silver;
+    min-height: 80px
+  }  
+  .nav-title {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .nav-button {
+    padding: 1px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .home-wrapper {
+    margin-left: 5%;
+    margin-right: 5%
+  }
+  .home-header {
+    font-size: 30px;
+    font-weight: 700;
+    border-bottom: 3px solid silver;
+    line-height: 2.0rem
+  }
+  .quotes {
+    padding-top: 20px;
+  }
+  .quote {
+    font-size: 20px;
+    font-weight: 700;
+    color: gold;
+  }
+  .source {
+    font-size: 12px;
+  }
+  .home-sub {
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 0.75rem
+  }
   .game-box-score-card {
     border-right: 0px;
     border-top-right-radius: 10px;

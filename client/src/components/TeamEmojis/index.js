@@ -3,6 +3,7 @@ import React from "react"
 import "./style.css"
 
 function Symbol(props) {
+    console.log(props)
     let team = props.abrv
     if (team === "BUF") { return (<Emoji className="symbol buf" text=":sparkles:" />) }
     else if (team === "VAN") { return (<Emoji className="symbol van" text=":fox:" />) }

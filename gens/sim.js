@@ -1,5 +1,6 @@
 const records = require("./records")
 const gameHandler = require("./gameManagement")
+const { post } = require("../routes")
 const handleGame = gameHandler.handleGame
 
 
@@ -113,6 +114,7 @@ function game(teams, timing, whichGame) {
             } else if (fightChance === 1 && havingFight === false && stage !== 1 && stage !== 5 && stage !== 0 && takingShot === false && posT.firedUp.status === false && nosT.firedUp.status === false) {
                 fight()
             } else {
+                pressure(i)
                 console.log(posT)
                 onePlay()
             }
@@ -360,7 +362,6 @@ function game(teams, timing, whichGame) {
                 else {
                     shot = rng((carrier.stats.offense.lowShot * 2) + (carrier.stats.mental.discipline) - (carrier.stats.mental.fear * 0.5) + posT.mod)
                     def = rng((nosT.lines[0].GK.stats.goalkeeping.lowBlock * 3) + (nosT.lines[0].GK.stats.physical.speed) + nosT.mod)
-
                 }
                 if (def <= shot) {
                     if (shotType === 0) { message = `GOAL: ${posT.info.city}'s ${carrier.name} scores top corner on ${nosT.lines[0].GK.name}!` }
@@ -476,6 +477,14 @@ function game(teams, timing, whichGame) {
             team.mod = team.mod - 5
         }
     }
+    function pressure(i){
+        if (posT.score + 1 < nosT.score && period === 3 && i > 30){
+            posT.mod++
+        }
+        if (posT.score < nosT.score && period === 3 && i > 45){
+            posT.mod++
+        }
+    }
     function timeConvert(x, y) {
         if (x === 0) { return "20:00" }
         else if (x == 1) { return "19:40" }
@@ -539,7 +548,7 @@ function game(teams, timing, whichGame) {
         else if (x == 59) { return "00:20" }
         else if (x == 60 || y == 1) { return "00:00" }
         else if (y == 0) { return "XX:XX" }
-        else if (x == 99) { return "nope" }
+        else if (x == 99) { return "" }
         else { return "??:??" }
     }
     function packager() {

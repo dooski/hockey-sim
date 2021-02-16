@@ -8,8 +8,8 @@ function GameBox(props) {
     const [t2C, setT2C] = useState("")
     const [t1S, setT1S] = useState(0)
     const [t2S, setT2S] = useState(0)
-    const [t1F, setT1F] = useState("nope")
-    const [t2F, setT2F] = useState("nope")
+    const [t1F, setT1F] = useState("")
+    const [t2F, setT2F] = useState("")
     const [ab1, setAB1] = useState("")
     const [ab2, setAB2] = useState("")
     const [sym1, setSYM1] = useState()
@@ -157,7 +157,7 @@ function GameBox(props) {
 
                                 </div>
                                 <div className="column is-4">
-                                    {t1F !== "nope" ? (<div className="fire-box">
+                                    {t1F !== "" ? (<div className="fire-box">
                                         <p className="fire-team">{ab1}</p>
                                         <p className="fire-time">{t1F}</p>
                                     </div>) : (<div className="fire-box">
@@ -166,7 +166,7 @@ function GameBox(props) {
                                 </div>)}
                                 </div>
                                 <div className="column is-4">
-                                    {t1F !== "nope" ? (<div className="fire-box">
+                                    {t2F !== "" ? (<div className="fire-box">
                                         <p className="fire-team">{ab2}</p>
                                         <p className="fire-time">{t2F}</p>
                                     </div>) : (
@@ -174,11 +174,6 @@ function GameBox(props) {
                                     <p className="inactive-team">{ab2}</p>
                                     <p className="inactive-time"></p>
                                 </div>)}
-                                </div>
-                                <div className="column is-6">
-                                    <div className="bet-box">
-                                        <p></p>
-                                    </div>
                                 </div>
                             </div>
                         </div>

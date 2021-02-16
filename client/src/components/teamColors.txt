@@ -77,3 +77,8 @@ New York Rats: light blue and dark blue
 Long Island Beach Bums: orange & blue
     primary: #F75C03
     secondary: #2274A5
+
+            <p>Plond Hockey is hockey played on a plond. There are two divisions in the Plond Hockey League: Bingo and Bongo. Teams play 80 games a season, 16 a day, Monday to Friday. The top 2 teams in each division make the playoffs, a best-of-5 two-round tournament on Saturday.
+          <br/><br/>Games end in a win or a loss. Tied scores are resolved with a Sudden Death overtime. There is no reward for losing in overtime besides getting to go curl on the Plond of Losers.
+          <br/><br/>The Plond serves as the rink, the arena, and the law. Players committing actions deemed illegal by the Plond are penalized. These are known as Penalties. The player is Frozen and their power is given to the other team for five minutes of play. This is known as a Power Play. The Plond has not made clear its laws, but seems alright with fighting.
+          <br/><br/>Fans may support a team, if that's what they're into. Each week, you'll get a Favor to ask of the Plond on behalf of your team. If the Plond does not do your team a Favor that week, you get it back the next, up to five total.
