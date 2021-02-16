@@ -448,7 +448,7 @@ function game(teams, timing, whichGame) {
             case "defNos":
                 line = [nosT.lines[nosT.zz].LD, nosT.lines[nosT.zz].RD]
         }
-        let targets = line.filter(player => player !== carrier || player !== posT.iced || player !== nosT.iced)
+        let targets = line.filter(player => player !== carrier)
         let z = rngWhole(targets.length)
         return targets[z]
     }
