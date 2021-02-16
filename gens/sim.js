@@ -1,7 +1,7 @@
 const records = require("./records")
 const gameHandler = require("./gameManagement")
 const handleGame = gameHandler.handleGame
-const fs = require("fs")
+
 
 let endOfGame = records.endOfGame
 
@@ -42,7 +42,17 @@ function game(teams, timing, whichGame) {
         },
         zz: 0,
         score: 0,
-        mod: 20
+        mod: 10,
+        firedUp: {
+            status: false,
+            time: 99
+        },
+        iced: {
+            status: false,
+            player: null,
+            time: 99
+        }
+
     }
     let t2 = {
         info: {
@@ -57,7 +67,16 @@ function game(teams, timing, whichGame) {
         },
         zz: 0,
         score: 0,
-        mod: 20
+        mod: 10,
+        firedUp: {
+            status: false,
+            time: 99
+        },
+        iced: {
+            status: false,
+            player: null,
+            time: 99
+        }
     }
     var posT = t1
     var nosT = t2
@@ -74,6 +93,14 @@ function game(teams, timing, whichGame) {
     async function periodPlay() {
         for (i = 0; i < 61; i++) {
             let fightChance = rngWhole(80)
+            if (posT.firedUp.status === true) {
+                posT.firedUp.time++
+                fireCheck(posT.firedUp.time, posT)
+            }
+            if (nosT.firedUp.status === true) {
+                nosT.firedUp.time++
+                fireCheck(nosT.firedUp.time, nosT)
+            }
             if (havingFight === true) {
                 i--
             } else if (i == 60 && period !== 3) {
@@ -83,7 +110,7 @@ function game(teams, timing, whichGame) {
             } else if (i == 60 && period == 3 && t1.score === t2.score) {
                 endOfPeriod(period)
                 overtime()
-            } else if (fightChance === 69 && havingFight === false && stage !== 1 && stage !== 5 && stage !== 0 && takingShot === false) {
+            } else if (fightChance === 1 && havingFight === false && stage !== 1 && stage !== 5 && stage !== 0 && takingShot === false && posT.firedUp.status === false && nosT.firedUp.status === false) {
                 fight()
             } else {
                 console.log(posT)
@@ -131,29 +158,32 @@ function game(teams, timing, whichGame) {
         stage = 0
         let fighter1 = targetPicker("defPos")
         let fighter2 = targetPicker("defNos")
-        let punch1 = rng((fighter1.stats.physical.fighting * 4) + (fighter2.stats.mental.respect))
-        let punch2 = rng((fighter2.stats.physical.fighting * 4) + (fighter2.stats.mental.discipline))
+        let punch1 = rng((fighter1.stats.physical.fighting * 4) + (fighter1.stats.mental.respect) + (nosT.score - posT.score))
+        let punch2 = rng((fighter2.stats.physical.fighting * 4) + (fighter2.stats.mental.discipline) + (posT.score - nosT.score))
         let winner = null
         let loser = null
         message = `Here we go, folks! ${fighter1.name} and ${fighter2.name} have thrown down the gloves for a fight!`
         if (punch1 <= punch2) {
             winner = fighter1
             loser = fighter2
-            posT.mod = nosT.mod + 10
-            await timer(timing * 1.1)
+            await timer(timing * 1)
             message = `${posT.info.city}'s ${winner.name} drops ${loser.name}! The ${posT.info.team} are fired up!`
+            await timer(timing * 1)
+            message = `Back to the hockey.`
+            fireUp("posT")
+            await timer(timing * 1)
+            havingFight = false
         } else {
             winner = fighter2
             loser = fighter1
-            nosT.mod = posT.mod + 10
             await timer(timing * 1)
-            message = `${nosT.info.city}'s ${winner.name} drops ${loser.name}! The ${posT.info.team} are fired up!`
-        } await timer(timing * 1)
-        message = `Back to the hockey.`
-        await timer(timing * 1)
-        havingFight = false
-
-
+            message = `${nosT.info.city}'s ${winner.name} drops ${loser.name}! The ${nosT.info.team} are fired up!`
+            await timer(timing * 1)
+            message = `Back to the hockey.`
+            fireUp("nosT")
+            await timer(timing * 1)
+            havingFight = false
+        }
     }
     function onePlay() {
         switch (stage) {
@@ -250,10 +280,10 @@ function game(teams, timing, whichGame) {
             if (stage === 4 && possession === 1 || stage === 2 && possession === 2) {
                 if (takingShot === true) {
                     let shot = rng(carrier.stats.offense.longShot * 3)
-                    let def = rng((nosT.lines[nosT.zz].GK.stats.goalkeeping.longBlock * 2) + (nosT.lines[nosT.zz].GK.stats.mental.vision) +
+                    let def = rng((nosT.lines[0].GK.stats.goalkeeping.longBlock * 2) + (nosT.lines[0].GK.stats.mental.vision) +
                         (nosT.lines[nosT.zz].LD.stats.defense.blocking) + (nosT.lines[nosT.zz].RD.stats.defense.blocking) + nosT.mod)
                     if (def <= shot) {
-                        message = `GOAL: ${posT.info.city}'s ${carrier.name} takes the shot and rockets it past ${nosT.lines[nosT.zz].GK.name}!`
+                        message = `GOAL: ${posT.info.city}'s ${carrier.name} takes the shot and rockets it past ${nosT.lines[0].GK.name}!`
                         posT.score++
                         setScore()
                         possession = 0
@@ -261,9 +291,9 @@ function game(teams, timing, whichGame) {
                         carrier = null
                         takingShot = false
                     } else {
-                        message = `${nosT.lines[nosT.zz].GK.name} saves ${carrier.name}'s slapshot!`
+                        message = `${nosT.lines[0].GK.name} saves ${carrier.name}'s slapshot!`
                         if (stage === 4) { stage = 5 } else if (stage === 2) { stage = 1 }
-                        carrier = nosT.lines[nosT.zz].GK
+                        carrier = nosT.lines[0].GK
                         takingShot = false
                         endPlay("switch")
                         return
@@ -274,7 +304,7 @@ function game(teams, timing, whichGame) {
                         let off = rng((carrier.stats.mental.vision * 2) + (carrier.stats.offense.passing) +
                             (posT.lines[posT.zz].CE.stats.physical.speed) + (posT.lines[posT.zz].RW.stats.physical.speed) + (posT.lines[posT.zz].LW.stats.physical.speed) + posT.mod)
                         let def = rng((nosT.lines[nosT.zz].LD.stats.defense.positioning) + (nosT.lines[nosT.zz].LD.stats.defense.stick) +
-                            (nosT.lines[nosT.zz].RD.stats.defense.positioning) + (nosT.lines[nosT.zz].RD.stats.defense.stick) + (nosT.lines[nosT.zz].GK.stats.goalkeeping.aura) + nosT.mod)
+                            (nosT.lines[nosT.zz].RD.stats.defense.positioning) + (nosT.lines[nosT.zz].RD.stats.defense.stick) + (nosT.lines[0].GK.stats.goalkeeping.aura) + nosT.mod)
                         if (def <= off) {
                             let target = targetPicker("offPos")
                             message = `${carrier.name} throws it to ${target.name} near the net!`
@@ -325,16 +355,16 @@ function game(teams, timing, whichGame) {
                 let def = 0
                 if (shotType === 0) {
                     shot = rng((carrier.stats.offense.highShot * 2) + (carrier.stats.mental.memory) - (carrier.stats.mental.fear * 0.5) + posT.mod)
-                    def = rng((nosT.lines[nosT.zz].GK.stats.goalkeeping.highBlock * 3) + (nosT.lines[nosT.zz].GK.stats.physical.strength) + nosT.mod)
+                    def = rng((nosT.lines[0].GK.stats.goalkeeping.highBlock * 3) + (nosT.lines[0].GK.stats.physical.strength) + nosT.mod)
                 }
                 else {
                     shot = rng((carrier.stats.offense.lowShot * 2) + (carrier.stats.mental.discipline) - (carrier.stats.mental.fear * 0.5) + posT.mod)
-                    def = rng((nosT.lines[nosT.zz].GK.stats.goalkeeping.lowBlock * 3) + (nosT.lines[nosT.zz].GK.stats.physical.speed) + nosT.mod)
+                    def = rng((nosT.lines[0].GK.stats.goalkeeping.lowBlock * 3) + (nosT.lines[0].GK.stats.physical.speed) + nosT.mod)
 
                 }
                 if (def <= shot) {
-                    if (shotType === 0) { message = `GOAL: ${posT.info.city}'s ${carrier.name} scores top corner on ${nosT.lines[nosT.zz].GK.name}!` }
-                    else { message = `GOAL: ${posT.info.city}'s ${carrier.name} scores with a low shot on ${nosT.lines[nosT.zz].GK.name}!` }
+                    if (shotType === 0) { message = `GOAL: ${posT.info.city}'s ${carrier.name} scores top corner on ${nosT.lines[0].GK.name}!` }
+                    else { message = `GOAL: ${posT.info.city}'s ${carrier.name} scores with a low shot on ${nosT.lines[0].GK.name}!` }
                     posT.score++
                     setScore()
                     possession = 0
@@ -342,8 +372,8 @@ function game(teams, timing, whichGame) {
                     carrier = null
                 }
                 else {
-                    message = `${nosT.lines[nosT.zz].GK.name} saves ${carrier.name}'s shot!`
-                    carrier = nosT.lines[nosT.zz].GK
+                    message = `${nosT.lines[0].GK.name} saves ${carrier.name}'s shot!`
+                    carrier = nosT.lines[0].GK
                     endPlay("switch")
                 }
             }
@@ -370,6 +400,13 @@ function game(teams, timing, whichGame) {
         function endPlay(result) {
             switch (result) {
                 case "same":
+                    if (possession === 1) {
+                        posT = t1
+                        nosT = t2
+                    } else if (possession === 2) {
+                        posT = t2
+                        nosT = t1
+                    }
                     break
                 case "switch":
                     if (possession === 1) {
@@ -411,11 +448,34 @@ function game(teams, timing, whichGame) {
             case "defNos":
                 line = [nosT.lines[nosT.zz].LD, nosT.lines[nosT.zz].RD]
         }
-        let targets = line.filter(player => player !== carrier)
+        let targets = line.filter(player => player !== carrier || player !== posT.iced || player !== nosT.iced)
         let z = rngWhole(targets.length)
         return targets[z]
     }
+    function icePlayer(player) {
 
+    }
+    function fireUp(team) {
+        switch (team) {
+            case "posT":
+                posT.firedUp.status = true;
+                posT.firedUp.time = 47;
+                posT.mod = posT.mod + 5
+                break;
+            case "nosT":
+                nosT.firedUp.status = true;
+                nosT.firedUp.time = 47;
+                nosT.mod = nosT.mod + 5
+                break;
+        }
+    }
+    function fireCheck(x, team) {
+        if (x > 61) {
+            team.firedUp.status = false;
+            team.firedUp.time = 99;
+            team.mod = team.mod - 5
+        }
+    }
     function timeConvert(x, y) {
         if (x === 0) { return "20:00" }
         else if (x == 1) { return "19:40" }
@@ -464,7 +524,7 @@ function game(teams, timing, whichGame) {
         else if (x == 44) { return "05:20" }
         else if (x == 45) { return "05:00" }
         else if (x == 46) { return "04:40" }
-        else if (x == 47) { return "BLAZE" }
+        else if (x == 47) { return "04:20" }
         else if (x == 48) { return "04:00" }
         else if (x == 49) { return "03:40" }
         else if (x == 50) { return "03:20" }
@@ -479,6 +539,7 @@ function game(teams, timing, whichGame) {
         else if (x == 59) { return "00:20" }
         else if (x == 60 || y == 1) { return "00:00" }
         else if (y == 0) { return "XX:XX" }
+        else if (x == 99) { return "nope" }
         else { return "??:??" }
     }
     function packager() {
@@ -490,6 +551,8 @@ function game(teams, timing, whichGame) {
             t2C: teams[1].info.city,
             t1S: t1.score,
             t2S: t2.score,
+            t1f: timeConvert(t1.firedUp.time),
+            t2f: timeConvert(t2.firedUp.time),
             ab1: teams[0].info.abrv,
             ab2: teams[1].info.abrv,
             per: period,

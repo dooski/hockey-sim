@@ -22,7 +22,7 @@ function scheduleMaker() {
 async function test() {
     let team1 = await fetchTeam("ATH")
     let team2 = await fetchTeam("OLY")
-    sim.game([team1, team2], 5000, 0)
+    sim.game([team1, team2], 8000, 0)
 }
 
 function wipeRecords() {
