@@ -24,29 +24,35 @@ function getTeam(abrv) {
     })
 }
 async function getTeams(req, res) {
-    let bingo = ["MON", "ROC", "OTT", "POR", "WVM", "BUF", "BOS", "TOR", "NOR", "CHI"]
-    let bongo = ["PHL", "BUR", "VAN", "NSH", "SFB", "VAL", "LAK", "PIT", "NYR", "LIB"]
-    bingo[0] = await getTeam(bingo[0])
-    bingo[1] = await getTeam(bingo[1])
-    bingo[2] = await getTeam(bingo[2])
-    bingo[3] = await getTeam(bingo[3])
-    bingo[4] = await getTeam(bingo[4])
-    bingo[5] = await getTeam(bingo[5])
-    bingo[6] = await getTeam(bingo[6])
-    bingo[7] = await getTeam(bingo[7])
-    bingo[8] = await getTeam(bingo[8])
-    bingo[9] = await getTeam(bingo[9])
-    bongo[0] = await getTeam(bongo[0])
-    bongo[1] = await getTeam(bongo[1])
-    bongo[2] = await getTeam(bongo[2])
-    bongo[3] = await getTeam(bongo[3])
-    bongo[4] = await getTeam(bongo[4])
-    bongo[5] = await getTeam(bongo[5])
-    bongo[6] = await getTeam(bongo[6])
-    bongo[7] = await getTeam(bongo[7])
-    bongo[8] = await getTeam(bongo[8])
-    bongo[9] = await getTeam(bongo[9])
-    var data = [bingo, bongo]
+    let ogopogo = ["VAN", "OTT", "MON", "TOR", "POR", "SEA"]
+    let igopogo = ["BUF", "WVM", "ROC", "NOR", "NSH", "KCS"]
+    let chessie = ["NYR", "PHL", "BOS", "CHI", "PIT", "MIN"]
+    let nessie = ["BUR", "SFB", "VAL", "LAK", "LIB", "MOS"]
+    ogopogo[0] = await getTeam(ogopogo[0])
+    ogopogo[1] = await getTeam(ogopogo[1])
+    ogopogo[2] = await getTeam(ogopogo[2])
+    ogopogo[3] = await getTeam(ogopogo[3])
+    ogopogo[4] = await getTeam(ogopogo[4])
+    ogopogo[5] = await getTeam(ogopogo[5])
+    igopogo[0] = await getTeam(igopogo[0])
+    igopogo[1] = await getTeam(igopogo[1])
+    igopogo[2] = await getTeam(igopogo[2])
+    igopogo[3] = await getTeam(igopogo[3])
+    igopogo[4] = await getTeam(igopogo[4])
+    igopogo[5] = await getTeam(igopogo[5])
+    chessie[0] = await getTeam(chessie[0])
+    chessie[1] = await getTeam(chessie[1])
+    chessie[2] = await getTeam(chessie[2])
+    chessie[3] = await getTeam(chessie[3])
+    chessie[4] = await getTeam(chessie[4])
+    chessie[5] = await getTeam(chessie[5])
+    nessie[0] = await getTeam(nessie[0])
+    nessie[1] = await getTeam(nessie[1])
+    nessie[2] = await getTeam(nessie[2])
+    nessie[3] = await getTeam(nessie[3])
+    nessie[4] = await getTeam(nessie[4])
+    nessie[5] = await getTeam(nessie[5])
+    var data = [ogopogo, igopogo, chessie, nessie]
     res.json(data)
 }
 function addWin(abrv) {

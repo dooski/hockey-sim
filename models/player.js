@@ -45,6 +45,13 @@ const playerSchema = new Schema(
                 vision: Number,
                 memory: Number
             },
+            mystical: {
+                divinity: Number,
+                fog: Number,
+                luck: Number,
+                bear: Number,
+                lakemonster: Number 
+            },
         items: {
             stick: String,
             helment: String,

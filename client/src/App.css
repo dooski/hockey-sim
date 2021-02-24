@@ -298,19 +298,26 @@ height: 10px;
 .league-table-wrapper {
   margin-left: 15%;
   margin-right: 15%;
+  line-height: 1.5rem
 }
 
-.division-table {
+.con-table {
   background-color: rgb(46, 45, 45);
   border-radius: 10px;
-  padding: 0
+  padding: 5px;
 }
 
-.division-table-title {
+.con-table-title {
   font-size: 26px;
   font-style: italic;
   font-weight: 800;
   margin-bottom: 10px;
+}
+
+.div-table-title {
+  font-size: 18px;
+  font-weight: 800;
+  padding-left: 10px;
 }
 
 .division-table-team {
@@ -320,39 +327,44 @@ height: 10px;
   padding-bottom: 0px;
   padding-left: 5px;
   padding-right: 5px;
-  margin: 0
+  margin: 0;
 }
 
 .division-table-team:hover {
   transform: scale(1.05)
 }
 
+.division-table-team:not(:last-child){
+  margin-bottom: 0;
+}
+
+.div-table-wrapper {
+  border: 3px solid black;
+  border-top-right-radius: 30px
+}
+
 .bingo {
-  background-color: rgb(21, 21, 32)
+  background-color: rgb(49, 49, 65);
 }
 
-.bingo.division-table-team.a {
-  background-color:rgb(23, 31, 49);
-  margin-bottom: 0px
+.ogopogo {
+  background-color:rgb(0, 13, 41)
 }
 
-.bingo.division-table-team.b {
-  background-color:rgb(21, 21, 32);
-  margin-bottom: 0px
+.igopogo {
+  background-color:rgb(0, 41, 31)
+}
+
+.chessie {
+  background-color:rgb(41, 0, 0)
+}
+
+.nessie {
+  background-color:rgb(34, 41, 0)
 }
 
 .bongo {
-  background-color: rgb(34, 18, 18)
-}
-
-.bongo.division-table-team.a {
-  background-color: rgb(54, 24, 24);
-  margin-bottom: 0px
-}
-
-.bongo.division-table-team.b {
-  background-color: rgb(34, 18, 18);
-  margin-bottom: 0px
+  background-color: rgb(71, 62, 62)
 }
 
 .table-record {
@@ -509,12 +521,12 @@ button:hover {
   .minor-text {
     font-size: 12px
   }
-  .division-table-title {
+  .con-table-title {
     font-size: 20px;
     font-weight: 500
   }
   .division-table-team {
-    font-size: 16px
+    font-size: 14px
   }
   .league-table-wrapper {
     margin-top: 10px;
@@ -539,6 +551,6 @@ button:hover {
   .roster-list{
     padding-top: 0px;
     padding-left: 0px;
-    font-size: 14px;
+    font-size: 12px;
   }
 }

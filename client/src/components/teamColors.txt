@@ -2,9 +2,9 @@ Montreal Panic: red & black
     primary: #C41E3D
     secondary: #3A2E39
 
-Rochester Bones: black & white
+Rochester Bones: black
     primary: #000000
-    secondary: #C4BBB8
+    secondary: #000000
 
 Ottawa Tulips: pink & greenish?
     primary: #DB5ABA

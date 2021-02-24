@@ -1,14 +1,16 @@
 .symbol {
-    border-bottom: 4px solid transparent;
+    border: 2px solid transparent;
     border-radius: 50%;
-}
+    height: 38px;
+    width: 38px;
+    }
 .buf {
-background-color:darkblue;
-border-color: darkblue
+background-color:#1D2F6F;
+border-color: goldenrod
 }
 .van {
     background-color: #8AEA92;
-    border-color: #8AEA92;
+    border-color: #DE9151
 }
 .roc {
     background-color: black;
@@ -16,70 +18,86 @@ border-color: darkblue
 }
 .ott {
     background-color: #DB5ABA;
-    border-color: #DB5ABA;
+    border-color: #EAF4D3;
 }
 .mon {
     background-color: #C41E3D;
-    border-color: #C41E3D;
+    border-color: #3A2E39
 }
 .tor {
     background-color: #0932EC;
-    border-color: #0932EC
+    border-color:#87C6FD
 }
 .nyr {
     background-color: #3C91E6;
-    border-color: #3C91E6
+    border-color: #011936
 }
 .phl {
     background-color: #FFA400;
-    border-color: #FFA400
+    border-color: #0A0908
 }
 .bos {
     background-color: #C97064;
-    border-color: #C97064
+    border-color: #DA2C38
 }
 .por {
     background-color: #7FB069;
-    border-color: #7FB069
+    border-color: #46B1C9
 }
 .pit {
     background-color: #F8FCDA;
-    border-color:#F8FCDA
+    border-color:#550C18
 }
 .bur {
     background-color:#324932;
-    border-color: #324932;
+    border-color: #34A5D5
 }
 .chi {
     background-color: #D62828;
-    border-color: #D62828
+    border-color: #3454D1
 }
 .wvm {
     background-color: #37123C;
-    border-color:#37123C;
+    border-color:#6369D1
 }
 .nor {
     background-color: #574D68;
-    border-color: #574D68;
+    border-color: #F4E04D
 }
 .sfb {
     background-color: #2E1F27;
-    border-color: #2E1F27
+    border-color: #ffffff
 }
 .val {
     background-color: #1B2021;
-    border-color: #1B2021
+    border-color: #63CCCA
 }
 .lak {
     background-color: #931621;
-    border-color: #931621;
+    border-color:  #28464B
 }
 .lib {
-    background-color: #F75C03;
-    border-color: #F75C03
+    background-color: #2274A5;
+    border-color: #F75C03;
 }
 .nsh {
     background-color: #FFCB77;
-    border-color: #FFCB77
+    border-color: #000000
+}
+.min {
+    background-color: #a6f0ff;
+    border-color: #ffffff
+}
+.kcs {
+    background-color: rgb(248, 45, 255);
+    border-color: rgb(255, 255, 255)
+}
+.sea {
+    background-color: #0e8054;
+    border-color: #e8ff1b
+}
+.mos {
+    background-color: #2c0202;
+    border-color: #ca0000
 }
 

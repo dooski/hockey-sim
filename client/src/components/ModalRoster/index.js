@@ -25,7 +25,7 @@ function ModalRoster(props) {
     return (
         <section class="modal-card-body">
             <div className="columns roster-list is-mobile">
-                <div className="column is-6 is-mobile">
+                <div className="column is-7 is-mobile">
                     <p className="position-title">Forwards</p>
                     <p>{players.line1.LW.name}</p>
                     <p>{players.line1.CE.name}</p>
@@ -44,7 +44,7 @@ function ModalRoster(props) {
                     <p>{players.line1.GK.name}</p>
                     <p>{players.line2.GK.name}</p>
                 </div>
-                <div className="column is-6 is-mobile">
+                <div className="column is-5 is-mobile">
                     <br />
                     <p>{calculateStat(players.line1.LW.stats, "winger")}</p>
                     <p>{calculateStat(players.line1.CE.stats, "center")}</p>

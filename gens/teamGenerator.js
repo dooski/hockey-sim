@@ -2,48 +2,64 @@ const db = require("../models")
 const RNG = require("rng-js")
 
 var rng = new RNG(Math.random);
+var personalities = ["Cool", "Off-putting", "Charming", "Weird", "Grizzly", "Hungry", "Loud", "Whimsical", "Nerd", "Cute", "Sauce", "Soft", "Loving", "Reptile", "Quick", "Funny", "Clunky"]
+
 
 function makePlayer(name, team) {
+    let offStat = rng.random(2,5)
+    let defStat = rng.random(2,5)
+    let gkStat = rng.random(2,5)
+    let phyStat = rng.random(2,5)
+    let menStat = rng.random(2,5)
+    let mysStat = rng.random(2,5)
+    let personality = personalities[rng.random(0, personalities.length)]
     let player = new db.Player({
         name: name,
         currentTeam: team,
-        personality: "???",
+        personality: personality,
         alive: true,
         stats: {
             offense: {
-                highShot: rng.random(1, 6),
-                lowShot: rng.random(1, 6),
-                longShot: rng.random(1, 6),
-                passing: rng.random(1, 6),
-                handling: rng.random(1, 6),
+                highShot: rng.random(offStat - 1, offStat + 1),
+                lowShot: rng.random(offStat - 1, offStat + 1),
+                longShot: rng.random(offStat - 1, offStat + 1),
+                passing: rng.random(offStat, offStat + 1),
+                handling: rng.random(offStat - 1, offStat + 1),
             },
             defense: {
-                forecheck: rng.random(1, 6),
-                stick: rng.random(1, 6),
-                checking: rng.random(1, 6),
-                positioning: rng.random(1, 6),
-                blocking: rng.random(1, 6)
+                forecheck: rng.random(defStat - 1, defStat + 1),
+                stick: rng.random(defStat - 1, defStat + 1),
+                checking: rng.random(defStat - 1, defStat + 1),
+                positioning: rng.random(defStat - 1, defStat + 1),
+                blocking: rng.random(defStat, defStat + 1),
             },
             goalkeeping: {
-                highBlock: rng.random(1, 6),
-                lowBlock: rng.random(1, 6),
-                longBlock: rng.random(1, 6),
-                catching: rng.random(1, 6),
-                aura: rng.random(1, 6)
+                highBlock: rng.random(gkStat, gkStat + 1),
+                lowBlock: rng.random(gkStat, gkStat + 1),
+                longBlock: rng.random(gkStat, gkStat + 1),
+                catching: rng.random(gkStat, gkStat + 1),
+                aura: rng.random(gkStat - 1, gkStat + 1),
             },
             physical: {
-                speed: rng.random(1, 6),
-                strength: rng.random(1, 6),
-                faceoff: rng.random(1, 6),
-                fighting: rng.random(1, 6),
-                blubber: rng.random(1, 6)
+                speed: rng.random(phyStat - 1, phyStat + 1),
+                strength: rng.random(phyStat - 1, phyStat + 1),
+                faceoff: rng.random(phyStat, phyStat + 1),
+                fighting: rng.random(phyStat, phyStat + 1),
+                blubber: rng.random(phyStat - 1, phyStat + 1),
             },
             mental: {
-                discipline: rng.random(1, 6),
-                respect: rng.random(1, 6),
-                fear: rng.random(1, 6),
-                vision: rng.random(1, 6),
-                memory: rng.random(1, 6)
+                discipline: rng.random(menStat - 1, menStat + 1),
+                respect: rng.random(menStat - 1, menStat + 1),
+                fear: rng.random(menStat - 1, menStat + 1),
+                vision: rng.random(menStat - 1, menStat + 1),
+                memory: rng.random(menStat - 1, menStat + 1),
+            },
+            mystical: {
+                divinity: rng.random(mysStat - 1, mysStat + 1),
+                fog: rng.random(mysStat - 1, mysStat + 1),
+                luck: rng.random(mysStat - 1, mysStat + 1),
+                bear: rng.random(mysStat - 1, mysStat + 1),
+                lakemonster: rng.random(mysStat - 1, mysStat + 1), 
             },
             items: {
                 stick: null,
@@ -63,7 +79,7 @@ function makePlayer(name, team) {
     })
 }
 
-async function makeTeam(fullName, cityName, teamName, teamDesc, teamDiv, teamAbrv) {
+async function makeTeam(fullName, cityName, teamName, teamDesc, teamConf, teamDiv, teamAbrv) {
     let roster = await makeRoster(teamAbrv)
     console.log(roster)
     let team = new db.Team({
@@ -72,6 +88,7 @@ async function makeTeam(fullName, cityName, teamName, teamDesc, teamDiv, teamAbr
             city: cityName,
             team: teamName,
             desc: teamDesc,
+            conf: teamConf,
             div: teamDiv,
             abrv: teamAbrv,
             captain: null

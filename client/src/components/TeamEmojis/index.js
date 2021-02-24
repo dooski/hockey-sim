@@ -26,6 +26,10 @@ function Symbol(props) {
     else if (team === "MSC") { return (<Emoji text=":heavy_minus_sign:" />) }
     else if (team === "LIB") { return (<Emoji className="symbol lib" text=":beach_with_umbrella:" />) }
     else if (team === "NSH") { return (<Emoji className="symbol nsh" text=":microphone:" />) }
+    else if (team === "MIN") { return (<Emoji className="symbol min" text=":snowman:" />) }
+    else if (team === "KCS") { return (<Emoji className="symbol kcs" text=":ghost:" />) }
+    else if (team === "SEA") { return (<Emoji className="symbol sea" text=":trident:" />) }
+    else if (team === "MOS") { return (<Emoji className="symbol mos" text=":drop_of_blood:" />) }
     else if (team === "GOL") { return (<Emoji text=":police_car_light:" />) }
     else if (team === "ATH") { return (<Emoji text=":owl:" />) }
     else if (team === "OLY") { return (<Emoji text=":lightning:" />) }

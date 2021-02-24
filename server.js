@@ -9,6 +9,7 @@ const app = express()
 
 //server stuff
 const control = require("./control.js")
+const plondWaker = require("./gens/seasonScheduler")
 const teamController = require("./controllers/teamController")
 
 //middlewhere? middleware!
@@ -33,12 +34,13 @@ mongoose.connect(uri, {
     .then(console.log(`MongoDB connected ${uri}`))
     .catch(err => console.log(err));
 
+
 //timing
 setInterval(clock, 60000)
 function clock() {
     now = new Date
     if (now.getMinutes() === 30 || now.getMinutes() === 0) {
-        control.start()
+        plondWaker.start()
         console.log(`Playing games at ${now.getMinutes()}`)
     }
 }
