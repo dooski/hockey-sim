@@ -45,8 +45,8 @@ function App() {
       <nav className="nav-spot">
         <div className="columns is-mobile">
           <div className="column">
-            <Link to="/"><p className="nav-title">Plond Hockey</p></Link>
-            <div className="nav-button-bar"><Link to="/plond" className="nav-button">The Plond</Link> <Link to="/teams" className="nav-button">The League</Link></div>
+            <Link to="/"><p className="nav-title">PLOND HOCKEY</p></Link>
+            <div className="nav-button-bar"><Link to="/plond" className="nav-button">Games</Link> <Link to="/teams" className="nav-button">Teams</Link></div>
           </div>
         </div>
       </nav>

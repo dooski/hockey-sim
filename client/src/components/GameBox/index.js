@@ -117,14 +117,9 @@ function GameBox(props) {
                     <div className="columns no-margin">
                         <div className="column game-box-score-card is-6">
                             <div className="game-box-score-card-row columns is-mobile">
-                                <div className="column is-2">
+                                <div className="column is-11 left">
                                     <p className="game-box-team-name">
-                                        {sym1}
-                                    </p>
-                                </div>
-                                <div className="column is-9 left">
-                                    <p className="game-box-team-name">
-                                        {t1}
+                                        {sym1} {t1}
                                     </p>
                                 </div>
                                 <div className="column is-1 left">
@@ -134,14 +129,9 @@ function GameBox(props) {
                                 </div>
                             </div>
                             <div className="game-box-score-card-row columns is-mobile">
-                                <div className="column is-2">
+                                <div className="column is-11 left">
                                     <p className="game-box-team-name">
-                                        {sym2}
-                                    </p>
-                                </div>
-                                <div className="column is-9 left">
-                                    <p className="game-box-team-name">
-                                        {t2}
+                                        {sym2} {t2}
                                     </p>
                                 </div>
                                 <div className="column is-1 left">

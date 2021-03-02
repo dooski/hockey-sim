@@ -60,11 +60,17 @@ function Teams() {
                 <div class="modal-background"></div>
                 {currentTeam !== null ? (
                     <div class="modal-card ">
-                        <header class="modal-card-head team-modal">
+                        <header class="modal-card-head team-modal"> 
+                        <div className="columns is-mobile" style={{width: "100%"}}>
+                            <div className="column is-11 is-mobile">
                             <p class="modal-card-title team-modal team-modal-title">
-                                <Symbol abrv={currentTeam.info.abrv} /> {currentTeam.info.full}
+                                <Symbol abrv={currentTeam.info.abrv}/> {currentTeam.info.full}
                                 <br /><p class="team-modal-subtitle">{currentTeam.info.desc}</p></p>
+                            </div>
+                            <div className="column is-1">
                             <button aria-label="close" onClick={closeModal}>X</button>
+                            </div>
+                        </div>
                         </header>
                         <ModalRoster props={currentTeam.players} />
                     </div>) : (<div></div>)}

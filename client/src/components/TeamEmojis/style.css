@@ -6,7 +6,7 @@
     }
 .buf {
 background-color:#1D2F6F;
-border-color: goldenrod
+border-color: #daa520
 }
 .van {
     background-color: #8AEA92;
@@ -89,7 +89,7 @@ border-color: goldenrod
     border-color: #ffffff
 }
 .kcs {
-    background-color: rgb(248, 45, 255);
+    background-color: #f82dff;
     border-color: rgb(255, 255, 255)
 }
 .sea {
