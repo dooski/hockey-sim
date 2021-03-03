@@ -1,6 +1,5 @@
 const data = require("./gens/data.json")
 const sim = require("./gens/sim.js")
-const records = require("./gens/records.js")
 const gameHandler = require("./gens/gameManagement")
 const teamGenerator = require("./gens/teamGenerator")
 const teamController = require("./controllers/teamController")
@@ -35,7 +34,9 @@ function wipeRecords() {
 async function start() {
     let bingo = ["BUF", "BOS", "ROC", "WVM", "MON", "OTT", "NOR", "POR", "TOR", "CHI", "MIN", "SEA"]
     let bongo = ["PHL", "BUR", "LAK", "NSH", "SFB", "PIT", "NYR", "VAL", "VAN", "LIB", "MOS", "KCS"]
-    let games = await pickTeams(bingo, bongo)
+    let bush1 = ["FAR", "DCH", "HOU", "BAL"]
+    let bush2 = ["MAT", "CLE", "NDD", "SJP"]
+    let games = await pickTeams(bingo, bongo, 12)
     //second argument is length of action in each game (60 actions per period x 3 periods and possible overtime)
     sim.game(games[0], 6000, 0)
     sim.game(games[1], 6000, 1)
@@ -49,17 +50,25 @@ async function start() {
     sim.game(games[9], 6000, 9)
     sim.game(games[10], 6000, 10)
     sim.game(games[11], 6000, 11)
+    let bushGames = await pickTeams(bush1, bush2, 4)
+    sim.game(bushGames[0], 6000, 12)
+    sim.game(bushGames[1], 6000, 13)
+    sim.game(bushGames[2], 6000, 14)
+    sim.game(bushGames[3], 6000, 15)
 }
 
-async function pickTeams(x, y) {
+async function pickTeams(x, y, z) {
     return new Promise(async resolve => {
         let gamesList = []
         let league = x.concat(y)
-        for (i = 0; i < 12; i++) {
+        console.log(league)
+        for (i = 0; i < z; i++) {
             let z1 = rng(league.length)
+            console.log(league[z1])
             let team1 = await fetchTeam(league[z1])
             league.splice(z1, 1)
             let z2 = rng(league.length)
+            console.log(league[z2])
             let team2 = await fetchTeam(league[z2])
             league.splice(z2, 1)
             let oneGame = [team1, team2]

@@ -1,9 +1,8 @@
-const records = require("./records")
 const gameHandler = require("./gameManagement")
 const handleGame = gameHandler.handleGame
 
 
-let endOfGame = records.endOfGame
+let endOfGame = gameHandler.endOfGame
 
 function rngWhole(z) {
     let x = Math.floor(Math.random() * z)
@@ -114,7 +113,6 @@ function game(teams, timing, whichGame) {
                 fight()
             } else {
                 pressure(i)
-                console.log(posT)
                 onePlay()
             }
             packager()

@@ -28,6 +28,7 @@ async function getTeams(req, res) {
     let igopogo = ["BUF", "WVM", "ROC", "NOR", "NSH", "KCS"]
     let chessie = ["NYR", "PHL", "BOS", "CHI", "PIT", "MIN"]
     let nessie = ["BUR", "SFB", "VAL", "LAK", "LIB", "MOS"]
+    let bush = ["FAR", "DCH", "HOU", "BAL", "MAT", "CLE", "NDD", "SJP"]
     ogopogo[0] = await getTeam(ogopogo[0])
     ogopogo[1] = await getTeam(ogopogo[1])
     ogopogo[2] = await getTeam(ogopogo[2])
@@ -52,7 +53,15 @@ async function getTeams(req, res) {
     nessie[3] = await getTeam(nessie[3])
     nessie[4] = await getTeam(nessie[4])
     nessie[5] = await getTeam(nessie[5])
-    var data = [ogopogo, igopogo, chessie, nessie]
+    bush[0] = await getTeam(bush[0])
+    bush[1] = await getTeam(bush[1])
+    bush[2] = await getTeam(bush[2])
+    bush[3] = await getTeam(bush[3])
+    bush[4] = await getTeam(bush[4])
+    bush[5] = await getTeam(bush[5])
+    bush[6] = await getTeam(bush[6])
+    bush[7] = await getTeam(bush[7])
+    var data = [ogopogo, igopogo, chessie, nessie, bush]
     res.json(data)
 }
 function addWin(abrv) {

@@ -24,6 +24,14 @@ import { ReactComponent as Min} from '../../svg/min.svg'
 import { ReactComponent as Kcs} from '../../svg/kcs.svg'
 import { ReactComponent as Sea} from '../../svg/sea.svg'
 import { ReactComponent as Mos} from '../../svg/mos.svg'
+import { ReactComponent as Far} from '../../svg/far.svg'
+import { ReactComponent as Dch} from '../../svg/dch.svg'
+import { ReactComponent as Hou} from '../../svg/hou.svg'
+import { ReactComponent as Bal} from '../../svg/bal.svg'
+import { ReactComponent as Mat} from '../../svg/mat.svg'
+import { ReactComponent as Cle} from '../../svg/cle.svg'
+import { ReactComponent as Ndd} from '../../svg/ndd.svg'
+import { ReactComponent as Sjp} from '../../svg/sjp.svg'
 
 import "./style.css"
 
@@ -49,13 +57,21 @@ function Symbol(props) {
     else if (team === "SFB") { return (<Sfb style={sizing}/>) }
     else if (team === "VAL") { return (<Val style={sizing}/>) }
     else if (team === "LAK") { return (<Lak style={sizing}/>) }
-    else if (team === "MSC") { return (<i style={{color: "white"}}>ice</i>) }
-    else if (team === "LIB") { return (<Lib style={sizing}/>)}
+    else if (team === "LIB") { return (<Lib style={sizing}/>) }
     else if (team === "NSH") { return (<Nsh style={sizing}/>) }
     else if (team === "MIN") { return (<Min style={sizing}/>) }
     else if (team === "KCS") { return (<Kcs style={sizing}/>) }
     else if (team === "SEA") { return (<Sea style={sizing}/>) }
     else if (team === "MOS") { return (<Mos style={sizing}/>) }
+    else if (team === "FAR") { return (<Far style={sizing}/>) }
+    else if (team === "DCH") { return (<Dch style={sizing}/>) }
+    else if (team === "HOU") { return (<Hou style={sizing}/>) }
+    else if (team === "BAL") { return (<Bal style={sizing}/>) }
+    else if (team === "MAT") { return (<Mat style={sizing}/>) }
+    else if (team === "CLE") { return (<Cle style={sizing}/>) }
+    else if (team === "NDD") { return (<Ndd style={sizing}/>) }
+    else if (team === "SJP") { return (<Sjp style={sizing}/>) }    
+    else if (team === "MSC") { return (<i style={{color: "white"}}>ice</i>) }
     else if (team === "GOL") { return (<Emoji text=":police_car_light:" />) }
     else if (team === "ATH") { return (<Emoji text=":owl:" />) }
     else if (team === "OLY") { return (<Emoji text=":lightning:" />) }
