@@ -34,13 +34,16 @@ mongoose.connect(uri, {
     .then(console.log(`MongoDB connected ${uri}`))
     .catch(err => console.log(err));
 
+let gameDay = 0
 //timing
 setInterval(clock, 60000)
 function clock() {
     now = new Date
     if (now.getMinutes() === 30 || now.getMinutes() === 0) {
-        plondWaker.start()
+        plondWaker.start(gameDay)
         console.log(`Playing games at ${now.getMinutes()}`)
+        gameDay = gameDay + 1
+        console.log(gameDay)
     }
 }
 
