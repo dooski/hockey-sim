@@ -36,8 +36,8 @@ import { ReactComponent as Sjp} from '../../svg/sjp.svg'
 import "./style.css"
 
 function Symbol(props) {
-    console.log(props)
     let sizing = {width: "36px", height: "auto", verticalAlign: "middle"}
+    if (props.alt === "true") {sizing = {width: "280px", animation: "roll-in-blurred-left 0.65s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.5s both"}}
     let team = props.abrv
     if (team === "BUF") { return (<Buf style={sizing}/>) }
     else if (team === "VAN") { return (<Van style={sizing}/>) }

@@ -1,13 +1,10 @@
 .App {
   text-align: center;
-  background: url("logo.svg") no-repeat fixed center;
   background-size: 500px;
   background-color: black;
   min-height: 100vh;
   color: whitesmoke;
   padding-top: 35px;
-  -webkit-animation: color-change-4x 8s linear infinite alternate both;
-  animation: color-change-4x 8s linear infinite alternate both;
 }
 
 .columns:last-child{
@@ -386,24 +383,22 @@ height: 10px;
   background-color: rgb(71, 62, 62)
 }
 
+.team-box {
+
+}
+
 .table-record {
   padding-right: 3px
 }
 
-.team-modal {
-  background-color: black;
-  color: white
-}
-
 .team-modal-title {
-  font-size: 26px;
+  font-size: 72px;
   font-weight: 700;
 }
 
 .team-modal-subtitle {
-  margin-top: 5px;
-  margin-left: 50px;
-  font-size: 16px;
+  padding: 10px;
+  font-size: 32px;
   font-weight: 300;
   font-style: italic
 }
@@ -485,7 +480,38 @@ button:hover {
   }
 }
 
-
+@-webkit-keyframes roll-in-blurred-left {
+  0% {
+    -webkit-transform: translateX(-1000px) rotate(-720deg);
+            transform: translateX(-1000px) rotate(-720deg);
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(0deg);
+            transform: translateX(0) rotate(0deg);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes roll-in-blurred-left {
+  0% {
+    -webkit-transform: translateX(-1000px) rotate(-720deg);
+            transform: translateX(-1000px) rotate(-720deg);
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(0deg);
+            transform: translateX(0) rotate(0deg);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
 @media only screen and (max-width: 1030px) {
   .league-table-wrapper {
     margin-left: 5%;
@@ -583,10 +609,10 @@ button:hover {
     margin-right: 2%
   }
   .team-modal-title {
-    font-size: 20px;
+    font-size: 30px;
   }
   .team-modal-subtitle{
-    margin-left: 0px
+    font-size: 20px;
   }
   .nav-title {
     font-size: 24px

@@ -27,40 +27,40 @@ function ModalRoster(props) {
             <div className="columns roster-list is-mobile">
                 <div className="column is-7 is-mobile">
                     <p className="position-title">Forwards</p>
-                    <p>{players.line1.LW.name}</p>
+                    <p style={{backgroundColor:"#202020"}}>{players.line1.LW.name}</p>
                     <p>{players.line1.CE.name}</p>
-                    <p>{players.line1.RW.name}</p>
+                    <p style={{backgroundColor:"#202020"}}>{players.line1.RW.name}</p>
                     <p>{players.line2.LW.name}</p>
-                    <p>{players.line2.CE.name}</p>
+                    <p style={{backgroundColor:"#202020"}}>{players.line2.CE.name}</p>
                     <p>{players.line2.RW.name}</p>
                     <br />
                     <p className="position-title">Defenders</p>
-                    <p>{players.line1.LD.name}</p>
+                    <p style={{backgroundColor:"#202020"}}>{players.line1.LD.name}</p>
                     <p>{players.line1.RD.name}</p>
-                    <p>{players.line2.LD.name}</p>
+                    <p style={{backgroundColor:"#202020"}}>{players.line2.LD.name}</p>
                     <p>{players.line2.RD.name}</p>
                     <br />
                     <p className="position-title">Goalies</p>
-                    <p>{players.line1.GK.name}</p>
+                    <p style={{backgroundColor:"#202020"}}>{players.line1.GK.name}</p>
                     <p>{players.line2.GK.name}</p>
                 </div>
                 <div className="column is-5 is-mobile">
                     <br />
-                    <p>{calculateStat(players.line1.LW.stats, "winger")}</p>
+                    <p style={{backgroundColor:"#202020"}}>{calculateStat(players.line1.LW.stats, "winger")}</p>
                     <p>{calculateStat(players.line1.CE.stats, "center")}</p>
-                    <p> {calculateStat(players.line1.RW.stats, "winger")}</p>
+                    <p style={{backgroundColor:"#202020"}}> {calculateStat(players.line1.RW.stats, "winger")}</p>
                     <p>{calculateStat(players.line2.LW.stats, "winger")}</p>
-                    <p>{calculateStat(players.line2.CE.stats, "center")}</p>
+                    <p style={{backgroundColor:"#202020"}}>{calculateStat(players.line2.CE.stats, "center")}</p>
                     <p> {calculateStat(players.line2.RW.stats, "winger")}</p>
                     <br />
                     <br />
-                    <p> {calculateStat(players.line1.LD.stats, "defender")}</p>
+                    <p style={{backgroundColor:"#202020"}}> {calculateStat(players.line1.LD.stats, "defender")}</p>
                     <p> {calculateStat(players.line1.RD.stats, "defender")}</p>
-                    <p> {calculateStat(players.line2.LD.stats, "defender")}</p>
+                    <p style={{backgroundColor:"#202020"}}> {calculateStat(players.line2.LD.stats, "defender")}</p>
                     <p> {calculateStat(players.line2.RD.stats, "defender")}</p>
                     <br />
                     <br />
-                    <p> {calculateStat(players.line1.GK.stats, "goalie")}</p>
+                    <p style={{backgroundColor:"#202020"}}> {calculateStat(players.line1.GK.stats, "goalie")}</p>
                     <p> {calculateStat(players.line2.GK.stats, "goalie")}</p>
                 </div>
             </div>

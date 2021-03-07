@@ -9,7 +9,7 @@ import ModalRoster from "../components/ModalRoster"
 function Teams() {
     Modal.setAppElement('#root')
 
-    const [modalIsOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
     const [currentTeam, setCurrentTeam] = useState(null)
     const [ogopogo, setOgopogo] = useState(null)
     const [igopogo, setIgopogo] = useState(null)
@@ -52,7 +52,9 @@ function Teams() {
 
     function openModal(team) {
         setCurrentTeam(team)
-        setIsOpen(true);
+        setIsOpen(true)
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera;
     }
     function closeModal() {
         setIsOpen(false);
@@ -60,25 +62,24 @@ function Teams() {
 
     return (
         <div>
-            <Modal isOpen={modalIsOpen} onRequestClose={closeModal} contentLabel="Team Info" className="modal is-active ">
-                <div class="modal-background"></div>
-                {currentTeam !== null ? (
-                    <div class="modal-card ">
-                        <header class="modal-card-head team-modal">
+            <div>
+                {currentTeam !== null && isOpen==true ? (
+                    <div className="team-box">
+                        <div onClick={closeModal}>
+                            <p  style={{backgroundColor: "black", border: "1px silver solid", borderTopLeftRadius: "5px", borderTopRightRadius: "5px", fontSize: "12px", fontWeight:"500", position:"relative", left:"10px", bottom: "-10px", textAlign:"left", zIndex: "99", height: "30px", width: "40px", textAlign: "center"}}>Close</p>
+                        </div>
+                        <header class="modal-card-head team-modal">                            
                             <div className="columns is-mobile" style={{ width: "100%" }}>
-                                <div className="column is-11 is-mobile">
+                                <div className="column is-12 is-mobile"><Symbol abrv={currentTeam.info.abrv} alt="true"/>
                                     <p class="modal-card-title team-modal team-modal-title">
-                                        <Symbol abrv={currentTeam.info.abrv} /> {currentTeam.info.full}
-                                        <br /><p class="team-modal-subtitle">{currentTeam.info.desc}</p></p>
-                                </div>
-                                <div className="column is-1">
-                                    <button aria-label="close" onClick={closeModal}>X</button>
+                                         {currentTeam.info.full}
+                                    <p class="team-modal-subtitle">{currentTeam.info.desc}</p></p>
                                 </div>
                             </div>
                         </header>
                         <ModalRoster props={currentTeam.players} />
-                    </div>) : (<div></div>)}
-            </Modal>
+                    <hr/></div>) : (<div></div>)}
+            </div>
             {ogopogo !== null && igopogo !== null && chessie !== null && nessie !== null && toilet !== null ?  (
                 <div>
                     <div style={{ background: "black", padding: "5px", margin: "auto", marginBottom: "25px", fontSize: "36px", fontWeight: "1000", border: "5px solid black", borderRadius: "15px", width: "240px" }}>
@@ -247,7 +248,7 @@ function Teams() {
                                 <p className="div-table-title">Nessie Division</p>
                                 <div className="columns is-mobile division-table-team nessie">
                                     <div className="column is-9">
-                                        <p onClick={() => openModal(nessie[0])}><Symbol abrv={nessie[0].info.abrv} /> {nessie[0].info.full}</p>
+                                        <p onClick={() => openModal(nessie[0])}><Symbol abrv={nessie[0].info.abrv} alt="false" /> {nessie[0].info.full}</p>
                                     </div>
                                     <div className="column is-3 right table-record">
                                         <p>{nessie[0].history.wins} - {nessie[0].history.losses}</p>
