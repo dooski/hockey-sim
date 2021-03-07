@@ -25,7 +25,7 @@ async function test() {
 }
 
 function wipeRecords() {
-    let teams = ["SEA", "MIN", "MOS", "KCS", "BUF", "BOS", "ROC", "WVM", "MON", "OTT", "NOR", "POR", "TOR", "NSH", "PHL", "BUR", "LAK", "CHI", "SFB", "PIT", "NYR", "VAL", "VAN", "LIB", "ATH", "OLY"]
+    let teams = ["FAR", "DCH", "HOU", "BAL", "MAT", "CLE", "NDD", "SJP", "SEA", "MIN", "MOS", "KCS", "BUF", "BOS", "ROC", "WVM", "MON", "OTT", "NOR", "POR", "TOR", "NSH", "PHL", "BUR", "LAK", "CHI", "SFB", "PIT", "NYR", "VAL", "VAN", "LIB", "ATH", "OLY"]
     for (i = 0; i < teams.length; i++) {
         teamController.resetRecord(teams[i])
     }
@@ -38,23 +38,23 @@ async function start() {
     let bush2 = ["MAT", "CLE", "NDD", "SJP"]
     let games = await pickTeams(bingo, bongo, 12)
     //second argument is length of action in each game (60 actions per period x 3 periods and possible overtime)
-    sim.game(games[0], 6000, 0)
-    sim.game(games[1], 6000, 1)
-    sim.game(games[2], 6000, 2)
-    sim.game(games[3], 6000, 3)
-    sim.game(games[4], 6000, 4)
-    sim.game(games[5], 6000, 5)
-    sim.game(games[6], 6000, 6)
-    sim.game(games[7], 6000, 7)
-    sim.game(games[8], 6000, 8)
-    sim.game(games[9], 6000, 9)
-    sim.game(games[10], 6000, 10)
-    sim.game(games[11], 6000, 11)
+    sim.game(games[0], 8000, 0)
+    sim.game(games[1], 8000, 1)
+    sim.game(games[2], 8000, 2)
+    sim.game(games[3], 8000, 3)
+    sim.game(games[4], 8000, 4)
+    sim.game(games[5], 8000, 5)
+    sim.game(games[6], 8000, 6)
+    sim.game(games[7], 8000, 7)
+    sim.game(games[8], 8000, 8)
+    sim.game(games[9], 8000, 9)
+    sim.game(games[10], 8000, 10)
+    sim.game(games[11], 8000, 11)
     let bushGames = await pickTeams(bush1, bush2, 4)
-    sim.game(bushGames[0], 6000, 12)
-    sim.game(bushGames[1], 6000, 13)
-    sim.game(bushGames[2], 6000, 14)
-    sim.game(bushGames[3], 6000, 15)
+    sim.game(bushGames[0], 8000, 12)
+    sim.game(bushGames[1], 8000, 13)
+    sim.game(bushGames[2], 8000, 14)
+    sim.game(bushGames[3], 8000, 15)
 }
 
 async function pickTeams(x, y, z) {

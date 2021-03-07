@@ -39,7 +39,7 @@ let gameDay = 0
 setInterval(clock, 60000)
 function clock() {
     now = new Date
-    if (now.getMinutes() === 30 || now.getMinutes() === 0) {
+    if (now.getMinutes() === 30) {
         plondWaker.start(gameDay)
         console.log(`Playing games at ${now.getMinutes()}`)
         gameDay = gameDay + 1

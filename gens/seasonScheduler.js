@@ -136,77 +136,6 @@ async function pickTeamsSame(x, z) {
     })
 }
 
-// starts a round of inner division matchups
-async function startDiv() {
-    let ogGames = await pickTeamsSame(ogopogo, 3)
-    sim.game(ogGames[0], 6000, 0)
-    sim.game(ogGames[1], 6000, 1)
-    sim.game(ogGames[2], 6000, 2)
-    let igGames = await pickTeamsSame(igopogo, 3)
-    sim.game(igGames[0], 6000, 3)
-    sim.game(igGames[1], 6000, 4)
-    sim.game(igGames[2], 6000, 5)
-    let chGames = await pickTeamsSame(chessie, 3)
-    sim.game(chGames[0], 6000, 6)
-    sim.game(chGames[1], 6000, 7)
-    sim.game(chGames[2], 6000, 8)
-    let neGames = await pickTeamsSame(nessie, 3)
-    sim.game(neGames[0], 6000, 9)
-    sim.game(neGames[1], 6000, 10)
-    sim.game(neGames[2], 6000, 11)
-    let bushGames = await pickTeamsRandom(bush1, bush2, 4)
-    sim.game(bushGames[0], 6000, 12)
-    sim.game(bushGames[1], 6000, 13)
-    sim.game(bushGames[2], 6000, 14)
-    sim.game(bushGames[3], 6000, 15)
-}
-
-// starts a round of ogo vs igo, ches vs nes matchups
-async function startCrossDiv() {
-    let biGames = await pickTeamsCross(ogopogo, igopogo, 6)
-    sim.game(biGames[0], 6000, 0)
-    sim.game(biGames[1], 6000, 1)
-    sim.game(biGames[2], 6000, 2)
-    sim.game(biGames[3], 6000, 3)
-    sim.game(biGames[4], 6000, 4)
-    sim.game(biGames[5], 6000, 5)
-    let boGames = await pickTeamsCross(chessie, nessie, 6)
-    sim.game(boGames[0], 6000, 6)
-    sim.game(boGames[1], 6000, 7)
-    sim.game(boGames[2], 6000, 8)
-    sim.game(boGames[3], 6000, 9)
-    sim.game(boGames[4], 6000, 10)
-    sim.game(boGames[5], 6000, 11)
-    let bushGames = await pickTeamsRandom(bush1, bush2, 4)
-    sim.game(bushGames[0], 6000, 12)
-    sim.game(bushGames[1], 6000, 13)
-    sim.game(bushGames[2], 6000, 14)
-    sim.game(bushGames[3], 6000, 15)
-}
-
-// starts a round of bingo vs bongo matchups
-async function startCrossConf() {
-    let games = await pickTeamsCross(ogopogo.concat(igopogo), chessie.concat(nessie), 12)
-    sim.game(games[0], 6000, 0)
-    sim.game(games[1], 6000, 1)
-    sim.game(games[2], 6000, 2)
-    sim.game(games[3], 6000, 3)
-    sim.game(games[4], 6000, 4)
-    sim.game(games[5], 6000, 5)
-    sim.game(games[6], 6000, 6)
-    sim.game(games[7], 6000, 7)
-    sim.game(games[8], 6000, 8)
-    sim.game(games[9], 6000, 9)
-    sim.game(games[10], 6000, 10)
-    sim.game(games[11], 6000, 11)
-    let bushGames = await pickTeamsRandom(bush1, bush2, 4)
-    sim.game(bushGames[0], 6000, 12)
-    sim.game(bushGames[1], 6000, 13)
-    sim.game(bushGames[2], 6000, 14)
-    sim.game(bushGames[3], 6000, 15)
-}
-
-
 // starts a round of completely random matchups (legacy)
 async function start(gameDay) {
     let games = await fetchTeams(schedule[gameDay])
@@ -249,8 +178,5 @@ function fetchTeam(x) {
 
 module.exports = {
     start,
-    startDiv,
-    startCrossDiv,
-    startCrossConf,
     makeSchedule
 }
