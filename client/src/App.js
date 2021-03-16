@@ -72,6 +72,7 @@ function App() {
               <Login/>
             </Route>
         </Switch>
+
         </div>
         <NotificationContainer/>
     </Router>
