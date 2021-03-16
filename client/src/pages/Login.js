@@ -8,19 +8,45 @@ import Symbol from "../components/TeamEmojis"
 
 const MyTextField = styled(TextField)`
     .MuiInputBase-input {
-        color: black;
+        color: white;  
     }
     .MuiInputLabel-root {
-        color: black;
+        color: white;
+    }
+    .MuiOutlinedInput-root {
+        border: 2px solid silver;
+        border-radius: 20px
     }
     .MuiOutlinedInput-root {
     &:hover 
         fieldset {
-        border-color: black
+        border-color: silver
     } 
     &.Mui-focused 
         fieldset {
-        border-color: black
+        border-color: white
+}}`
+
+const MySelect = styled(Select)`
+    .MuiInputBase-input {
+        color: black;
+        background-color: silver;
+        padding: 5px;
+        padding-right: 15px;
+        margin: 5px;
+        border-radius: 20px;
+    }
+    .MuiInputLabel-root {
+        color: white;
+    }
+    .MuiOutlinedInput-root {
+    &:hover 
+        fieldset {
+        border-color: silver
+    } 
+    &.Mui-focused 
+        fieldset {
+        border-color: white
 }}`
 
 
@@ -33,14 +59,15 @@ function Login() {
     ["WVM", "West Virginia Mothmen"], ["MON", "Montreal Panic"], ["OTT", "Ottawa Tulips"], ["NOR", "New Orleans Moonshine"], ["POR", "Portland Shrooms"], 
     ["VAN", "Vancouver Foxtrots"], ["LIB", "Long Island Beach Bums"]]
     const LoginBox = {
-        background: "#deb887",
+        background: "black",
         width: "90%",
         maxWidth: "700px",
         marginTop: 35,
         marginBottom: 35,
         borderRadius: 20,
         padding: 30,
-        color: "black"
+        color: "white",
+        border: "2px solid silver"
     }
 
     const [email, setEmail] = useState("");
@@ -97,7 +124,7 @@ function Login() {
             .catch(err => {
                 console.log(err);
                 console.log(err.response)
-                NotificationManager.error(err.response, "uh oh!", 6000)
+                NotificationManager.error("Double-check your stuff!", "Uh oh!", 6000)
             })
     }
 
@@ -132,7 +159,7 @@ function Login() {
                     <Typography variant="subtitle2"><i>Come thru</i></Typography>
                 ) : (<div></div>)}
                 <form>
-                    <Grid container spacing={3}>
+                    <Grid container spacing={3} className="centerBox">
                         {value == "register" ? (
                         
                             <Grid item xl={12}>
@@ -149,7 +176,7 @@ function Login() {
                             <Grid item xl={6}>
                                 <Typography variant="subtitle"><b>What's your personality type?</b></Typography>
                                 <br/>
-                                <Select aria-label="type" name="type" value={personality} onChange={handleChangeType}>
+                                <MySelect aria-label="type" name="type" value={personality} onChange={handleChangeType}>
                                     <MenuItem value="Grizzly">Grizzly</MenuItem>
                                     <MenuItem value="Cool">Cool</MenuItem>
                                     <MenuItem value="Weird">Weird</MenuItem>
@@ -157,21 +184,21 @@ function Login() {
                                     <MenuItem value="Reptile">Reptile</MenuItem>
                                     <MenuItem value="Whimsical">Whimsical</MenuItem>
                                     <MenuItem value="Charming">Charming</MenuItem>
-                                </Select>
+                                </MySelect>
                             </Grid>) : (<div></div>)}
                             {value == "register" ? (
                             <Grid item xl={6} alignContent="center">
                                 <Typography variant="subtitle"><b>Choose a Team</b></Typography>
                                 <br/>
                                 <FormControl>
-                                <Select labelId="team-select-label" id="team-select" aria-label="team" value={team} onChange={handleChangeTeam}>
+                                <MySelect labelId="team-select-label" id="team-select" aria-label="team" value={team} onChange={handleChangeTeam}>
                                     {teams.map((myTeam) => (
                                         <MenuItem value={myTeam[0]}> <Symbol abrv={myTeam[0]}/> <b>{myTeam[1]}</b></MenuItem>
                                     ))}
-                                </Select>
+                                </MySelect>
                                 </FormControl>
                             </Grid>) : (<div></div>)}
-                        <Grid item xs={6}>
+                        <Grid item xl={6}>
                             <br/>
                             <MyTextField
                                 variant="outlined"
@@ -180,7 +207,7 @@ function Login() {
                                 onChange={(e) => setEmail(e.target.value)}
                             />
                         </Grid>
-                        <Grid item xs={6}>
+                        <Grid item xl={6}>
                             <br/>
                             <MyTextField
                                 variant="outlined"
@@ -189,19 +216,14 @@ function Login() {
                                 onChange={(e) => setPassword(e.target.value)}
                             />
                         </Grid>
-                        {value == "register" ? (
-                            <Grid item xs={12}>
-
-                            </Grid>
-                        ) : (<div></div>)}
                     </Grid>
                     <br></br>
-                    <Container maxWidth="xs">
+                    <div className="centerBox">
                         {value == "login" ? (
                             <Button variant="contained" onClick={Login}>Login</Button>
                         ) : (
-                                <Button variant="contained" onClick={Register}>Register</Button>)}
-                    </Container>
+                            <Button variant="contained" onClick={Register}>Register</Button>)}
+                    </div>
                 </form>
             </div>
         </Container>
