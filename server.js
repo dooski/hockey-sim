@@ -2,15 +2,18 @@
 require("dotenv").config()
 const express = require("express");
 const session = require("express-session")
+const passport = require("./passport/setup.js")
 const mongoose = require("mongoose")
 const routes = require("./routes/index")
+const MongoStore = require("connect-mongo")(session);
+
+
 const PORT = process.env.PORT || 4000;
 const app = express()
 
 //server stuff
 const control = require("./control.js")
 const plondWaker = require("./gens/seasonScheduler")
-const teamController = require("./controllers/teamController")
 
 //middlewhere? middleware!
 app.use(express.urlencoded({ extended: true }));
@@ -34,8 +37,23 @@ mongoose.connect(uri, {
     .then(console.log(`MongoDB connected ${uri}`))
     .catch(err => console.log(err));
 
+//sessions for logins
+
+app.use(
+    session({
+        secret: `${process.env.SECRET}`,
+        resave: true,
+        saveUninitialized: true,
+        store: new MongoStore({ mongooseConnection: mongoose.connection })
+    })
+);
+app.use(passport.initialize());
+app.use(passport.session())
+app.use(routes);
+
+//game start
 let gameDay = 0
-//timing
+
 setInterval(clock, 60000)
 function clock() {
     now = new Date

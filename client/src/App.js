@@ -1,10 +1,15 @@
 import React, {useEffect, useState, useRef} from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom"
+import { NotificationContainer } from 'react-notifications';
+import 'react-notifications/lib/notifications.css';
 import Home from "./pages/Home.js"
 import Games from "./pages/Games.js"
 import Teams from "./pages/Teams.js"
+import Login from "./pages/Login.js"
 import API from './utils/API'
 import './App.css';
+
+
 
 
 function App() {
@@ -52,6 +57,7 @@ function App() {
       </nav>
       <div className="nav-break"> </div>
       <div className="App">
+        
         <Switch>
           <Route exact path="/">
             <Home />
@@ -62,8 +68,12 @@ function App() {
           <Route exact path="/teams">
             <Teams/>
             </Route>
+            <Route exact path="/login">
+              <Login/>
+            </Route>
         </Switch>
-      </div>
+        </div>
+        <NotificationContainer/>
     </Router>
 
   );

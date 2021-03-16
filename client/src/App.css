@@ -6,7 +6,10 @@
   color: whitesmoke;
   padding-top: 35px;
 }
-
+/* bulma override for notifications */
+.message {
+  background-color: transparent;
+}
 .columns:last-child{
   margin-bottom: 0;
 }
@@ -61,7 +64,7 @@
 }
 
 .nav-button:hover {
-  background-color:burlywood;
+  background-color:#deb887;
 }
 
 .nav-button:active {
