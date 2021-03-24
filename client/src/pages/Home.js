@@ -50,7 +50,7 @@ useEffect(() => {
           <li>
           <p style={{fontWeight: "900", fontSize: "20px"}}>"ETERNAL PRESEASON"!</p>
           <p>Due to a lack of the coordination skills necessary to facilitate a full season, the Front Office has declared an Eternal Preseason
-            until all teams can afford to buy a calendar. Teams will play every hour on the :30s and players may be Rematerialized, at the discretion of the Plond.
+            until all teams can afford to buy a calendar. Teams will play every hour on the hour and players may be Rematerialized, at the discretion of the Plond.
           </p>
           </li>
           <br/>
