@@ -94,7 +94,7 @@ function Login() {
                         .then(res => {
                             console.log(res)
                             NotificationManager.success("Welcome!", "You're In!", 4000)
-                            setRedirect('/plond')
+                            setRedirect('/')
                         })
                         .catch(err => {
                             console.log(err);
@@ -119,7 +119,7 @@ function Login() {
             .then(res => {
                 console.log(res)
                 NotificationManager.success("Welcome back!", "Heyooooooo!", 6000)
-                setRedirect('/plond')
+                setRedirect('/')
             })
             .catch(err => {
                 console.log(err);

@@ -29,7 +29,7 @@ useEffect(() => {
       </div>
       <div className="quotes columns">
         <div className="column is-4">
-          {!userData ? (<Link to="/login">Click here to login or make an account</Link>) : (<AccountBox user={userData} team={teamData}/>)}
+          {!userData || !teamData ? (<Link to="/login">Click here to login or make an account</Link>) : (<AccountBox user={userData} team={teamData}/>)}
         </div>
         <div className="column is-4">
           {!userData ? (<Logo style={{width: "80%"}}/>) : (<Symbol abrv={userData.team} alt="true"/>)}
