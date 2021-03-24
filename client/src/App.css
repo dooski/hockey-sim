@@ -565,7 +565,7 @@ button:hover {
     line-height: 2.0rem
   }
   .quotes {
-    padding-top: 20px;
+    margin: 20px;
   }
   .quote {
     font-size: 20px;
