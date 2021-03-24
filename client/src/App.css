@@ -164,10 +164,11 @@ height: 10px;
 }
 
 .account-box {
-  background-color:rgb(23, 31, 49);
+  background-color:rgb(21, 17, 34);
+  color: rgb(255, 255, 255);
   margin: 10px;
-  border: 1px solid black;
-  border-radius: 10px;
+  border: 2px silver solid;
+  border-radius: 15px;
 }
 
 /* game-box-container */

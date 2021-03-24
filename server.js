@@ -53,8 +53,8 @@ app.use(routes);
 
 //game start
 let gameDay = 0
-
-setInterval(clock, 60000)
+plondWaker.start(gameDay)
+// setInterval(clock, 60000)
 function clock() {
     now = new Date
     if (now.getMinutes() === 30) {

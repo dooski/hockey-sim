@@ -60,7 +60,7 @@ function App() {
         
         <Switch>
           <Route exact path="/">
-            <Home />
+            <Home props={games}/>
             </Route>
           <Route exact path="/plond">
             <Games props={games}/>

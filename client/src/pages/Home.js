@@ -1,30 +1,25 @@
 import { ReactComponent as Logo} from '../logo.svg'
-import React from "react";
+import Symbol from "../components/TeamEmojis"
+import React, {useState, useEffect} from "react";
+import {Link} from "react-router-dom"
 import AccountBox from "../components/AccountBox"
+import API from "../utils/API";
 import "../App.css"
 
 function Home() {
-let account = {
-  name: "dooski",
-  team: "BUF",
-  favors: 1
-}
-let favor1 = {
-  title: "Let Them Ice Cake",
-  desc: "Defenders receives a Cake to Ice"
-}
-let favor2 = {
-  title: "New Glasses",
-  desc: "Forwards improves their passing by 10%"
-}
-let favor3 = {
-  title: "Pregame Coffee",
-  desc: "Team improves speed by 5%"
-}
-let favor4 = {
-  title: "Watch the Throne",
-  desc: "Top team in your division swaps with lowest team in other division"
-}
+  const [userData, setUserData] = useState()
+  const [teamData, setTeam] = useState()
+useEffect(() => {
+    API.loadUser()
+        .then((res) => {
+            setUserData(res.data)
+            API.getTeam().then((res) => {setTeam(res.data)})
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+}, [])
+
 
   return (
     <div className="home-wrapper">
@@ -34,13 +29,10 @@ let favor4 = {
       </div>
       <div className="quotes columns">
         <div className="column is-4">
-<p className="quote">"Like Blaseball but with More Ice"<p className="source">- Amanda Silberling, verified Twitter user</p></p>
-<br/><br/>
-<p className="quote">"Jump into the Plond" <p className="source">- Will LaPorte, unverified Twitter user</p></p>  
-
+          {!userData ? (<Link to="/login">Click here to login or make an account</Link>) : (<AccountBox user={userData} team={teamData}/>)}
         </div>
         <div className="column is-4">
-          <Logo style={{width: "80%"}}/>
+          {!userData ? (<Logo style={{width: "80%"}}/>) : (<Symbol abrv={userData.team} alt="true"/>)}
         </div>
         <div className="column is-4">
 <p className="quote">"Must've Been the Cheese" <p className="source">- Matt Bosque, a guy</p></p>

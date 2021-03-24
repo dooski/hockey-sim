@@ -13,7 +13,7 @@ router.route("/user").get(function (req, res) {
     })
         .then(() => {
             res.json({
-                username: req.user.username, type: req.user.type
+                username: req.user.username, team: req.user.team, personality: req.user.personality
             })
         })
         .catch((err) => res.status(422).json(err))

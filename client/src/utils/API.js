@@ -7,6 +7,9 @@ export default {
     checkSeason: function () {
         return axios.get("api/game/season")
     },
+    getTeam: function () {
+        return axios.get("api/info/team")
+    },
     getTeams: function() {
         return axios.get("api/info/teams")
     },
