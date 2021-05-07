@@ -1,7 +1,7 @@
 const data = require("./gens/data.json")
 const sim = require("./gens/sim.js")
 const gameHandler = require("./gens/gameManagement")
-const teamGenerator = require("./gens/teamGenerator")
+const teamGenerator = require("./gens/gens")
 const teamController = require("./controllers/teamController")
 const playerController = require("./controllers/playerController")
 const returnGames = gameHandler.returnGames
@@ -105,58 +105,15 @@ function varString(a, b) {
 }
 
 async function makeTeams() {
-    var players = [
-        ["Delia", "ATH"],
-        ["Plato", "ATH"],
-        ["Pericles", "ATH"],
-        ["Solon", "ATH"],
-        ["Cleisthenes", "ATH"],
-        ["Themistocles", "ATH"],
-        ["Socrates", "ATH"],
-        ["Peisistratos", "ATH"],
-        ["Thucydides", "ATH"],
-        ["Peisistratos", "ATH"],
-        ["Aristotle", "ATH"],
-        ["Phidias", "ATH"],
-        ["Zeus", "OLY"],
-        ["Hera", "OLY"],
-        ["Poseidon", "OLY"],
-        ["Athena", "OLY"],
-        ["Demeter", "OLY"],
-        ["Ares", "OLY"],
-        ["Apollo", "OLY"],
-        ["Artemis", "OLY"],
-        ["Hephaestus", "OLY"],
-        ["Aphrodite", "OLY"],
-        ["Hermes", "OLY"],
-        ["Dionysus", "OLY"]
-    ]
-    var teams = [
-        ["Athenian Lads", "Athens", "Lads", "Greece Lightning!", "Ancient", "ATH"],
-        ["Olympian Gods", "Olympus", "Gods", "*inaudible screaming*", "Ancient", "OLY"],
-    ]
-    for (i = 0; i < players.length; i++) {
-        teamGenerator.makePlayer(players[i][0], players[i][1])
-    } await timer(10000)
-    for (i = 0; i < teams.length; i++) {
-        teamGenerator.makeTeam(teams[i][0], teams[i][1], teams[i][2], teams[i][3], teams[i][4], teams[i][5])
-    }
-}
-
-async function makeTeam() {
     var teams = data.teamLegacy
-    var players = data.legacy
-    for (i = 0; i < players.length; i++) {
-        teamGenerator.makePlayer(players[i][0], players[i][1])
-    }
-    makeSecondLine()
+    makePlayers()
     await timer(10000)
     for (i = 0; i < teams.length; i++) {
         teamGenerator.makeTeam(teams[i][0], teams[i][1], teams[i][2], teams[i][3], teams[i][4], teams[i][5], teams[i][6])
     }
 }
 
-async function makeSecondLine() {
+async function makePlayers() {
     var first = data.first
     var last = data.last
     var team = data.team
@@ -183,7 +140,6 @@ module.exports = {
     seasonData,
     packageReturn,
     makeTeams,
-    makeTeam,
     wipeRecords,
-    makeSecondLine
+    makePlayers
 }

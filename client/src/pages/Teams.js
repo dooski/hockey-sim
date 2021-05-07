@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../App.css"
 import Modal from "react-modal"
-import data from "../utils/data.json"
 import API from "../utils/API"
 import Symbol from "../components/TeamEmojis"
 import ModalRoster from "../components/ModalRoster"
@@ -15,7 +14,6 @@ function Teams() {
     const [igopogo, setIgopogo] = useState(null)
     const [chessie, setChessie] = useState(null)
     const [nessie, setNessie] = useState(null)
-    const [toilet, setToilet] = useState(null)
 
     useEffect(() => {
         UpdateTable();
@@ -30,17 +28,14 @@ function Teams() {
                 let igoRaw = data[1]
                 let chesRaw = data[2]
                 let nesRaw = data[3]
-                let toiletRaw = data[4]
                 ogoRaw.sort(Sorter)
                 igoRaw.sort(Sorter)
                 chesRaw.sort(Sorter)
                 nesRaw.sort(Sorter)
-                toiletRaw.sort(Sorter)
                 setOgopogo(ogoRaw)
                 setIgopogo(igoRaw)
                 setChessie(chesRaw)
                 setNessie(nesRaw)
-                setToilet(toiletRaw)
             })
     }
 
@@ -68,6 +63,8 @@ function Teams() {
                         <div onClick={closeModal}>
                             <p  style={{backgroundColor: "black", border: "1px silver solid", borderTopLeftRadius: "5px", borderTopRightRadius: "5px", fontSize: "12px", fontWeight:"500", position:"relative", left:"10px", bottom: "-10px", textAlign:"left", zIndex: "99", height: "30px", width: "40px", textAlign: "center"}}>Close</p>
                         </div>
+                        <div className="columns">
+                            <div className="column is-6">
                         <header class="modal-card-head team-modal">                            
                             <div className="columns is-mobile" style={{ width: "100%" }}>
                                 <div className="column is-12 is-mobile"><Symbol abrv={currentTeam.info.abrv} alt="true"/>
@@ -75,12 +72,16 @@ function Teams() {
                                          {currentTeam.info.full}
                                     <p class="team-modal-subtitle">{currentTeam.info.desc}</p></p>
                                 </div>
-                            </div>
+                            </div>    
                         </header>
+                        </div>
+                        <div className="column is-6">
                         <ModalRoster props={currentTeam.players} />
+                        </div>
+                        </div>
                     <hr/></div>) : (<div></div>)}
             </div>
-            {ogopogo !== null && igopogo !== null && chessie !== null && nessie !== null && toilet !== null ?  (
+            {ogopogo !== null && igopogo !== null && chessie !== null && nessie !== null ?  (
                 <div>
                     <div style={{ background: "black", padding: "5px", margin: "auto", marginBottom: "25px", fontSize: "36px", fontWeight: "1000", border: "5px solid black", borderRadius: "15px", width: "240px" }}>
                         <i>BIG LEAGUE</i>
@@ -294,95 +295,6 @@ function Teams() {
                                         <p>{nessie[5].history.wins} - {nessie[5].history.losses}</p>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style={{ background: "black", padding: "5px", margin: "auto", marginBottom: "25px", marginTop: "45px", fontSize: "36px", fontWeight: "1000", border: "5px solid black", borderRadius: "15px", width: "280px" }}>
-                        <i>BUSH LEAGUE</i>
-                    </div>
-                    <div className="columns league-table-wrapper">
-                        <div className="column is-5 con-table left" style={{ background: "silver", color: "black" }}>
-                            <p className="con-table-title center">Toilet Division</p>
-                            <div className="div-table-wrapper">
-                                <p className="div-table-title">The Worst of the Worst</p>
-                                <div className="columns is-mobile division-table-team">
-                                    <div className="column is-9">
-                                        <p onClick={() => openModal(toilet[0])}><Symbol abrv={toilet[0].info.abrv} /> {toilet[0].info.full} </p>
-                                    </div>
-                                    <div className="column is-3 right table-record">
-                                        <p>{toilet[0].history.wins} - {toilet[0].history.losses}</p>
-                                    </div>
-                                </div>
-                                <div className="columns is-mobile division-table-team">
-                                    <div className="column is-9">
-                                        <p onClick={() => openModal(toilet[1])}><Symbol abrv={toilet[1].info.abrv} /> {toilet[1].info.full} </p>
-                                    </div>
-                                    <div className="column is-3 right table-record">
-                                        <p>{toilet[1].history.wins} - {toilet[1].history.losses}</p>
-                                    </div>
-                                </div>
-                                <div className="columns is-mobile division-table-team">
-                                    <div className="column is-9">
-                                        <p onClick={() => openModal(toilet[2])}><Symbol abrv={toilet[2].info.abrv} /> {toilet[2].info.full} </p>
-                                    </div>
-                                    <div className="column is-3 right table-record">
-                                        <p>{toilet[2].history.wins} - {toilet[2].history.losses}</p>
-                                    </div>
-                                </div>
-                                <div className="columns is-mobile division-table-team">
-                                    <div className="column is-9">
-                                        <p onClick={() => openModal(toilet[3])}><Symbol abrv={toilet[3].info.abrv} /> {toilet[3].info.full} </p>
-                                    </div>
-                                    <div className="column is-3 right table-record">
-                                        <p>{toilet[3].history.wins} - {toilet[3].history.losses}</p>
-                                    </div>
-                                </div>
-                                <div className="columns is-mobile division-table-team">
-                                    <div className="column is-9">
-                                        <p onClick={() => openModal(toilet[4])}><Symbol abrv={toilet[4].info.abrv} /> {toilet[4].info.full} </p>
-                                    </div>
-                                    <div className="column is-3 right table-record">
-                                        <p>{toilet[4].history.wins} - {toilet[4].history.losses}</p>
-                                    </div>
-                                </div>
-                                <div className="columns is-mobile division-table-team">
-                                    <div className="column is-9">
-                                        <p onClick={() => openModal(toilet[5])}><Symbol abrv={toilet[5].info.abrv} /> {toilet[5].info.full} </p>
-                                    </div>
-                                    <div className="column is-3 right table-record">
-                                        <p>{toilet[5].history.wins} - {toilet[5].history.losses}</p>
-                                    </div>
-                                </div>
-                                <div className="columns is-mobile division-table-team">
-                                    <div className="column is-9">
-                                        <p onClick={() => openModal(toilet[6])}><Symbol abrv={toilet[6].info.abrv} /> {toilet[6].info.full} </p>
-                                    </div>
-                                    <div className="column is-3 right table-record">
-                                        <p>{toilet[6].history.wins} - {toilet[6].history.losses}</p>
-                                    </div>
-                                </div>
-                                <div className="columns is-mobile division-table-team">
-                                    <div className="column is-9">
-                                        <p onClick={() => openModal(toilet[7])}><Symbol abrv={toilet[7].info.abrv} /> {toilet[7].info.full} </p>
-                                    </div>
-                                    <div className="column is-3 right table-record">
-                                        <p>{toilet[7].history.wins} - {toilet[7].history.losses}</p>
-                                    </div>
-                                </div>
-                            </div> </div>
-                        <div className="column is-2 buffer"><p> -</p></div>
-                        <div className="column is-5">
-                            <div className="con-table left" style={{ background: "black", display: "block", overflow: "auto" }}>
-                                <p className="con-table-title center" >What's all this then?</p>
-                                <p style={{ fontSize: "16px", padding: "10px" }}>Bush League teams are, well, bad. They're not ready for the Big League just yet, and so they toil away here,
-                                training, honing, scheming and winning their chance to play at the top next season.
-                            <br /><br />
-                            At the end of every season, all players in the Bush League will have a chance of improving their stats. The more a team grinds away in the Bush League,
-                            the better they'll become.
-                            <br /><br />
-                            The worst team in each division of the Big League will be swapped with one of the Top 4 teams in the Toilet Division. The Plond needs fresh blood, the Plond
-                            gets fresh blood.
-                            </p>
                             </div>
                         </div>
                     </div>

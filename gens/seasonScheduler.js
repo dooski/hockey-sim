@@ -5,8 +5,6 @@ const fs = require("fs")
 
 const timer = ms => new Promise(res => setTimeout(res, ms))
 
-
-
 function rng(z) {
     return Math.floor(Math.random() * z)
 }
@@ -14,8 +12,6 @@ let ogopogo = ["VAN", "OTT", "MON", "TOR", "POR", "SEA"]
 let igopogo = ["BUF", "WVM", "ROC", "NOR", "NSH", "KCS"]
 let chessie = ["NYR", "PHL", "BOS", "CHI", "PIT", "MIN"]
 let nessie = ["BUR", "SFB", "VAL", "LAK", "LIB", "MOS"]
-let bush1 = ["FAR", "DCH", "HOU", "BAL"]
-let bush2 = ["MAT", "CLE", "NDD", "SJP"]
 
 async function makeSchedule() {
     let season = []
@@ -26,7 +22,6 @@ async function makeSchedule() {
         let day4 = await makeCrossDiv()
         let day5 = await makeCrossConf()
         season.push(day1)
-        
         season.push(day2)
         season.push(day3)
         season.push(day4)
@@ -45,8 +40,7 @@ async function makeDiv() {
     let igGames = await pickTeamsSame(igopogo, 3)
     let chGames = await pickTeamsSame(chessie, 3)
     let neGames = await pickTeamsSame(nessie, 3)
-    let bushGames = await pickTeamsRandom(bush1, bush2, 4)
-    let dayGames = ogGames.concat(igGames, chGames, neGames, bushGames)
+    let dayGames = ogGames.concat(igGames, chGames, neGames)
     ogopogo = ["VAN", "OTT", "MON", "TOR", "POR", "SEA"]
     igopogo = ["BUF", "WVM", "ROC", "NOR", "NSH", "KCS"]
     chessie = ["NYR", "PHL", "BOS", "CHI", "PIT", "MIN"]
@@ -58,8 +52,7 @@ async function makeDiv() {
 async function makeCrossDiv() {
     let biGames = await pickTeamsCross(ogopogo, igopogo, 6)
     let boGames = await pickTeamsCross(chessie, nessie, 6)
-    let bushGames = await pickTeamsRandom(bush1, bush2, 4)
-    let dayGames = biGames.concat(boGames, bushGames)
+    let dayGames = biGames.concat(boGames)
     ogopogo = ["VAN", "OTT", "MON", "TOR", "POR", "SEA"]
     igopogo = ["BUF", "WVM", "ROC", "NOR", "NSH", "KCS"]
     chessie = ["NYR", "PHL", "BOS", "CHI", "PIT", "MIN"]
@@ -70,8 +63,7 @@ async function makeCrossDiv() {
 // starts a round of bingo vs bongo matchups
 async function makeCrossConf() {
     let games = await pickTeamsCross(ogopogo.concat(igopogo), chessie.concat(nessie), 12)
-    let bushGames = await pickTeamsRandom(bush1, bush2, 4)
-    let dayGames = games.concat(bushGames)
+    let dayGames = games
     return dayGames
 }
 
@@ -151,10 +143,6 @@ async function start(gameDay) {
     sim.game(games[9], 6000, 9)
     sim.game(games[10], 6000, 10)
     sim.game(games[11], 6000, 11)
-    sim.game(games[12], 6000, 12)
-    sim.game(games[13], 6000, 13)
-    sim.game(games[14], 6000, 14)
-    sim.game(games[15], 6000, 15)
 }
 
 async function fetchTeams(x) {

@@ -10,6 +10,8 @@ function GameBox(props) {
     const [t2S, setT2S] = useState(0)
     const [t1F, setT1F] = useState("")
     const [t2F, setT2F] = useState("")
+    const [t1L, setT1L] = useState("")
+    const [t2L, setT2L] = useState("")
     const [ab1, setAB1] = useState("")
     const [ab2, setAB2] = useState("")
     const [sym1, setSYM1] = useState()
@@ -54,6 +56,8 @@ function GameBox(props) {
         setT2S(data.t2S)
         setT1F(data.t1f)
         setT2F(data.t2f)
+        setT1L(data.t1L)
+        setT2L(data.t2L)
         setAB1(data.ab1)
         setAB2(data.ab2)
         setSYM1(symbolPicker(data.ab1))
@@ -120,6 +124,8 @@ function GameBox(props) {
                                 <div className="column is-11 left">
                                     <p className="game-box-team-name">
                                         {sym1} {t1}
+                                        {t1L !== "" ? (
+                                        <p style={{fontSize:"12px", fontWeight:"normal", lineHeight:"1.3"}}><i>{t1L[0]}, {t1L[1]}, {t1L[2]}</i></p>) : (<div></div>)}
                                     </p>
                                 </div>
                                 <div className="column is-1 left">
@@ -128,10 +134,13 @@ function GameBox(props) {
                                     </p>
                                 </div>
                             </div>
+                            
                             <div className="game-box-score-card-row columns is-mobile">
                                 <div className="column is-11 left">
                                     <p className="game-box-team-name">
                                         {sym2} {t2}
+                                        {t2L !== "" ? (
+                                        <p style={{fontSize:"12px", fontWeight:"normal", lineHeight:"1.3"}}><i>{t2L[0]}, {t2L[1]}, {t2L[2]}</i></p>) : (<div></div>)}
                                     </p>
                                 </div>
                                 <div className="column is-1 left">

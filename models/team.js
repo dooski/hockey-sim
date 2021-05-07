@@ -15,21 +15,23 @@ const teamSchema = new Schema(
         captain: String,
         },
         players: {
-            line1: {
-                LW: String,
-                CE: String,
-                RW: String,
-                LD: String,
-                RD: String,
-                GK: String
+            l1: {
+                a: String,
+                b: String,
+                c: String,
             },
-            line2: {
-                LW: String,
-                CE: String,
-                RW: String,
-                LD: String,
-                RD: String,
-                GK: String
+            l2: {
+                a: String,
+                b: String,
+                c: String,
+            },
+            g: {
+                a: String,
+            },
+            b: {
+                a: String,
+                b: String,
+                c: String
             }
         },
         history: {

@@ -11,47 +11,41 @@ const playerSchema = new Schema(
         alive: Boolean,
         stats: {
             offense: {
-                highShot: Number,
-                lowShot: Number,
-                longShot: Number,
-                passing: Number,
-                handling: Number,
+                snipe: Number,
+                snap: Number,
+                slap: Number,
+                sauce: Number,
+                silk: Number,
             },
             defense: {
-                forecheck: Number,
-                stick: Number,
-                checking: Number,
-                positioning: Number,
-                blocking: Number,
+                annoy: Number,
+                rascal: Number,
+                thump: Number,
+                choreography: Number,
+                blubber: Number,
             },
             goalkeeping: {
-                highBlock: Number,
-                lowBlock: Number,
-                longBlock: Number,
-                catching: Number,
-                aura: Number
+                swat: Number,
+                squish: Number,
+                sweetness: Number,
+                swallow: Number,
+                scream: Number
             },
             physical: {
-                speed: Number,
-                strength: Number,
-                faceoff: Number,
-                fighting: Number,
-                blubber: Number
+                zoom: Number,
+                spinach: Number,
+                tricks: Number,
+                darkness: Number,
+                love: Number
             },
             mental: {
-                discipline: Number,
-                respect: Number,
-                fear: Number,
-                vision: Number,
-                memory: Number
+                stoicism: Number,
+                absurdism: Number,
+                nihilism: Number,
+                platonism: Number,
+                postmodernism: Number
             },
-            mystical: {
-                divinity: Number,
-                fog: Number,
-                luck: Number,
-                bear: Number,
-                lakemonster: Number 
-            },
+
         items: {
             stick: String,
             helment: String,

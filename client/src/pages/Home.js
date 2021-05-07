@@ -43,7 +43,7 @@ function Home() {
         </div>
       </div>
       <div className="home-content columns">
-        <div className="column is-6">
+        {/* <div className="column is-6">
           <div className="home-info-wrapper" >
             <p style={{ fontSize: "32px", textAlign: "center", fontWeight: "1000" }}>THE PLONDSPIEL</p>
             <p style={{ fontSize: "22px", textAlign: "center", fontWeight: "500", fontStyle: "italic" }}>News from around the Plond</p>
@@ -73,6 +73,7 @@ function Home() {
             </ul>
           </div>
         </div>
+         */}
         <div className="column is-6" style={{ padding: "20px" }}>
           <p>Plond Hockey is hockey played on a plond, which is a sentient frozen body of water. Twenty-four teams play in Plond Hockey's primary league, the Big League. There are two conferences in the Big League: Bingo and Bongo. The Bingo Conference is made up of the Ogopogo and Igopogo divisions, while the Bongo Conference is made up of the Chessie and Nessie divisions.
           <br /><br />Games end in a win or a loss. Tied scores are resolved with a Sudden Death overtime. There is no reward for losing in overtime. The Plond is binary.
