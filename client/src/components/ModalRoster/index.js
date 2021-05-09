@@ -7,16 +7,16 @@ function ModalRoster(props) {
         let y = 0
         if (type === "off") {
             let x = stats.offense.snipe + stats.offense.snap + stats.offense.slap + (stats.offense.sauce * 2) + stats.offense.silk 
-            y = Math.round((x*10)/6)
+            y = Math.round((x*100)/6)
         } if (type === "def") {
             let x = stats.defense.annoy + stats.defense.rascal + stats.defense.thump + (stats.defense.choreography * 2) + stats.defense.blubber
-            y = Math.round((x*10)/6)
+            y = Math.round((x*100)/6)
         } if (type === "gk") {
             let x = stats.goalkeeping.swat + stats.goalkeeping.squish + stats.goalkeeping.sweetness + stats.goalkeeping.swallow + stats.goalkeeping.scream
-            y = Math.round((x*10)/5)
+            y = Math.round((x*100)/5)
         } if (type === "phy") {
             let x = (stats.physical.zoom * 2.5) + stats.physical.spinach + (stats.physical.tricks * 1.5) + stats.physical.darkness + stats.physical.love
-            y = Math.round((x*10)/7)
+            y = Math.round((x*100)/7)
         }
         return y
     }
@@ -37,6 +37,11 @@ function ModalRoster(props) {
                     <br />
                     <p className="position-title">GOALIE</p>
                     <p style={{backgroundColor:"#202020"}}>{players.g.a.name}</p>
+                    <br />
+                    <p className="position-title">BENCH</p>
+                    <p style={{backgroundColor:"#202020"}}>{players.b.a.name}</p>
+                    <p>{players.b.b.name}</p>
+                    <p style={{backgroundColor:"#202020"}}>{players.b.c.name}</p>
                 </div>
                 <div className="column is-2 is-mobile">
                     <p className="position-title">OFF</p>
@@ -51,6 +56,11 @@ function ModalRoster(props) {
                     <br />
                     <p className="position-title">GK</p>
                     <p style={{backgroundColor:"#202020"}}><b>{calculateStat(players.g.a.stats, "gk")}</b></p>
+                    <br />
+                    <p className="position-title">OFF</p>
+                    <p style={{backgroundColor:"#202020"}}><b>{calculateStat(players.b.a.stats, "off")}</b></p>
+                    <b>{calculateStat(players.b.b.stats, "off")}</b>
+                    <p style={{backgroundColor:"#202020"}}><b>{calculateStat(players.b.c.stats, "off")}</b></p>
                 </div>
                 <div className="column is-2 is-mobile">
                     <p className="position-title">DEF</p>
@@ -67,6 +77,13 @@ function ModalRoster(props) {
                     </b><br />
                     <p className="position-title">DEF</p>
                     <p style={{backgroundColor:"#202020"}}><b>{calculateStat(players.g.a.stats, "def")}</b></p>
+                    <br />
+                    <p className="position-title">DEF</p>
+                    <b><p style={{backgroundColor:"#202020"}}>{calculateStat(players.b.a.stats, "def")}</p>
+                    <b>{calculateStat(players.b.b.stats, "def")}</b>
+                    <p style={{backgroundColor:"#202020"}}><b>{calculateStat(players.b.c.stats, "def")}</b></p>
+                    </b>
+                    
                 </div>
                 <div className="column is-2 is-mobile">
                     <p className="position-title">PHY</p>
@@ -83,6 +100,12 @@ function ModalRoster(props) {
                     </b><br />
                     <p className="position-title">PHY</p>
                     <p style={{backgroundColor:"#202020"}}><b>{calculateStat(players.g.a.stats, "phy")}</b></p>
+                    <br />
+                    <p className="position-title">PHY</p>
+                    <b><p style={{backgroundColor:"#202020"}}>{calculateStat(players.b.a.stats, "phy")}</p>
+                    <b>{calculateStat(players.b.b.stats, "phy")}</b>
+                    <p style={{backgroundColor:"#202020"}}><b>{calculateStat(players.b.c.stats, "phy")}</b></p>
+                    </b>
                 </div>
             </div>
             <br />

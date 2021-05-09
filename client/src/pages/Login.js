@@ -53,7 +53,7 @@ const MySelect = styled(Select)`
 function Login() {
     const teams = [["TOR", "Toronto Brewskis"], ["NSH", "Nashville Dollys"], ["PHL", "Philadelphia Pineapples"], ["BUR", "Burlington Lumberjacks"], ["LAK", "Los Angeles Kickflips"],
         ["CHI", "Chicago Squalls"], ["SFB", "Santa Fe Buckaroos"], ["PIT", "Pittsburgh Good Boys"], ["NYR", "New York Rats"], ["VAL", "Valhalla Omens"], 
-    ["MOS", "Moscow Red"], ["KCS", "Kansas City Spookies"], ["BUF", "Buffalo Starlights"], ["BOS", "Boston Chowdahs"], ["ROC", "Rochester Bones"], 
+    ["MOS", "Moscow Red"], ["SBH", "Kansas City Spookies"], ["BUF", "Buffalo Starlights"], ["BOS", "Boston Chowdahs"], ["ROC", "Rochester Bones"], 
 ["CLE", "Cleveland Yankees"], ["NDD", "New Dorp Dylans"], ["SJP", "San Jose Pigeonkickers"], ["SEA", "Seattle Sirens"], ["MIN", "Minneosta Frosties"], 
     ["FAR", "Fargo Slam Dunks"], ["DCH", "DC Hockey Team"], ["HOU", "Houston Invaders"], ["BAL", "Baltimore Wham"], ["MAT", "Matterhorn Elephants"],
     ["WVM", "West Virginia Mothmen"], ["MON", "Montreal Panic"], ["OTT", "Ottawa Tulips"], ["NOR", "New Orleans Moonshine"], ["POR", "Portland Shrooms"], 

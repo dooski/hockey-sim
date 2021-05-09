@@ -3,15 +3,15 @@ const db = require("../models")
 var personalities = ["Cool", "Charming", "Weird", "Grizzly"]
 
 function statGen(stat) {
-    return Math.random() * ((.6 + stat) - stat) + stat
+    return Math.random() * ((.5 + stat) - stat) + stat
 }
 
 function makePlayer(name, team) {
-    let offStat = (Math.floor(Math.random() * 4))/10
-    let defStat = (Math.floor(Math.random() * 4))/10
-    let gkStat = (Math.floor(Math.random() * 4))/10
-    let phyStat = (Math.floor(Math.random() * 4))/10
-    let menStat = (Math.floor(Math.random() * 4))/10
+    let offStat = (Math.floor(Math.random() * 5))/10
+    let defStat = (Math.floor(Math.random() * 5))/10
+    let gkStat = (Math.floor(Math.random() * 5))/10
+    let phyStat = (Math.floor(Math.random() * 5))/10
+    let menStat = (Math.floor(Math.random() * 5))/10
     let personality = personalities[Math.random(0, personalities.length)]
     let player = new db.Player({
         name: name,

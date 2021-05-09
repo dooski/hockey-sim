@@ -21,7 +21,7 @@ import { ReactComponent as Lak} from '../../svg/lak.svg'
 import { ReactComponent as Lib} from '../../svg/lib.svg'
 import { ReactComponent as Nsh} from '../../svg/nsh.svg'
 import { ReactComponent as Min} from '../../svg/min.svg'
-import { ReactComponent as Kcs} from '../../svg/kcs.svg'
+import { ReactComponent as Sbh} from '../../svg/sbh.svg'
 import { ReactComponent as Sea} from '../../svg/sea.svg'
 import { ReactComponent as Mos} from '../../svg/mos.svg'
 import { ReactComponent as Far} from '../../svg/far.svg'
@@ -60,7 +60,7 @@ function Symbol(props) {
     else if (team === "LIB") { return (<Lib style={sizing}/>) }
     else if (team === "NSH") { return (<Nsh style={sizing}/>) }
     else if (team === "MIN") { return (<Min style={sizing}/>) }
-    else if (team === "KCS") { return (<Kcs style={sizing}/>) }
+    else if (team === "SBH") { return (<Sbh style={sizing}/>) }
     else if (team === "SEA") { return (<Sea style={sizing}/>) }
     else if (team === "MOS") { return (<Mos style={sizing}/>) }
     else if (team === "FAR") { return (<Far style={sizing}/>) }

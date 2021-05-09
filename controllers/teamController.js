@@ -14,13 +14,16 @@ function getTeam(abrv) {
                 team.players.l2.b = await playerController.getPlayer(team.players.l2.b)
                 team.players.l2.c = await playerController.getPlayer(team.players.l2.c)
                 team.players.g.a = await playerController.getPlayer(team.players.g.a)
+                team.players.b.a = await playerController.getPlayer(team.players.b.a)
+                team.players.b.b = await playerController.getPlayer(team.players.b.b)
+                team.players.b.c = await playerController.getPlayer(team.players.b.c)
                 resolve(team)
             })
     })
 }
 async function getTeams(req, res) {
     let ogopogo = ["VAN", "OTT", "MON", "TOR", "POR", "SEA"]
-    let igopogo = ["BUF", "WVM", "ROC", "NOR", "NSH", "KCS"]
+    let igopogo = ["BUF", "WVM", "ROC", "NOR", "NSH", "SBH"]
     let chessie = ["NYR", "PHL", "BOS", "CHI", "PIT", "MIN"]
     let nessie = ["BUR", "SFB", "VAL", "LAK", "LIB", "MOS"]
     ogopogo[0] = await getTeam(ogopogo[0])

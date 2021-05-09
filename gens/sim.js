@@ -10,7 +10,7 @@ function rngWhole(z) {
 }
 
 function rng(z) {
-    let x = (Math.random() * z)
+    let x = ((Math.random() * z) + z)
     return x
 }
 
@@ -42,7 +42,7 @@ function game(teams, timing, whichGame) {
         },
         zz: 0,
         score: 0,
-        mod: 1.0,
+        mod: 0.5,
         firedUp: {
             status: false,
             time: 99
@@ -68,7 +68,7 @@ function game(teams, timing, whichGame) {
         },
         zz: 0,
         score: 0,
-        mod: 1.0,
+        mod: 0.5,
         firedUp: {
             status: false,
             time: 99
@@ -104,7 +104,8 @@ function game(teams, timing, whichGame) {
             }
             if (havingFight === true) {
                 i--
-            } else if (i == 60 && period !== 3) {
+            }
+             else if (i == 60 && period !== 3) {
                 endOfPeriod(period)
             } else if (i == 60 && period == 3 && t1.score !== t2.score) {
                 finalScore("THIRD PERIOD")
@@ -118,6 +119,9 @@ function game(teams, timing, whichGame) {
                 onePlay()
             }
             packager()
+            if (stage == 0) {
+                await timer(timing)
+            }
             await timer(timing)
         }
     }
@@ -135,6 +139,8 @@ function game(teams, timing, whichGame) {
     }
     async function endOfPeriod(x) {
         let periodName = "FIRST"
+        t1.zz = 0
+        t2.zz = 0
         if (x === 2) { periodName = "SECOND" }
         if (x === 3) { periodName = "THIRD" }
         message = `END OF ${periodName} PERIOD.`
@@ -242,21 +248,29 @@ function game(teams, timing, whichGame) {
                     break;
             }
         }
-        function puckdrop() {
-            let p1 = rng(t1.lines[t1.zz].a.stats.physical.tricks + t1.mod)
-            let p2 = rng(t2.lines[t2.zz].a.stats.physical.tricks + t2.mod)
+        async function puckdrop() {
+            let taker1 = targetPicker("t1")
+            let taker2 = targetPicker("t2")
+            let p1 = rng(taker1.stats.physical.tricks + t1.mod)
+            let p2 = rng(taker2.stats.physical.tricks + t2.mod)
+            let winner = null
             if (p2 <= p1) {
                 posT = t1
                 nosT = t2
                 possession = 1
+                winner = taker1
             } else {
                 posT = t2
                 nosT = t1
                 possession = 2
+                winner = taker2
             }
+            message = `${t1.info.city}'s ${taker1.name} and ${t2.info.city}'s ${taker2.name} line up for the faceoff.`
+            await timer(timing * 1)
             carrier = posT.lines[posT.zz].a
-            message = `${carrier.name} wins the face off for the ${posT.info.full}.`
+            message = `${winner.name} wins the puck for the ${posT.info.full}.`
             stage = 3
+            packager()
         }
         function center() {
             let off = rng((carrier.stats.offense.sauce * 2) + (posT.lines[posT.zz].b.stats.offense.silk) +
@@ -281,7 +295,7 @@ function game(teams, timing, whichGame) {
             if (stage === 4 && possession === 1 || stage === 2 && possession === 2) {
                 if (takingShot === true) {
                     let shot = rng(carrier.stats.offense.slap * 3)
-                    let def = rng((nosT.lines[2].stats.goalkeeping.sweetness * 4) + (nosT.lines[2].stats.mental.platonism) +
+                    let def = rng((nosT.lines[2].stats.goalkeeping.sweetness * 2) +
                         (nosT.lines[nosT.zz].c.stats.defense.blubber) + (nosT.lines[nosT.zz].b.stats.defense.blubber) + nosT.mod)
                     if (def <= shot) {
                         message = `GOAL: ${posT.info.city}'s ${carrier.name} takes the shot and rockets it past ${nosT.lines[2].name}!`
@@ -302,10 +316,10 @@ function game(teams, timing, whichGame) {
                 } else {
                     let z = rngWhole(12)
                     if (z > 1) {
-                        let off = rng((carrier.stats.mental.platonism * 2) + (carrier.stats.offense.sauce) +
+                        let off = rng((carrier.stats.offense.sauce) +
                             (posT.lines[posT.zz].a.stats.physical.zoom) + (posT.lines[posT.zz].c.stats.physical.zoom) + (posT.lines[posT.zz].b.stats.physical.zoom) + posT.mod)
                         let def = rng((nosT.lines[nosT.zz].c.stats.defense.choreography) + (nosT.lines[nosT.zz].c.stats.defense.rascal) +
-                            (nosT.lines[nosT.zz].b.stats.defense.choreography) + (nosT.lines[nosT.zz].b.stats.defense.rascal) + (nosT.lines[2].stats.goalkeeping.scream) + nosT.mod)
+                            (nosT.lines[nosT.zz].b.stats.defense.choreography) + (nosT.lines[nosT.zz].b.stats.defense.rascal) + (nosT.lines[2].stats.goalkeeping.scream * 2) + nosT.mod)
                         if (def <= off) {
                             let target = targetPicker("pos")
                             message = `${carrier.name} throws it to ${target.name} near the net!`
@@ -355,18 +369,22 @@ function game(teams, timing, whichGame) {
                 let shot = 0
                 let def = 0
                 if (shotType === 0) {
-                    shot = rng((carrier.stats.offense.snipe * 2) + (carrier.stats.mental.postmodernism) - (carrier.stats.mental.nihilism * 0.05) + posT.mod)
-                    def = rng((nosT.lines[2].stats.goalkeeping.swat * 3) + (nosT.lines[2].stats.physical.spinach) + nosT.mod)
+                    shot = rng((carrier.stats.offense.snipe * 3) + posT.mod)
+                    def = rng((nosT.lines[2].stats.goalkeeping.swat * 2) + (nosT.lines[2].stats.physical.zoom) + nosT.mod) + nosT.lines[2].stats.goalkeeping.swat
                 }
                 else {
-                    shot = rng((carrier.stats.offense.snap * 2) + (carrier.stats.mental.stoicism) - (carrier.stats.mental.nihilism * 0.05) + posT.mod)
-                    def = rng((nosT.lines[2].stats.goalkeeping.squish * 3) + (nosT.lines[2].stats.physical.zoom) + nosT.mod)
+                    shot = rng((carrier.stats.offense.snap * 3) + posT.mod)
+                    def = (rng((nosT.lines[2].stats.goalkeeping.squish * 2) + (nosT.lines[2].stats.physical.zoom) + nosT.mod)) + nosT.lines[2].stats.goalkeeping.squish
                 }
                 if (def <= shot) {
                     if (shotType === 0) { message = `GOAL: ${posT.info.city}'s ${carrier.name} picks out the top corner to score on ${nosT.lines[2].name}!` }
                     else { message = `GOAL: ${posT.info.city}'s ${carrier.name} scores with a snap shot on ${nosT.lines[2].name}!` }
                     posT.score++
                     setScore()
+                    let z = rngWhole(3)
+                    if (z ==! 0) {
+                        changeLinesBoth()
+                    }
                     possession = 0
                     stage = 0
                     carrier = null
@@ -441,6 +459,12 @@ function game(teams, timing, whichGame) {
                 break
             case "nos":
                 line = [nosT.lines[nosT.zz].b, nosT.lines[nosT.zz].a, nosT.lines[nosT.zz].c]
+                break
+            case "t1":
+                line = [t1.lines[t1.zz].a, t1.lines[t1.zz].b, t1.lines[t1.zz].c]
+                break
+            case "t2":
+                line = [t2.lines[t2.zz].a, t2.lines[t2.zz].b, t2.lines[t2.zz].c]
                 break
         }
         let targets = line.filter(player => player !== carrier)

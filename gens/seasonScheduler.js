@@ -9,7 +9,7 @@ function rng(z) {
     return Math.floor(Math.random() * z)
 }
 let ogopogo = ["VAN", "OTT", "MON", "TOR", "POR", "SEA"]
-let igopogo = ["BUF", "WVM", "ROC", "NOR", "NSH", "KCS"]
+let igopogo = ["BUF", "WVM", "ROC", "NOR", "NSH", "SBH"]
 let chessie = ["NYR", "PHL", "BOS", "CHI", "PIT", "MIN"]
 let nessie = ["BUR", "SFB", "VAL", "LAK", "LIB", "MOS"]
 
@@ -18,7 +18,7 @@ async function makeSchedule() {
     for (block = 0; block < 15; block++) {
         let day1 = await makeDiv()
         let day2 = await makeDiv()
-        let day3 = await makeDiv()
+        let day3 = await makeCrossConf()
         let day4 = await makeCrossDiv()
         let day5 = await makeCrossConf()
         season.push(day1)
@@ -42,7 +42,7 @@ async function makeDiv() {
     let neGames = await pickTeamsSame(nessie, 3)
     let dayGames = ogGames.concat(igGames, chGames, neGames)
     ogopogo = ["VAN", "OTT", "MON", "TOR", "POR", "SEA"]
-    igopogo = ["BUF", "WVM", "ROC", "NOR", "NSH", "KCS"]
+    igopogo = ["BUF", "WVM", "ROC", "NOR", "NSH", "SBH"]
     chessie = ["NYR", "PHL", "BOS", "CHI", "PIT", "MIN"]
     nessie = ["BUR", "SFB", "VAL", "LAK", "LIB", "MOS"]
     return dayGames
@@ -54,7 +54,7 @@ async function makeCrossDiv() {
     let boGames = await pickTeamsCross(chessie, nessie, 6)
     let dayGames = biGames.concat(boGames)
     ogopogo = ["VAN", "OTT", "MON", "TOR", "POR", "SEA"]
-    igopogo = ["BUF", "WVM", "ROC", "NOR", "NSH", "KCS"]
+    igopogo = ["BUF", "WVM", "ROC", "NOR", "NSH", "SBH"]
     chessie = ["NYR", "PHL", "BOS", "CHI", "PIT", "MIN"]
     nessie = ["BUR", "SFB", "VAL", "LAK", "LIB", "MOS"]
     return dayGames
@@ -131,18 +131,18 @@ async function pickTeamsSame(x, z) {
 // starts a round of completely random matchups (legacy)
 async function start(gameDay) {
     let games = await fetchTeams(schedule[gameDay])
-    sim.game(games[0], 6000, 0)
-    sim.game(games[1], 6000, 1)
-    sim.game(games[2], 6000, 2)
-    sim.game(games[3], 6000, 3)
-    sim.game(games[4], 6000, 4)
-    sim.game(games[5], 6000, 5)
-    sim.game(games[6], 6000, 6)
-    sim.game(games[7], 6000, 7)
-    sim.game(games[8], 6000, 8)
-    sim.game(games[9], 6000, 9)
-    sim.game(games[10], 6000, 10)
-    sim.game(games[11], 6000, 11)
+    sim.game(games[0], 8000, 0)
+    sim.game(games[1], 8000, 1)
+    sim.game(games[2], 8000, 2)
+    sim.game(games[3], 8000, 3)
+    sim.game(games[4], 8000, 4)
+    sim.game(games[5], 8000, 5)
+    sim.game(games[6], 8000, 6)
+    sim.game(games[7], 8000, 7)
+    sim.game(games[8], 8000, 8)
+    sim.game(games[9], 8000, 9)
+    sim.game(games[10], 8000, 10)
+    sim.game(games[11], 8000, 11)
 }
 
 async function fetchTeams(x) {

@@ -25,7 +25,7 @@ async function test() {
 }
 
 function wipeRecords() {
-    let teams = ["FAR", "DCH", "HOU", "BAL", "MAT", "CLE", "NDD", "SJP", "SEA", "MIN", "MOS", "KCS", "BUF", "BOS", "ROC", "WVM", "MON", "OTT", "NOR", "POR", "TOR", "NSH", "PHL", "BUR", "LAK", "CHI", "SFB", "PIT", "NYR", "VAL", "VAN", "LIB", "ATH", "OLY"]
+    let teams = ["FAR", "DCH", "HOU", "BAL", "MAT", "CLE", "NDD", "SJP", "SEA", "MIN", "MOS", "SBH", "BUF", "BOS", "ROC", "WVM", "MON", "OTT", "NOR", "POR", "TOR", "NSH", "PHL", "BUR", "LAK", "CHI", "SFB", "PIT", "NYR", "VAL", "VAN", "LIB", "ATH", "OLY"]
     for (i = 0; i < teams.length; i++) {
         teamController.resetRecord(teams[i])
     }
@@ -33,7 +33,7 @@ function wipeRecords() {
 
 async function start() {
     let bingo = ["BUF", "BOS", "ROC", "WVM", "MON", "OTT", "NOR", "POR", "TOR", "CHI", "MIN", "SEA"]
-    let bongo = ["PHL", "BUR", "LAK", "NSH", "SFB", "PIT", "NYR", "VAL", "VAN", "LIB", "MOS", "KCS"]
+    let bongo = ["PHL", "BUR", "LAK", "NSH", "SFB", "PIT", "NYR", "VAL", "VAN", "LIB", "MOS", "SBH"]
     let bush1 = ["FAR", "DCH", "HOU", "BAL"]
     let bush2 = ["MAT", "CLE", "NDD", "SJP"]
     let games = await pickTeams(bingo, bongo, 12)
