@@ -370,11 +370,11 @@ function game(teams, timing, whichGame) {
                 let def = 0
                 if (shotType === 0) {
                     shot = rng((carrier.stats.offense.snipe * 3) + posT.mod)
-                    def = rng((nosT.lines[2].stats.goalkeeping.swat * 2) + (nosT.lines[2].stats.physical.zoom) + nosT.mod) + nosT.lines[2].stats.goalkeeping.swat
+                    def = rng((nosT.lines[2].stats.goalkeeping.swat) + (nosT.lines[2].stats.physical.zoom) + nosT.mod) + nosT.lines[2].stats.goalkeeping.swat
                 }
                 else {
                     shot = rng((carrier.stats.offense.snap * 3) + posT.mod)
-                    def = (rng((nosT.lines[2].stats.goalkeeping.squish * 2) + (nosT.lines[2].stats.physical.zoom) + nosT.mod)) + nosT.lines[2].stats.goalkeeping.squish
+                    def = (rng((nosT.lines[2].stats.goalkeeping.squish) + (nosT.lines[2].stats.physical.zoom) + nosT.mod)) + nosT.lines[2].stats.goalkeeping.squish
                 }
                 if (def <= shot) {
                     if (shotType === 0) { message = `GOAL: ${posT.info.city}'s ${carrier.name} picks out the top corner to score on ${nosT.lines[2].name}!` }
