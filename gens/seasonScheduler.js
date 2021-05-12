@@ -73,12 +73,12 @@ async function pickTeamsRandom(x, y, z) {
         let league = x.concat(y)
         for (i = 0; i < z; i++) {
             let z1 = rng(league.length)
-            let team1 = league[z1]
-            // let team1 = await fetchTeam(league[z1])
+            // let team1 = league[z1]
+            let team1 = await fetchTeam(league[z1])
             league.splice(z1, 1)
             let z2 = rng(league.length)
-            let team2 = league[z2]
-            // let team2 = await fetchTeam(league[z2])
+            // let team2 = league[z2]
+            let team2 = await fetchTeam(league[z2])
             league.splice(z2, 1)
             let oneGame = [team1, team2]
             gamesList.push(oneGame)
@@ -129,8 +129,10 @@ async function pickTeamsSame(x, z) {
 }
 
 // starts a round of completely random matchups (legacy)
-async function start(gameDay) {
-    let games = await fetchTeams(schedule[gameDay])
+async function start() {
+    let bingo = igopogo.concat(ogopogo)
+    let bongo = chessie.concat(nessie)
+    let games = await pickTeamsRandom(bingo, bongo, 12)
     sim.game(games[0], 8000, 0)
     sim.game(games[1], 8000, 1)
     sim.game(games[2], 8000, 2)

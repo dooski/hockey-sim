@@ -46,19 +46,20 @@ const playerSchema = new Schema(
                 postmodernism: Number
             },
 
-        items: {
-            stick: String,
-            helment: String,
-            skates: String,
-            gloves: String,
-            other: String
-        }
-        },
+            items: {
+                stick: String,
+                helment: String,
+                skates: String,
+                gloves: String,
+                other: String
+            },
         history: {
             goals: Number,
-            saves: Number
+            saves: Number,
+            plusminus: Number
         }
     }
+}
 )
 
 const Player = mongoose.model("Player", playerSchema)

@@ -86,25 +86,25 @@ function ModalRoster(props) {
                     
                 </div>
                 <div className="column is-2 is-mobile">
-                    <p className="position-title">PHY</p>
+                    <p className="position-title">GOALS</p>
                     <b>
-                    <p style={{backgroundColor:"#202020"}}>{calculateStat(players.l1.a.stats, "phy")}</p>
-                    <p>{calculateStat(players.l1.b.stats, "phy")}</p>
-                    <p style={{backgroundColor:"#202020"}}> {calculateStat(players.l1.c.stats, "phy")}</p>
+                    <p style={{backgroundColor:"#202020"}}>{players.l1.a.stats.history.goals}</p>
+                    <p>{players.l1.b.stats.history.goals}</p>
+                    <p style={{backgroundColor:"#202020"}}> {players.l1.c.stats.history.goals}</p>
                     </b>
                     <br />
-                    <p className="position-title">PHY</p>
-                    <b><p style={{backgroundColor:"#202020"}}>{calculateStat(players.l2.a.stats, "phy")}</p>
-                    <b>{calculateStat(players.l2.b.stats, "phy")}</b>
-                    <p style={{backgroundColor:"#202020"}}><b>{calculateStat(players.l2.c.stats, "phy")}</b></p>
+                    <p className="position-title">GOALS</p>
+                    <b><p style={{backgroundColor:"#202020"}}>{players.l2.a.stats.history.goals}</p>
+                    <b>{players.l2.b.stats.history.goals}</b>
+                    <p style={{backgroundColor:"#202020"}}><b>{players.l2.c.stats.history.goals}</b></p>
                     </b><br />
-                    <p className="position-title">PHY</p>
-                    <p style={{backgroundColor:"#202020"}}><b>{calculateStat(players.g.a.stats, "phy")}</b></p>
+                    <p className="position-title">SAVES</p>
+                    <p style={{backgroundColor:"#202020"}}><b>{players.g.a.stats.history.saves}</b></p>
                     <br />
-                    <p className="position-title">PHY</p>
-                    <b><p style={{backgroundColor:"#202020"}}>{calculateStat(players.b.a.stats, "phy")}</p>
-                    <b>{calculateStat(players.b.b.stats, "phy")}</b>
-                    <p style={{backgroundColor:"#202020"}}><b>{calculateStat(players.b.c.stats, "phy")}</b></p>
+                    <p className="position-title">GOALS</p>
+                    <b><p style={{backgroundColor:"#202020"}}>{players.b.a.stats.history.goals}</p>
+                    <b>{players.b.b.stats.history.goals}</b>
+                    <p style={{backgroundColor:"#202020"}}><b>{players.b.c.stats.history.goals}</b></p>
                     </b>
                 </div>
             </div>

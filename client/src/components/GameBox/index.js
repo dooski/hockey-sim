@@ -124,7 +124,7 @@ function GameBox(props) {
                                 <div className="column is-11 left">
                                     <p className="game-box-team-name">
                                         {sym1} {t1}
-                                        {t1L !== "" ? (
+                                        {t1L !== "" || undefined ? (
                                         <p style={{fontSize:"12px", fontWeight:"normal", lineHeight:"1.3"}}><i>{t1L[0]}, {t1L[1]}, {t1L[2]}</i></p>) : (<div></div>)}
                                     </p>
                                 </div>

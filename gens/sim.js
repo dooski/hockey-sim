@@ -1,3 +1,4 @@
+const playerController = require("../controllers/playerController")
 const gameHandler = require("./gameManagement")
 const handleGame = gameHandler.handleGame
 
@@ -134,7 +135,7 @@ function game(teams, timing, whichGame) {
                 onePlay()
             }
             packager()
-            await timer(timing * 0.08)
+            await timer(timing * 0.8)
         }
     }
     async function endOfPeriod(x) {
@@ -274,7 +275,7 @@ function game(teams, timing, whichGame) {
         }
         function center() {
             let off = rng((carrier.stats.offense.sauce * 2) + (posT.lines[posT.zz].b.stats.offense.silk) +
-                (posT.lines[posT.zz].a.stats.offense.silk) + (posT.lines[posT.zz].c.stats.offense.silk) + posT.mod)
+                (posT.lines[posT.zz].a.stats.offense.silk) + (posT.lines[posT.zz].c.stats.offense.silk) + posT.mod) + carrier.stats.offense.silk
             let def = rng((nosT.lines[nosT.zz].c.stats.defense.annoy) + (nosT.lines[nosT.zz].a.stats.defense.annoy) +
                 (nosT.lines[nosT.zz].b.stats.defense.annoy) + nosT.mod)
             if (def <= off) {
@@ -299,6 +300,9 @@ function game(teams, timing, whichGame) {
                         (nosT.lines[nosT.zz].c.stats.defense.blubber) + (nosT.lines[nosT.zz].b.stats.defense.blubber) + nosT.mod)
                     if (def <= shot) {
                         message = `GOAL: ${posT.info.city}'s ${carrier.name} takes the shot and rockets it past ${nosT.lines[2].name}!`
+                        gameHandler.recordPlusminus("plus", posT.lines[posT.zz].a.name, posT.lines[posT.zz].b.name, posT.lines[posT.zz].c.name)
+                        gameHandler.recordPlusminus("minus", nosT.lines[nosT.zz].a.name, nosT.lines[nosT.zz].b.name, nosT.lines[nosT.zz].c.name)
+                            gameHandler.recordStat("goal", carrier.name)
                         posT.score++
                         setScore()
                         possession = 0
@@ -308,6 +312,7 @@ function game(teams, timing, whichGame) {
                     } else {
                         message = `${nosT.lines[2].name} saves ${carrier.name}'s slapshot!`
                         if (stage === 4) { stage = 5 } else if (stage === 2) { stage = 1 }
+                        gameHandler.recordStat("save", nosT.lines[2].name)
                         carrier = nosT.lines[2]
                         takingShot = false
                         endPlay("switch")
@@ -316,10 +321,10 @@ function game(teams, timing, whichGame) {
                 } else {
                     let z = rngWhole(12)
                     if (z > 1) {
-                        let off = rng((carrier.stats.offense.sauce) +
-                            (posT.lines[posT.zz].a.stats.physical.zoom) + (posT.lines[posT.zz].c.stats.physical.zoom) + (posT.lines[posT.zz].b.stats.physical.zoom) + posT.mod)
+                        let off = rng((carrier.stats.offense.sauce * 3) + (posT.lines[posT.zz].a.stats.physical.zoom) + (posT.lines[posT.zz].c.stats.physical.zoom) + (posT.lines[posT.zz].b.stats.physical.zoom) + posT.mod) + carrier.stats.offense.silk
                         let def = rng((nosT.lines[nosT.zz].c.stats.defense.choreography) + (nosT.lines[nosT.zz].c.stats.defense.rascal) +
-                            (nosT.lines[nosT.zz].b.stats.defense.choreography) + (nosT.lines[nosT.zz].b.stats.defense.rascal) + (nosT.lines[2].stats.goalkeeping.scream * 2) + nosT.mod)
+                            (nosT.lines[nosT.zz].b.stats.defense.choreography) + (nosT.lines[nosT.zz].b.stats.defense.rascal) + (nosT.lines[nosT.zz].b.stats.defense.choreography) 
+                            + (nosT.lines[nosT.zz].b.stats.defense.rascal) + (nosT.lines[2].stats.goalkeeping.scream * 2) + nosT.mod)
                         if (def <= off) {
                             let target = targetPicker("pos")
                             message = `${carrier.name} throws it to ${target.name} near the net!`
@@ -379,6 +384,9 @@ function game(teams, timing, whichGame) {
                 if (def <= shot) {
                     if (shotType === 0) { message = `GOAL: ${posT.info.city}'s ${carrier.name} picks out the top corner to score on ${nosT.lines[2].name}!` }
                     else { message = `GOAL: ${posT.info.city}'s ${carrier.name} scores with a snap shot on ${nosT.lines[2].name}!` }
+                    gameHandler.recordStat("goal", carrier.name)
+                    gameHandler.recordPlusminus("plus", posT.lines[posT.zz].a.name, posT.lines[posT.zz].b.name, posT.lines[posT.zz].c.name)
+                    gameHandler.recordPlusminus("minus", nosT.lines[nosT.zz].a.name, nosT.lines[nosT.zz].b.name, nosT.lines[nosT.zz].c.name)
                     posT.score++
                     setScore()
                     let z = rngWhole(3)
@@ -391,6 +399,7 @@ function game(teams, timing, whichGame) {
                 }
                 else {
                     message = `${nosT.lines[2].name} saves ${carrier.name}'s shot!`
+                    gameHandler.recordStat("save", nosT.lines[2].name)
                     carrier = nosT.lines[2]
                     endPlay("switch")
                 }
@@ -451,6 +460,7 @@ function game(teams, timing, whichGame) {
         }
     }
 
+  
     function targetPicker(x) {
         let line = []
         switch (x) {

@@ -52,18 +52,18 @@ app.use(passport.session())
 app.use(routes);
 
 //game start
-let gameDay = 0
+// let gameDay = 0
+
 setInterval(clock, 60000)
 function clock() {
     now = new Date
     if (now.getMinutes() === 0) {
-        plondWaker.start(gameDay)
+        plondWaker.start()
         console.log(`Playing games at ${now.getMinutes()}`)
-        gameDay = gameDay + 1
-        console.log(gameDay)
     }
 }
 
+// control.makeTeams()
 
 //api routes
 

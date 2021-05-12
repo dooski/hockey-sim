@@ -71,6 +71,9 @@ function Teams() {
                                     <p class="modal-card-title team-modal team-modal-title">
                                          {currentTeam.info.full}
                                     <p class="team-modal-subtitle">{currentTeam.info.desc}</p></p>
+                                    <b style={{ color: "black", fontSize: "24px"}}>{currentTeam.history.wins}-{currentTeam.history.losses}</b>
+                                    <br/><b style={{color: "black"}}>Goals Scored: {currentTeam.players.l1.a.stats.history.goals + currentTeam.players.l1.b.stats.history.goals + currentTeam.players.l1.c.stats.history.goals + currentTeam.players.l2.a.stats.history.goals + currentTeam.players.l2.b.stats.history.goals + currentTeam.players.l2.c.stats.history.goals } </b>
+                                    <br/><b style={{color: "black"}}>Goal Difference: {currentTeam.players.l1.a.stats.history.plusminus + currentTeam.players.l2.a.stats.history.plusminus} </b>
                                 </div>
                             </div>    
                         </header>

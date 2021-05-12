@@ -23,7 +23,7 @@ const teamSchema = new Schema(
             l2: {
                 a: String,
                 b: String,
-                c: String,
+                c: String
             },
             g: {
                 a: String,

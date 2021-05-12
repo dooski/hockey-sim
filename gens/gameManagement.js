@@ -1,4 +1,5 @@
 const teamController = require("../controllers/teamController")
+const playerController = require("../controllers/playerController")
 
 let gamesDone = 0
 
@@ -19,8 +20,24 @@ function endOfGame(t1, t2, t1s, t2s) {
     }
 }
 
-function recordGoal(scorer){
-    
+function recordStat(type, player){
+    switch (type){
+        case "goal":
+            playerController.addGoal(player)
+            break;
+        case "save":
+            playerController.addSave(player)
+    }
+}
+function recordPlusminus(type, player1, player2, player3){
+    switch (type){
+        case "plus":
+            playerController.addPlus(player1, player2, player3)
+            break;
+        case "minus":
+            playerController.addMinus(player1, player2, player3)
+            break;
+    }
 }
 
 let games = [{
@@ -308,5 +325,7 @@ function returnGames() {
 module.exports = {
     handleGame,
     returnGames,
-    endOfGame
+    endOfGame,
+    recordStat,
+    recordPlusminus
 }
