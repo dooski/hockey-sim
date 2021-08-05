@@ -24,8 +24,8 @@ function Home() {
   return (
     <div className="home-wrapper">
       <div className="home-header">
-        <p>Welcome to the Plond*</p>
-        <i className="home-sub">*It's like a pond, but harder to conceptualize.</i>
+        <p>Welcome to the Plond</p>
+        <b className="home-sub">PLOND HOCKEY IS CURRENTLY UNDER REDEVELOPMENT AND WILL BE BACK SOON</b>
       </div>
       <div className="quotes">
       <div className="columns">
@@ -75,7 +75,7 @@ function Home() {
         </div>
          */}
         <div className="column is-6" style={{ padding: "20px" }}>
-          <p>Plond Hockey is hockey played on a plond, which is a sentient frozen body of water. Twenty-four teams play in Plond Hockey's primary league, the Big League. There are two conferences in the Big League: Bingo and Bongo. The Bingo Conference is made up of the Ogopogo and Igopogo divisions, while the Bongo Conference is made up of the Chessie and Nessie divisions.
+          <p>Plond Hockey is hockey played on a plond, which is a sentient frozen body of water. Sixteen teams play in Plond Hockey's primary league, the Big League. There are two divisions: Bingo and Bongo.
           <br /><br />Games end in a win or a loss. Tied scores are resolved with a Sudden Death overtime. There is no reward for losing in overtime. The Plond is binary.
           <br /><br />The Plond serves as the rink, the arena, and the law. Players committing actions deemed illegal by the Plond are penalized. These are known as Penalties. The player is Frozen and their power is given to the other team for five minutes of play. This is known as a Power Play. Research continues on the Plond's internal legal system.
 </p>

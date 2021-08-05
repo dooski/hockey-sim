@@ -2,8 +2,91 @@ const sim = require("./sim.js")
 const schedule = require("./seasonSchedule.json")
 const teamController = require("../controllers/teamController")
 const fs = require("fs")
+const { db } = require("../models/season.js")
 
 const timer = ms => new Promise(res => setTimeout(res, ms))
+
+function makeSeason(x){
+    let season = new db.Season({
+                seasonNumber: x,
+                active: true,
+                game: 0,
+                gameDay: 0,
+                playoff: false,
+                playoffRound: 0,
+                playoffGame: 0,
+                regularStandings: {
+                    ogo: {
+                        first: "VAN",
+                        second: "OTT",
+                        third: "MON",
+                        fourth: "TOR",
+                        fifth: "POR",
+                        sixth: "SEA"
+                    },
+                    igo: {
+                        first: "BUF",
+                        second: "WVM",
+                        third: "ROC",
+                        fourth: "NOR",
+                        fifth: "NSH",
+                        sixth: "SBH"
+                    },
+                    che: {
+                        first: "NYR",
+                        second: "PHL",
+                        third: "BOS",
+                        fourth: "CHI",
+                        fifth: "PIT",
+                        sixth: "MIN"
+                    },
+                    nes: {
+                        first: "BUR",
+                        second: "SFB",
+                        third: "VAL",
+                        fourth: "LAK",
+                        fifth: "LIB",
+                        sixth: "MOS"
+                    }
+                },
+                playoffStandings: {
+                    binSeeds: {
+                        first: "",
+                        second: "",
+                        third: "",
+                        fourth: "",
+                    },
+                    bonSeeds: {
+                        first: "",
+                        second: "",
+                        third: "",
+                        fourth: "",
+                    },
+                    binFinals: {
+                        first: "",
+                        second: "",
+                    },
+                    bonFinals: {
+                        first: "",
+                        second: "",
+                    },
+                    finals: {
+                        first: "",
+                        second: "",
+                    }
+                },
+                history: {
+                    champion: "",
+                    topScorer: "",
+                    topLine: "",
+                    mostSaves: "",
+                    totalGoals: "",
+                }
+            })
+            season.save(function (err) {
+                if (err) return handleError(err)
+})
+}
 
 function rng(z) {
     return Math.floor(Math.random() * z)

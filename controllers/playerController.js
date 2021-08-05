@@ -1,5 +1,7 @@
 const db = require("../models");
 
+
+
 module.exports = {
     getPlayer: function (id) {
         return new Promise(resolve => {

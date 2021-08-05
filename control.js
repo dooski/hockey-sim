@@ -117,7 +117,7 @@ async function makePlayers() {
     var first = data.first
     var last = data.last
     var team = data.team
-    const num = first.length
+    const num = team.length
     for (i = 0; i < num; i++) {
         let z1 = rng(first.length)
         let firstName = first[z1]
