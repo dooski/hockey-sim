@@ -6,6 +6,7 @@ function getTeam(abrv) {
         db.Team.find({ 'info.abrv': abrv },
             async (err, data) => {
                 if (err) { console.log(err) }
+                console.log(abrv)
                 let team = (JSON.parse(JSON.stringify(data[0])))
                 team.players.l1.a = await playerController.getPlayer(team.players.l1.a)
                 team.players.l1.b = await playerController.getPlayer(team.players.l1.b)
@@ -23,7 +24,7 @@ function getTeam(abrv) {
 }
 async function getTeams(req, res) {
     let bingo = ["TOR", "MON", "BUF", "BOS", "NYR", "HOU", "SJP", "CHI", "PIT"]
-    let bongo = ["ROC", "BAL", "MIN", "PHL", "LAK", "WVM", "NSH", "VAL"]
+    let bongo = ["ROC", "BAL", "MIN", "PHL", "LAK", "WVM", "NSH", "VAL", "HOU"]
     bingo[0] = await getTeam(bingo[0])
     bingo[1] = await getTeam(bingo[1])
     bingo[2] = await getTeam(bingo[2])
@@ -41,6 +42,7 @@ async function getTeams(req, res) {
     bongo[5] = await getTeam(bongo[5])
     bongo[6] = await getTeam(bongo[6])
     bongo[7] = await getTeam(bongo[7])
+    bongo[8] = await getTeam(bongo[8])
 
     var data = [bingo, bongo]
     res.json(data)

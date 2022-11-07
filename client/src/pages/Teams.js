@@ -226,6 +226,13 @@ function Teams() {
                                     <div className="column is-3 right table-record">
                                         <p>{bongo[7].history.wins} - {bongo[7].history.losses}</p>
                                     </div>
+                                </div><div className="columns is-mobile division-table-team bongo">
+                                    <div className="column is-9 left">
+                                        <p onClick={() => openModal(bongo[8])}><Symbol abrv={bongo[8].info.abrv} /> {bongo[8].info.full}</p>
+                                    </div>
+                                    <div className="column is-3 right table-record">
+                                        <p>{bongo[8].history.wins} - {bongo[8].history.losses}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

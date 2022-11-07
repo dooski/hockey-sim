@@ -40,9 +40,9 @@ function App() {
   }
 
 
-  // useInterval(() => {
-  //   UpdateGame();
-  // }, 1000);
+  useInterval(() => {
+    UpdateGame();
+  }, 1000);
 
   
   return (
@@ -52,7 +52,7 @@ function App() {
           <div className="column">
             <Link to="/"><p className="nav-title">PLOND HOCKEY</p></Link>
             <div className="nav-button-bar">
-              {/* <Link to="/plond" className="nav-button">Games</Link>  */}
+              <Link to="/plond" className="nav-button">Games</Link> 
             <Link to="/teams" className="nav-button">Teams</Link></div>
           </div>
         </div>
@@ -64,9 +64,9 @@ function App() {
           <Route exact path="/">
             <Home props={games}/>
             </Route>
-          {/* <Route exact path="/plond">
+          <Route exact path="/plond">
             <Games props={games}/>
-            </Route> */}
+            </Route>
           <Route exact path="/teams">
             <Teams/>
             </Route>

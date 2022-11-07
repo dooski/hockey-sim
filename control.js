@@ -32,11 +32,9 @@ function wipeRecords() {
 }
 
 async function start() {
-    let bingo = ["BUF", "BOS", "ROC", "WVM", "MON", "OTT", "NOR", "POR", "TOR", "CHI", "MIN", "SEA"]
-    let bongo = ["PHL", "BUR", "LAK", "NSH", "SFB", "PIT", "NYR", "VAL", "VAN", "LIB", "MOS", "SBH"]
-    let bush1 = ["FAR", "DCH", "HOU", "BAL"]
-    let bush2 = ["MAT", "CLE", "NDD", "SJP"]
-    let games = await pickTeams(bingo, bongo, 12)
+    let bingo = ["TOR", "MON", "BUF", "BOS", "NYR", "HOU", "SJP", "CHI", "PIT"]
+    let bongo = ["ROC", "BAL", "MIN", "PHL", "LAK", "WVM", "NSH", "VAL", "HOU"]
+    let games = await pickTeams(bingo, bongo, 8)
     //second argument is length of action in each game (60 actions per period x 3 periods and possible overtime)
     sim.game(games[0], 8000, 0)
     sim.game(games[1], 8000, 1)
@@ -47,14 +45,6 @@ async function start() {
     sim.game(games[6], 8000, 6)
     sim.game(games[7], 8000, 7)
     sim.game(games[8], 8000, 8)
-    sim.game(games[9], 8000, 9)
-    sim.game(games[10], 8000, 10)
-    sim.game(games[11], 8000, 11)
-    let bushGames = await pickTeams(bush1, bush2, 4)
-    sim.game(bushGames[0], 8000, 12)
-    sim.game(bushGames[1], 8000, 13)
-    sim.game(bushGames[2], 8000, 14)
-    sim.game(bushGames[3], 8000, 15)
 }
 
 async function pickTeams(x, y, z) {
