@@ -3,6 +3,7 @@
   background-size: 500px;
   background-color: black;
   min-height: 100vh;
+  max-width: 100vw;
   color: whitesmoke;
   padding-top: 35px;
   padding-bottom: 35px;
@@ -13,6 +14,11 @@
 }
 .columns:last-child{
   margin-bottom: 0;
+}
+
+.columns {
+  margin-right: 0px;
+  margin-left: 0px
 }
 
 .centerBox {

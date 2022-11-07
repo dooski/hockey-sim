@@ -653,7 +653,17 @@
 "HOU",
 "BAL",
 "MIN",
-"SJP"
+"SJP",
+"CLE",
+"CLE",
+"CLE",
+"CLE",
+"CLE",
+"CLE",
+"CLE",
+"CLE",
+"CLE",
+"CLE"
     ],
     "teamLegacy": [
         [
@@ -799,6 +809,15 @@
             "Bongo",
             "",
             "MIN"
+        ],
+        [
+            "Cleveland Yankees",
+            "Cleveland",
+            "Yankees",
+            "What're You Gonna Do About It, New York?",
+            "Bush",
+            "",
+            "CLE"
         ],
         [
             "San Juan Pigeonkickers",

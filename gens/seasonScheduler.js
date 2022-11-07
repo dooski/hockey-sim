@@ -91,7 +91,7 @@ function makeSeason(x){
 function rng(z) {
     return Math.floor(Math.random() * z)
 }
-let bingo = ["TOR", "MON", "BUF", "BOS", "NYR", "HOU", "SJP", "CHI", "PIT"]
+let bingo = ["TOR", "MON", "BUF", "BOS", "NYR", "CLE", "SJP", "CHI", "PIT"]
 let bongo = ["ROC", "BAL", "MIN", "PHL", "LAK", "WVM", "NSH", "VAL", "HOU"]
 
 async function makeSchedule() {
