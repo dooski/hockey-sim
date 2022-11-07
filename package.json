@@ -2,7 +2,7 @@
   "name": "hockey-sim",
   "version": "1.0.0",
   "engines": {
-"node": "14.5.3"
+"node": "14.15.3"
   },
   "description": "blaseball-esque hockey simulator",
   "main": "server.js",
