@@ -1,6 +1,9 @@
 {
   "name": "hockey-sim",
   "version": "1.0.0",
+  "engines": {
+"node": "14.5.3"
+  },
   "description": "blaseball-esque hockey simulator",
   "main": "server.js",
   "scripts": {
@@ -39,7 +42,7 @@
     "if-env": "^1.0.4",
     "moment": "^2.29.4",
     "mongoose": "^5.13.15",
-    "passport": "^0.4.1",
+    "passport": "^0.6.0",
     "passport-local": "^1.0.0",
     "react-emoji-render": "^1.2.4",
     "rng-js": "^1.0.1",
