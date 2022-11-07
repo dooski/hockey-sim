@@ -96,8 +96,8 @@ height: 10px;
 }
 
 .home-wrapper {
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 10%;
+  margin-right: 10%;
   background: black;
   border: 5px silver double;
   border-radius: 10px;
@@ -322,8 +322,8 @@ height: 10px;
 }
 
 .league-table-wrapper {
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 10%;
+  margin-right: 10%;
   line-height: 1.5rem
 }
 

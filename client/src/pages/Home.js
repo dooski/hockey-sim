@@ -25,7 +25,6 @@ function Home() {
     <div className="home-wrapper">
       <div className="home-header">
         <p>Welcome to the Plond</p>
-        <b className="home-sub">PLOND HOCKEY IS CURRENTLY UNDER REDEVELOPMENT AND WILL BE BACK SOON</b>
       </div>
       <div className="quotes">
       <div className="columns">
@@ -43,7 +42,7 @@ function Home() {
         </div>
       </div>
       <div className="home-content columns">
-        {/* <div className="column is-6">
+        <div className="column is-6">
           <div className="home-info-wrapper" >
             <p style={{ fontSize: "32px", textAlign: "center", fontWeight: "1000" }}>THE PLONDSPIEL</p>
             <p style={{ fontSize: "22px", textAlign: "center", fontWeight: "500", fontStyle: "italic" }}>News from around the Plond</p>
@@ -55,15 +54,7 @@ function Home() {
                 until all teams can afford to buy a calendar. Teams will play every hour on the hour and players may be Rematerialized, at the discretion of the Plond.
           </p>
               </li>
-              <br />
-              <li>
-                <i style={{ fontWeight: "700", fontSize: "18px" }}>Bush League Begins Play</i>
-                <p>The Bush League will begin play under the shadows of the Eternal Preseason. The inaugural Toilet Division will try to determine the best of the worst, and should
-                the Eternal Preseason end, Toilet League teams will have a chance to make it to the big time. The new competition format has the top 4 teams of the Toilet League
-                replace the worst team in each division of the Big League at the end of the season. Players playing in the Bush League will also have a chance of growing each game.
-          </p>
-              </li>
-              <br />
+              
               <li>
                 <i style={{ fontWeight: "700", fontSize: "18px" }}>Plond Law Research Breakthrough Announced</i>
                 <p>Plond researchers have discovered the Plond does not consider Fighting to be inherently bad and will not penalize players for Fighting. All players
@@ -73,9 +64,9 @@ function Home() {
             </ul>
           </div>
         </div>
-         */}
+        
         <div className="column is-6" style={{ padding: "20px" }}>
-          <p>Plond Hockey is hockey played on a plond, which is a sentient frozen body of water. Sixteen teams play in Plond Hockey's primary league, the Big League. There are two divisions: Bingo and Bongo.
+          <p>Plond Hockey is hockey played on a plond, which is a sentient frozen body of water. Eighteen teams play in Plond Hockey's primary league, the Big League. There are two divisions: Bingo and Bongo.
           <br /><br />Games end in a win or a loss. Tied scores are resolved with a Sudden Death overtime. There is no reward for losing in overtime. The Plond is binary.
           <br /><br />The Plond serves as the rink, the arena, and the law. Players committing actions deemed illegal by the Plond are penalized. These are known as Penalties. The player is Frozen and their power is given to the other team for five minutes of play. This is known as a Power Play. Research continues on the Plond's internal legal system.
 </p>
