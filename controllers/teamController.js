@@ -23,8 +23,8 @@ function getTeam(abrv) {
     })
 }
 async function getTeams(req, res) {
-    let bingo = ["TOR", "MON", "BUF", "BOS", "NYR", "CLE", "SJP", "CHI", "PIT"]
-    let bongo = ["ROC", "BAL", "MIN", "PHL", "LAK", "WVM", "NSH", "VAL", "HOU"]
+    let bingo = ["TOR", "MON", "BUF", "BOS", "NYR", "CLE", "SEA", "POR", "CHI", "PIT"]
+    let bongo = ["ROC", "BAL", "MIN", "PHL", "LAK", "WVM", "NSH", "VAL", "HOU", "MOS"]
     bingo[0] = await getTeam(bingo[0])
     bingo[1] = await getTeam(bingo[1])
     bingo[2] = await getTeam(bingo[2])
@@ -34,6 +34,7 @@ async function getTeams(req, res) {
     bingo[6] = await getTeam(bingo[6])
     bingo[7] = await getTeam(bingo[7])
     bingo[8] = await getTeam(bingo[8])
+    bingo[9] = await getTeam(bingo[9])
     bongo[0] = await getTeam(bongo[0])
     bongo[1] = await getTeam(bongo[1])
     bongo[2] = await getTeam(bongo[2])
@@ -43,6 +44,7 @@ async function getTeams(req, res) {
     bongo[6] = await getTeam(bongo[6])
     bongo[7] = await getTeam(bongo[7])
     bongo[8] = await getTeam(bongo[8])
+    bongo[9] = await getTeam(bongo[9])
 
     var data = [bingo, bongo]
     res.json(data)

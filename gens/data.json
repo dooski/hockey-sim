@@ -500,7 +500,7 @@
 "HOU",
 "BAL",
 "MIN",
-"SJP",
+"POR",
 "BUF",
 "BOS",
 "ROC",
@@ -517,7 +517,7 @@
 "HOU",
 "BAL",
 "MIN",
-"SJP",
+"POR",
 "BUF",
 "BOS",
 "ROC",
@@ -534,7 +534,7 @@
 "HOU",
 "BAL",
 "MIN",
-"SJP",
+"POR",
 "BUF",
 "BOS",
 "ROC",
@@ -551,7 +551,7 @@
 "HOU",
 "BAL",
 "MIN",
-"SJP",
+"POR",
 "BUF",
 "BOS",
 "ROC",
@@ -568,7 +568,7 @@
 "HOU",
 "BAL",
 "MIN",
-"SJP",
+"POR",
 "BUF",
 "BOS",
 "ROC",
@@ -585,7 +585,7 @@
 "HOU",
 "BAL",
 "MIN",
-"SJP",
+"POR",
 "BUF",
 "BOS",
 "ROC",
@@ -602,7 +602,7 @@
 "HOU",
 "BAL",
 "MIN",
-"SJP",
+"POR",
 "BUF",
 "BOS",
 "ROC",
@@ -619,7 +619,7 @@
 "HOU",
 "BAL",
 "MIN",
-"SJP",
+"POR",
 "BUF",
 "BOS",
 "ROC",
@@ -636,7 +636,7 @@
 "HOU",
 "BAL",
 "MIN",
-"SJP",
+"POR",
 "BUF",
 "BOS",
 "ROC",
@@ -653,7 +653,7 @@
 "HOU",
 "BAL",
 "MIN",
-"SJP",
+"POR",
 "CLE",
 "CLE",
 "CLE",
@@ -663,7 +663,28 @@
 "CLE",
 "CLE",
 "CLE",
-"CLE"
+"CLE",
+"MOS",
+"MOS",
+"MOS",
+"MOS",
+"MOS",
+"MOS",
+"MOS",
+"MOS",
+"MOS",
+"MOS",
+"SEA",
+"SEA",
+"SEA",
+"SEA",
+"SEA",
+"SEA",
+"SEA",
+"SEA",
+"SEA",
+"SEA"
+
     ],
     "teamLegacy": [
         [
@@ -818,7 +839,35 @@
             "Bush",
             "",
             "CLE"
+        ],  
+        [
+            "Portland Shrooms",
+            "Portland",
+            "Shrooms",
+            "Good Sporesmanship",
+            "Bingo",
+            "Ogopogo",
+            "POR"
+        ],      [
+            "Moscow Red",
+            "Moscow",
+            "Red",
+            "Red or Dead",
+            "Bongo",
+            "Nessie",
+            "MOS"
         ],
+        [
+            "Seattle Sirens",
+            "Seattle",
+            "Sirens",
+            "Magically Pacific!",
+            "Bingo",
+            "Ogopogo",
+            "SEA"
+        ]      
+    ],
+    "teamExpansion": [
         [
             "San Juan Pigeonkickers",
             "San Juan",
@@ -827,9 +876,7 @@
             "Bingo",
             "",
             "SJP"
-        ]
-    ],
-    "teamExpansion": [
+        ],
         [
             "Ottawa Tulips",
             "Ottawa",
@@ -839,15 +886,7 @@
             "Ogopogo",
             "OTT"
         ],
-        [
-            "Portland Shrooms",
-            "Portland",
-            "Shrooms",
-            "Good Sporesmanship",
-            "Bingo",
-            "Ogopogo",
-            "POR"
-        ],
+      
         [
             "New Orleans Moonshine",
             "New Orleans",
@@ -884,24 +923,7 @@
             "Nessie",
             "LIB"
         ],
-        [
-            "Moscow Red",
-            "Moscow",
-            "Red",
-            "Red or Dead",
-            "Bongo",
-            "Nessie",
-            "MOS"
-        ],
-        [
-            "Seattle Sirens",
-            "Seattle",
-            "Sirens",
-            "Magically Pacific!",
-            "Bingo",
-            "Ogopogo",
-            "SEA"
-        ],
+  
         [
             "South Bend Huskers",
             "South Bend",

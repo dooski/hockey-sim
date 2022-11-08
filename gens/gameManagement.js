@@ -15,7 +15,7 @@ function endOfGame(t1, t2, t1s, t2s) {
         teamController.addWin(team2)
     }
     gamesDone++   
-    if (gamesDone > 8) {
+    if (gamesDone > 9) {
         gamesDone = 0
     }
 }

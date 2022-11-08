@@ -91,8 +91,8 @@ function makeSeason(x){
 function rng(z) {
     return Math.floor(Math.random() * z)
 }
-let bingo = ["TOR", "MON", "BUF", "BOS", "NYR", "CLE", "SJP", "CHI", "PIT"]
-let bongo = ["ROC", "BAL", "MIN", "PHL", "LAK", "WVM", "NSH", "VAL", "HOU"]
+let bingo = ["TOR", "MON", "BUF", "BOS", "NYR", "CLE", "SEA", "POR", "CHI", "PIT"]
+let bongo = ["ROC", "BAL", "MIN", "PHL", "LAK", "WVM", "NSH", "VAL", "HOU", "MOS"]
 
 async function makeSchedule() {
     let season = []
@@ -211,7 +211,7 @@ async function pickTeamsSame(x, z) {
 
 // starts a round of completely random matchups (legacy)
 async function start() {
-    let games = await pickTeamsRandom(bingo, bongo, 9)
+    let games = await pickTeamsRandom(bingo, bongo, 10)
     sim.game(games[0], 8000, 0)
     sim.game(games[1], 8000, 1)
     sim.game(games[2], 8000, 2)
@@ -221,6 +221,7 @@ async function start() {
     sim.game(games[6], 8000, 6)
     sim.game(games[7], 8000, 7)
     sim.game(games[8], 8000, 8)
+    sim.game(games[9], 8000, 9)
 }
 
 async function fetchTeams(x) {

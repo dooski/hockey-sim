@@ -157,6 +157,14 @@ function Teams() {
                                         <p>{bingo[8].history.wins} - {bingo[8].history.losses}</p>
                                     </div>
                                 </div>
+                                <div className="columns is-mobile division-table-team bingo">
+                                    <div className="column is-9">
+                                        <p onClick={() => openModal(bingo[9])}><Symbol abrv={bingo[9].info.abrv} /> {bingo[9].info.full}</p>
+                                    </div>
+                                    <div className="column is-3 right table-record">
+                                        <p>{bingo[9].history.wins} - {bingo[9].history.losses}</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div className="column is-2 buffer"><p> -</p></div>
@@ -226,12 +234,21 @@ function Teams() {
                                     <div className="column is-3 right table-record">
                                         <p>{bongo[7].history.wins} - {bongo[7].history.losses}</p>
                                     </div>
-                                </div><div className="columns is-mobile division-table-team bongo">
+                                </div>
+                                <div className="columns is-mobile division-table-team bongo">
                                     <div className="column is-9 left">
                                         <p onClick={() => openModal(bongo[8])}><Symbol abrv={bongo[8].info.abrv} /> {bongo[8].info.full}</p>
                                     </div>
                                     <div className="column is-3 right table-record">
                                         <p>{bongo[8].history.wins} - {bongo[8].history.losses}</p>
+                                    </div>
+                                </div>
+                                <div className="columns is-mobile division-table-team bongo">
+                                    <div className="column is-9 left">
+                                        <p onClick={() => openModal(bongo[9])}><Symbol abrv={bongo[9].info.abrv} /> {bongo[9].info.full}</p>
+                                    </div>
+                                    <div className="column is-3 right table-record">
+                                        <p>{bongo[9].history.wins} - {bongo[9].history.losses}</p>
                                     </div>
                                 </div>
                             </div>
